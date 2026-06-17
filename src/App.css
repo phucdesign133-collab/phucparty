@@ -1,0 +1,213 @@
+/* Giao diện tổng thể */
+:root {
+  --primary-color: #6c5ce7;
+  --secondary-color: #ff7675;
+  --text-color: #2d3436;
+  --bg-color: #f9f9fb;
+  --card-bg: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header mượt mà */
+.main-header {
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Trang chính LuckySpinParty */
+.party-container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.party-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.party-desc {
+  font-size: 1.1rem;
+  color: #636e72;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 5px;
+  height: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+}
+
+/* Grid danh sách các Stage */
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Card thiết kế nịnh mắt */
+.stage-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.stage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(108, 92, 231, 0.1);
+  border-color: rgba(108, 92, 231, 0.2);
+}
+
+.stage-name {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.stage-date {
+  font-size: 0.85rem;
+  color: #b2bec3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+}
+
+/* Footer tinh tế */
+/* Footer cải tiến với Grid 4 cột */
+.main-footer {
+  background-color: #2d3436;
+  color: #dfe6e9;
+  padding: 50px 20px 20px 20px;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* Chia đều làm 4 cột trên màn hình máy tính, tự co giãn trên điện thoại */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+  position: relative;
+  font-weight: 700;
+}
+
+/* Thêm một gạch nhỏ dưới tiêu đề cho đẹp */
+.footer-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 35px;
+  height: 2px;
+  background-color: #6c5ce7;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #b2bec3;
+  margin: 0 0 10px 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #b2bec3;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition:
+    color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+/* Hiệu ứng rê chuột vào link ở footer */
+.footer-links a:hover {
+  color: #ff7675;
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #4a4a4a;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #636e72;
+}

@@ -1,0 +1,183 @@
+/* ========================================================
+   GIAO DIỆN DESKTOP (MÀN HÌNH LỚN) - GIỮ NGUYÊN CHUẨN
+   ======================================================== */
+.site-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 6%;
+  background-color: #1a0836;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  height: 50px;       
+  max-height: 50px;
+}
+
+.logo-anchor {
+  display: inline-block;
+  height: 100%;
+}
+
+.logo-image {
+  height: 50px !important;    
+  width: auto !important;     
+  max-height: 100%;
+  display: block;
+  object-fit: contain;        
+}
+
+.nav-menu {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #ffffff !important; 
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 22px;           
+  font-weight: 700;
+}
+
+/* NÚT HAMBURGER */
+.hamburger-bar {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1000;
+}
+
+.hamburger-bar span {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.hamburger-bar.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger-bar.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-bar.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* KHỐI DROPDOWN DESKTOP */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 100%;             
+  left: 0;
+  background-color: #1a0836; 
+  min-width: 180px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 8px 0;
+  z-index: 999;
+  margin-top: 0;         
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  display: block;
+  text-align: left;
+  font-size: 18px;       
+  color: #ffffff !important;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+
+@media (min-width: 769px) {
+  .dropdown-container:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* ========================================================
+   GIAO DIỆN MOBILE RESPONSIVE - FIX LỖI CĂN LỀ TRÁI
+   ======================================================== */
+@media (max-width: 768px) {
+  .hamburger-bar {
+    display: flex; 
+  }
+
+  .nav-menu {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #14052b;
+    flex-direction: column;
+    align-items: flex-start; /* Ép khung cha dồn hết nội dung sang lề trái */
+    padding: 25px 8%;
+    gap: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 998;
+  }
+
+  .nav-menu.mobile-open {
+    display: flex;
+  }
+
+  /* Đồng bộ toàn bộ các thẻ link menu thường và dropdown */
+  .nav-menu a,
+  .dropdown-container {
+    width: 100% !important;
+    text-align: left !important; /* Khóa chết căn lề trái */
+    display: block !important;
+  }
+
+  .nav-menu a {
+    font-size: 20px;
+    padding: 6px 0;
+  }
+
+  /* Định dạng danh sách con thụt lề mượt mà phía dưới chữ chính trên mobile */
+  .dropdown-menu {
+    display: block; 
+    position: static; 
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    padding-left: 20px; /* Tạo khoảng thụt lề để phân biệt menu con */
+    margin-top: 5px;
+  }
+  
+  .dropdown-item {
+    padding: 8px 0;
+    font-size: 18px;
+    opacity: 0.85; /* Giảm độ sáng nhẹ cho link con nhìn sang hơn */
+  }
+}
