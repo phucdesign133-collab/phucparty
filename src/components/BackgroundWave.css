@@ -1,0 +1,39 @@
+.wave-carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Điều chỉnh chiều cao cho phù hợp với thiết kế của bạn */
+  overflow: hidden;
+}
+
+/* Lớp này chứa ảnh Carousel */
+.carousel-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  /* Cấu trúc 2 đường vát chéo, tạo mũi tên xuống */
+  /* clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); */
+  /* Cấu trúc 3 đường cắt (Zig-zag ở đáy) */
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 95%, 50% 85%, 25% 95%, 0 85%);
+}
+
+.wave-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.wave-slide.active {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .carousel-layer {
+    width: 200%;
+  }
+}

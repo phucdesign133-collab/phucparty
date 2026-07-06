@@ -1,0 +1,57 @@
+import React, { useMemo } from "react";
+import { Link } from "react-router-dom";
+import "./eventSection.css";
+import MenuIconEventSection from "./MenuIconEventSection";
+
+const EventSection = ({ data, category, activeFilter, setActiveFilter, currentSlug }) => {
+  // 1. Khai báo hook ở cấp cao nhất - KHÔNG ĐẶT TRONG IF/ELSE
+  const sorted = useMemo(() => {
+    if (!data) return [];
+    return [...data].sort((a, b) => {
+      const timeA = a.time || a.date || a.contactInfo?.date || "2000-01-01";
+      const timeB = b.time || b.date || b.contactInfo?.date || "2000-01-01";
+      return new Date(timeB) - new Date(timeA);
+    });
+  }, [data]);
+
+  // 2. Logic lọc vẫn nằm trong useMemo nhưng không chứa Hook nào khác bên trong
+  const displayPosts = useMemo(() => {
+    if (currentSlug) {
+      const currentPost = sorted.find((item) => item.slug === currentSlug);
+      if (!currentPost) return [];
+      return sorted
+        .filter((item) => {
+          if (item.slug === currentSlug) return false;
+          const currentCats = Array.isArray(currentPost.subCategory) ? currentPost.subCategory : [currentPost.subCategory].filter(Boolean);
+          const itemCats = Array.isArray(item.subCategory) ? item.subCategory : [item.subCategory].filter(Boolean);
+          return itemCats.some((cat) => currentCats.includes(cat));
+        })
+        .sort(() => 0.5 - Math.random());
+    } else {
+      return sorted.filter((item) => {
+        const itemCats = Array.isArray(item.subCategory) ? item.subCategory : [item.subCategory].filter(Boolean);
+        return item.category === category && (activeFilter === "all" || itemCats.includes(activeFilter));
+      });
+    }
+  }, [currentSlug, category, activeFilter, sorted]);
+
+  // 3. Render giao diện
+  return (
+    <div className="event-section-container">
+      {!currentSlug && <MenuIconEventSection category={category} activeFilter={activeFilter} setActiveFilter={setActiveFilter} />}
+      <div className="gallery-grid">
+        {displayPosts.map((project) => (
+          <Link key={project.slug} to={`/post/${project.slug}`} className="gallery-item">
+            <img src={`/phucparty/img/${project?.files?.[0] || "default.jpg"}`} alt={project?.title || "Dự án"} loading="lazy" />
+            <div className="item-info">
+              <p className="project-name">{project?.title}</p>
+              {project.category !== "thiet-ke" && <p className="project-time">Thời gian: {project.time}</p>}
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default EventSection;

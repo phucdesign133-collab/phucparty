@@ -52,9 +52,8 @@ body {
 /* Trang chính LuckySpinParty */
 .party-container {
   flex: 1;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .party-title {
@@ -138,7 +137,7 @@ body {
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   display: grid;
   /* Chia đều làm 4 cột trên màn hình máy tính, tự co giãn trên điện thoại */
@@ -203,11 +202,57 @@ body {
 }
 
 .footer-bottom {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 40px auto 0 auto;
   padding-top: 20px;
   border-top: 1px solid #4a4a4a;
   text-align: center;
   font-size: 0.85rem;
   color: #636e72;
+}
+.back-to-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 45px;
+  height: 45px;
+  background-color: #6c5ce7; /* Màu tím đồng bộ thương hiệu */
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.4);
+  z-index: 9999; /* Đảm bảo luôn nằm trên mọi element */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+  background-color: #5b4cc4;
+  transform: translateY(-5px); /* Hiệu ứng bay nhẹ lên khi hovers */
+}
+
+@media (max-width: 768px) {
+  /* Khống chế hoàn toàn khối container bọc ngoài */
+  .party-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    padding-left: 15px !important; /* Giữ khoảng cách đệm nhẹ 2 bên */
+    padding-right: 15px !important;
+    /* overflow-hidden: hidden !important; */
+    box-sizing: border-box !important;
+  }
+  
+  .back-to-top-btn {
+    bottom: 25px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+  }
 }

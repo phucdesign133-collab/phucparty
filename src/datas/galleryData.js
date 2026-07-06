@@ -1,0 +1,1026 @@
+//Dữ liệu gốc
+export const data = {
+  // ------------------------------------------------------------------------------x-----------------------------------------
+  events: {
+    "sinh-nhat-be-hien-long": {
+      id: 1,
+      slug: "sinh-nhat-be-hien-long",
+      title: "Sinh nhật bé Hiển Long",
+      category: "su-kien", // Dùng để lọc và quyết định label
+      subCategory: "sinh-nhat", // Dùng để lọc ở subTab
+      date: "28.01.2024", // Định dạng chuẩn YYYY-MM-DD để dễ sắp xếp/lọc
+      files: [
+        "sinhnhat-beLong-1.jpg",
+        "sinhnhat-beLong-2.jpg",
+        "sinhnhat-beLong-3.jpg",
+        "sinhnhat-beLong-4.jpg",
+        "sinhnhat-beLong-5.jpg",
+        "sinhnhat-beLong-6.jpg",
+        "sinhnhat-beLong-7.jpg",
+        "sinhnhat-beLong-8.jpg",
+        "sinhnhat-beLong-9.jpg",
+        "sinhnhat-beLong-10.jpg",
+        "sinhnhat-beLong-11.jpg",
+        "sinhnhat-beLong-12.jpg",
+        "sinhnhat-beLong-13.jpg",
+        "sinhnhat-beLong-14.jpg",
+        "sinhnhat-beLong-15.jpg",
+        "sinhnhat-beLong-16.jpg",
+        "sinhnhat-beLong-17.jpg",
+        "sinhnhat-beLong-18.jpg",
+        "sinhnhat-beLong-19.jpg",
+        "sinhnhat-beLong-20.jpg",
+      ],
+      contactInfo: {
+        address: "McDonald's Phú Lâm",
+        brandName: "Phúc Party",
+      },
+    },
+    "sinh-nhat-be-bao-mi": {
+      id: 2,
+      slug: "sinh-nhat-be-bao-mi",
+      title: "Sinh nhật bé Bảo Mi",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "sinh-nhat", // Tầng 2 (Icon con)
+      date: "2023-10-13",
+      files: [
+        "sinhnhat-bebaomi-2.jpg",
+        "sinhnhat-bebaomi-3.jpg",
+        "sinhnhat-bebaomi-4.jpg",
+        "sinhnhat-bebaomi-5.jpg",
+        "sinhnhat-bebaomi-6.jpg",
+        "sinhnhat-bebaomi-7.jpg",
+        "sinhnhat-bebaomi-8.jpg",
+        "sinhnhat-bebaomi-9.jpg",
+        "sinhnhat-bebaomi-10.jpg",
+        "sinhnhat-bebaomi-1.jpg",
+      ],
+      contactInfo: {
+        address: "KFC Tân Hòa Đông",
+        brandName: "Phúc Party",
+      },
+    },
+    "sinh-nhat-be-bao-tran": {
+      id: 3,
+      slug: "sinh-nhat-be-bao-tran",
+      title: "Sinh nhật bé Bảo Trân",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "sinh-nhat", // Tầng 2 (Icon con)
+      date: "2023-11-02",
+      files: [
+        "sinhnhat-beBaoTran-5.jpg",
+        "sinhnhat-beBaoTran-2.jpg",
+        "sinhnhat-beBaoTran-3.jpg",
+        "sinhnhat-beBaoTran-4.jpg",
+        "sinhnhat-beBaoTran-1.jpg",
+        "sinhnhat-beBaoTran-6.jpg",
+        "sinhnhat-beBaoTran-7.jpg",
+      ],
+      contactInfo: {
+        address: "McDonald's Phú Lâm",
+        brandName: "Phúc Party",
+      },
+    },
+    "sinh-nhat-be-nhat-anh": {
+      id: 4,
+      slug: "sinh-nhat-be-nhat-anh",
+      title: "Sinh nhật bé Nhật Anh",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "sinh-nhat", // Tầng 2 (Icon con)
+      date: "2023-11-03",
+      files: [
+        "sinhnhat-beNhatAnh-1.jpg",
+        "sinhnhat-beNhatAnh-2.jpg",
+        "sinhnhat-beNhatAnh-3.jpg",
+        "sinhnhat-beNhatAnh-4.jpg",
+        "sinhnhat-beNhatAnh-1.jpg",
+        "sinhnhat-beNhatAnh-6.jpg",
+        "sinhnhat-beNhatAnh-7.jpg",
+        "sinhnhat-beNhatAnh-8.jpg",
+        "sinhnhat-beNhatAnh-9.jpg",
+      ],
+      contactInfo: {
+        address: "McDonald's Phú Lâm",
+        brandName: "Phúc Party",
+      },
+    },
+    "sinh-nhat-be-thien-kim": {
+      id: 5,
+      slug: "sinh-nhat-be-thien-kim",
+      title: "Sinh nhật bé Thiên Kim",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "sinh-nhat", // Tầng 2 (Icon con)
+      date: "2023-11-03",
+      files: [
+        "sinhnhat-bethienkim-1.jpg",
+        "sinhnhat-bethienkim-26.jpg",
+        "sinhnhat-bethienkim-3.jpg",
+        "sinhnhat-bethienkim-4.jpg",
+        "sinhnhat-bethienkim-1.jpg",
+        "sinhnhat-bethienkim-6.jpg",
+        "sinhnhat-bethienkim-7.jpg",
+        "sinhnhat-bethienkim-8.jpg",
+        "sinhnhat-bethienkim-2.jpg",
+        "sinhnhat-bethienkim-9.jpg",
+        "sinhnhat-bethienkim-10.jpg",
+        "sinhnhat-bethienkim-11.jpg",
+        "sinhnhat-bethienkim-12.jpg",
+        "sinhnhat-bethienkim-13.jpg",
+        "sinhnhat-bethienkim-14.jpg",
+        "sinhnhat-bethienkim-15.jpg",
+        "sinhnhat-bethienkim-16.jpg",
+        "sinhnhat-bethienkim-17.jpg",
+        "sinhnhat-bethienkim-18.jpg",
+        "sinhnhat-bethienkim-19.jpg",
+        "sinhnhat-bethienkim-20.jpg",
+        "sinhnhat-bethienkim-21.jpg",
+        "sinhnhat-bethienkim-22.jpg",
+        "sinhnhat-bethienkim-23.jpg",
+        "sinhnhat-bethienkim-24.jpg",
+        "sinhnhat-bethienkim-25.jpg",
+        "sinhnhat-bethienkim-27.jpg",
+        "sinhnhat-bethienkim-28.jpg",
+        "sinhnhat-bethienkim-29.jpg",
+        "sinhnhat-bethienkim-30.jpg",
+      ],
+      contactInfo: {
+        address: "McDonald's Phú Lâm",
+        brandName: "Phúc Party",
+      },
+    },
+    "sinh-nhat-mr-minh-quyen": {
+      id: 6,
+      slug: "sinh-nhat-mr-minh-quyen",
+      title: "Sinh nhật Mr. Minh Quyền",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "sinh-nhat", // Tầng 2 (Icon con)
+      date: "2023-08-18",
+      contactInfo: {
+        address: "Nhà hàng Lẩu Tôm",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "sinhnhat-Mr.Quyen-21.jpg",
+        "sinhnhat-Mr.Quyen-2.jpg",
+        "sinhnhat-Mr.Quyen-1.jpg",
+        "sinhnhat-Mr.Quyen-3.jpg",
+        "sinhnhat-Mr.Quyen-4.jpg",
+        "sinhnhat-Mr.Quyen-1.jpg",
+        "sinhnhat-Mr.Quyen-6.jpg",
+        "sinhnhat-Mr.Quyen-7.jpg",
+        "sinhnhat-Mr.Quyen-8.jpg",
+        "sinhnhat-Mr.Quyen-2.jpg",
+        "sinhnhat-Mr.Quyen-9.jpg",
+        "sinhnhat-Mr.Quyen-10.jpg",
+        "sinhnhat-Mr.Quyen-11.jpg",
+        "sinhnhat-Mr.Quyen-12.jpg",
+        "sinhnhat-Mr.Quyen-13.jpg",
+        "sinhnhat-Mr.Quyen-14.jpg",
+        "sinhnhat-Mr.Quyen-15.jpg",
+        "sinhnhat-Mr.Quyen-16.jpg",
+        "sinhnhat-Mr.Quyen-17.jpg",
+        "sinhnhat-Mr.Quyen-18.jpg",
+        "sinhnhat-Mr.Quyen-19.jpg",
+        "sinhnhat-Mr.Quyen-20.jpg",
+        "sinhnhat-Mr.Quyen-22.jpg",
+        "sinhnhat-Mr.Quyen-23.jpg",
+      ],
+    },
+    "mam-non-da-ly-huong": {
+      id: 7,
+      slug: "mam-non-da-ly-huong",
+      title: "Trung thu - mầm non Dạ Lý Hương",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "le-hoi", // Tầng 2 (Icon con)
+      date: "2023-10-13",
+      contactInfo: {
+        address: "Trường mầm non Dạ Lý Hương",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "mamnon-dalyhuong-1.webp",
+        "mamnon-dalyhuong-2.webp",
+        "mamnon-dalyhuong-3.webp",
+        "mamnon-dalyhuong-4.webp",
+        "mamnon-dalyhuong-5.webp",
+        "mamnon-dalyhuong-6.webp",
+        "mamnon-dalyhuong-7.webp",
+        "mamnon-dalyhuong-8.webp",
+        "mamnon-dalyhuong-9.webp",
+        "mamnon-dalyhuong-10.webp",
+        "mamnon-dalyhuong-11.webp",
+        "mamnon-dalyhuong-20.webp",
+        "mamnon-dalyhuong-13.webp",
+        "mamnon-dalyhuong-14.webp",
+        "mamnon-dalyhuong-15.webp",
+        "mamnon-dalyhuong-16.webp",
+        "mamnon-dalyhuong-17.webp",
+        "mamnon-dalyhuong-18.webp",
+        "mamnon-dalyhuong-19.webp",
+        "mamnon-dalyhuong-20.webp",
+      ],
+    },
+    "khu-vui-choi-dam-sen": {
+      id: 8,
+      slug: "khu-vui-choi-dam-sen",
+      title: "Quốc tế Thiếu Nhi",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "le-hoi", // Tầng 2 (Icon con)
+      date: "2025-06-01",
+      contactInfo: {
+        address: "Đầm Sen Park",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "khuvuichoi-damsen-1.webp",
+        "khuvuichoi-damsen-2.webp",
+        "khuvuichoi-damsen-3.webp",
+        "khuvuichoi-damsen-4.webp",
+        "khuvuichoi-damsen-5.webp",
+        "khuvuichoi-damsen-6.webp",
+        "khuvuichoi-damsen-7.webp",
+      ],
+    },
+    "nha-luu-tru-0-dong": {
+      id: 9,
+      slug: "nha-luu-tru-0-dong",
+      title: "Trung thu - Nhà lưu trú 0 đồng",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "thien-nguyen", // Tầng 2 (Icon con)
+      date: "2023-09-15",
+      contactInfo: {
+        address: "Nhà Lưu trú 0 Đồng - Thủ Đức",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "thiennguyen-nhaluutru0dong-1.webp",
+        "thiennguyen-nhaluutru0dong-2.webp",
+        "thiennguyen-nhaluutru0dong-3.webp",
+        "thiennguyen-nhaluutru0dong-4.webp",
+        "thiennguyen-nhaluutru0dong-5.webp",
+        "thiennguyen-nhaluutru0dong-6.webp",
+        "thiennguyen-nhaluutru0dong-7.webp",
+        "thiennguyen-nhaluutru0dong-9.webp",
+        "thiennguyen-nhaluutru0dong-10.webp",
+        "thiennguyen-nhaluutru0dong-11.webp",
+        "thiennguyen-nhaluutru0dong-12.webp",
+        "thiennguyen-nhaluutru0dong-13.webp",
+        "thiennguyen-nhaluutru0dong-14.webp",
+      ],
+    },
+    "mai-am-huynh-de-nhu-nghia": {
+      id: 10,
+      slug: "mai-am-huynh-de-nhu-nghia",
+      title: "Trung thu - Mái ấm Huynh Đệ Như Nghĩa",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "thien-nguyen", // Tầng 2 (Icon con)
+      date: "2023-09-15",
+      contactInfo: {
+        address: "Mái ấm Huynh Đệ Như Nghĩa",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "thiennguyen-maiamhuynhdenhunghia-1.webp",
+        "thiennguyen-maiamhuynhdenhunghia-2.webp",
+        "thiennguyen-maiamhuynhdenhunghia-3.webp",
+        "thiennguyen-maiamhuynhdenhunghia-4.webp",
+      ],
+    },
+    "lop-hoc-tinh-thuong-c4-pham-hung": {
+      id: 11,
+      slug: "lop-hoc-tinh-thuong-c4-pham-hung",
+      title: "Trung thu - Lớp học tình thương - C4 Phạm Hùng, Quận 8",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "thien-nguyen", // Tầng 2 (Icon con)
+      date: "2023-10-13",
+      contactInfo: {
+        address: "Sân bóng C4 Phạm Hùng",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "thiennguyen-lophoctinhthuong-0.webp",
+        "thiennguyen-lophoctinhthuong-2.webp",
+        "thiennguyen-lophoctinhthuong-3.webp",
+        "thiennguyen-lophoctinhthuong-4.webp",
+        "thiennguyen-lophoctinhthuong-1.webp",
+      ],
+    },
+    "mung-tho-cu-ba-phan-thi-so": {
+      id: 12,
+      slug: "mung-tho-cu-ba-phan-thi-so",
+      title: "Mừng thọ - cụ bà Phan Thị Sơ",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "mung-tho", // Tầng 2 (Icon con)
+      date: "2023-08-26",
+      contactInfo: {
+        address: "Nhà hàng Ái Huê",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "mungtho-cubalethiso-0.webp",
+        "mungtho-cubalethiso-17.webp",
+        "mungtho-cubalethiso-12.webp",
+        "mungtho-cubalethiso-3.webp",
+        "mungtho-cubalethiso-5.webp",
+        "mungtho-cubalethiso-11.webp",
+        // "mungtho-cubalethiso-1.webp",
+        "mungtho-cubalethiso-4.webp",
+        "mungtho-cubalethiso-6.webp",
+        "mungtho-cubalethiso-7.webp",
+        "mungtho-cubalethiso-8.webp",
+        "mungtho-cubalethiso-9.webp",
+        "mungtho-cubalethiso-10.webp",
+        "mungtho-cubalethiso-13.webp",
+        "mungtho-cubalethiso-14.webp",
+        "mungtho-cubalethiso-15.webp",
+        "mungtho-cubalethiso-16.webp",
+        // "mungtho-cubalethiso-17.webp",
+        "mungtho-cubalethiso-18.webp",
+        "mungtho-cubalethiso-19.webp",
+        "mungtho-cubalethiso-20.webp",
+      ],
+    },
+    "sinh-nhat-be-nha-doanh": {
+      id: 13,
+      slug: "sinh-nhat-be-nha-doanh",
+      title: "Sinh nhật bé Nhã Doanh",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "sinh-nhat", // Tầng 2 (Icon con)
+      date: "2023-11.14",
+      contactInfo: {
+        address: "McDonald's Phú Lâm",
+        brandName: "Phúc Party",
+      },
+      files: ["sinhnhat_benhadoanh.jpg"],
+    },
+    "sinh-nhat-be-mai-lam-vi-hung": {
+      id: 14,
+      slug: "sinh-nhat-be-mai-lam-vi-hung",
+      title: "Sinh nhật bé Mai Lâm & Vĩ Hùng",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "sinh-nhat", // Tầng 2 (Icon con)
+      date: "2023-11.26",
+      contactInfo: {
+        address: "McDonald's Phú Lâm",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "sinhnhat-mailam-vihung-1.webp",
+        "sinhnhat-mailam-vihung-2.webp",
+        "sinhnhat-mailam-vihung-3.webp",
+        "sinhnhat-mailam-vihung-4.webp",
+        "sinhnhat-mailam-vihung-5.webp",
+        "sinhnhat-mailam-vihung-6.webp",
+        "sinhnhat-mailam-vihung-7.webp",
+        "sinhnhat-mailam-vihung-8.webp",
+        "sinhnhat-mailam-vihung-9.webp",
+        "sinhnhat-mailam-vihung-10.webp",
+        "sinhnhat-mailam-vihung-11.webp",
+        "sinhnhat-mailam-vihung-12.webp",
+        "sinhnhat-mailam-vihung-13.webp",
+        "sinhnhat-mailam-vihung-14.webp",
+        "sinhnhat-mailam-vihung-15.webp",
+        "sinhnhat-mailam-vihung-16.webp",
+        "sinhnhat-mailam-vihung-17.webp",
+        "sinhnhat-mailam-vihung-18.webp",
+        "sinhnhat-mailam-vihung-19.webp",
+        "sinhnhat-mailam-vihung-20.webp",
+      ],
+    },
+    "hao-hao-concert": {
+      id: 15,
+      slug: "hao-hao-concert",
+      title: "Hảo Hảo Concert",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "le-hoi", // Tầng 2 (Icon con)
+      date: "2025-12-15",
+      contactInfo: {
+        // address: "McDonald's Phú Lâm",
+        brandName: "Phúc Party",
+      },
+      files: ["haohao-concert-1.webp", "haohao-concert-2.webp", "haohao-concert-3.webp"],
+    },
+    "quoc-te-thieu-nhi-nha-xuat-ban-tre": {
+      id: 16,
+      slug: "quoc-te-thieu-nhi-nha-xuat-ban-tre",
+      title: "Quốc tế Thiếu nhi - Nhà xuất bản Trẻ",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "le-hoi", // Tầng 2 (Icon con)
+      date: "2026-06.01",
+      contactInfo: {
+        address: "Nhà xuất bản Trẻ - 151 Lý Chính Thắng. Quận 3, TP.HCM",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "quoctethieunhi-nhaxuatbantre-2.webp",
+        "quoctethieunhi-nhaxuatbantre-1.webp",
+        "quoctethieunhi-nhaxuatbantre-4.webp",
+        "quoctethieunhi-nhaxuatbantre-5.webp",
+        "quoctethieunhi-nhaxuatbantre-3.webp",
+        "quoctethieunhi-nhaxuatbantre-6.webp",
+        "quoctethieunhi-nhaxuatbantre-7.webp",
+        "quoctethieunhi-nhaxuatbantre-10.webp",
+        "quoctethieunhi-nhaxuatbantre-11.webp",
+        "quoctethieunhi-nhaxuatbantre-12.webp",
+        "quoctethieunhi-nhaxuatbantre-13.webp",
+        "quoctethieunhi-nhaxuatbantre-22.webp",
+        "quoctethieunhi-nhaxuatbantre-15.webp",
+        "quoctethieunhi-nhaxuatbantre-27.webp",
+        "quoctethieunhi-nhaxuatbantre-17.webp",
+        "quoctethieunhi-nhaxuatbantre-18.webp",
+        "quoctethieunhi-nhaxuatbantre-19.webp",
+        "quoctethieunhi-nhaxuatbantre-20.webp",
+      ],
+    },
+    "trung-thu-cong-an-huyen-ben-luc": {
+      id: 17,
+      slug: "trung-thu-cong-an-huyen-ben-luc",
+      title: "Trung thu - Công an Huyện Bến Lức",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "le-hoi", // Tầng 2 (Icon con)
+      date: "2024.09.16",
+      contactInfo: {
+        address: "Công an Huyện Bến Lức",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "trungthu-cahbenluc-1.webp",
+        "trungthu-cahbenluc-2.webp",
+        "trungthu-cahbenluc-4.webp",
+        "trungthu-cahbenluc-5.webp",
+        "trungthu-cahbenluc-5.webp",
+        "trungthu-cahbenluc-6.webp",
+        "trungthu-cahbenluc-7.webp",
+        "trungthu-cahbenluc-8.webp",
+        "trungthu-cahbenluc-9.webp",
+        "trungthu-cahbenluc-10.webp",
+        "trungthu-cahbenluc-11.webp",
+        "trungthu-cahbenluc-12.webp",
+        "trungthu-cahbenluc-13.webp",
+        "trungthu-cahbenluc-24.webp",
+        "trungthu-cahbenluc-15.webp",
+        "trungthu-cahbenluc-16.webp",
+      ],
+    },
+    "thien-nguyen-thuong-nhieu-bien-oi": {
+      id: 18,
+      slug: "thien-nguyen-thuong-nhieu-bien-oi",
+      title: "Thiện nguyện - chủ đề Biển ơi",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["le-hoi", "thien-nguyen"], // Tầng 2 (Icon con)
+      date: "2026.05.31",
+      contactInfo: {
+        address: "Bệnh viện Nhi Đồng 2",
+        owner: "Thương Nhiều",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "thiennguyen-thuongnhieu6-1.webp",
+        "thiennguyen-thuongnhieu6-2.webp",
+        "thiennguyen-thuongnhieu6-4.webp",
+        "thiennguyen-thuongnhieu6-5.webp",
+        "thiennguyen-thuongnhieu6-5.webp",
+        "thiennguyen-thuongnhieu6-6.webp",
+        "thiennguyen-thuongnhieu6-7.webp",
+        "thiennguyen-thuongnhieu6-8.webp",
+        "thiennguyen-thuongnhieu6-9.webp",
+        "thiennguyen-thuongnhieu6-10.webp",
+      ],
+    },
+    "year-end-party-cong-ty-luat-hoang-ha": {
+      id: 19,
+      slug: "year-end-party-cong-ty-luat-hoang-ha",
+      title: "Year End Party công ty Luật Lưỡng Hà",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "yep", // Tầng 2 (Icon con)
+      date: "2024.12.15",
+      contactInfo: {
+        address: "Hoa viên 102",
+        brandName: "Phúc Party",
+      },
+      files: ["yep-luathoangha.jpg"],
+    },
+    "thoi-noi-hoang-anh-hoang-quan": {
+      id: 20,
+      slug: "thoi-noi-hoang-anh-hoang-quan",
+      title: "Thôi nôi Hoàng Anh & Hoàng Quân",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "thoi-noi", // Tầng 2 (Icon con)
+      date: "2024.12.10",
+      contactInfo: {
+        // address: "Nhà hàng 7 Kỳ Quan",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "thoinoi-hoanganh-hoangquan-1.webp",
+        "thoinoi-hoanganh-hoangquan-2.webp",
+        "thoinoi-hoanganh-hoangquan-3.webp",
+        "thoinoi-hoanganh-hoangquan-4.webp",
+        "thoinoi-hoanganh-hoangquan-5.webp",
+        "thoinoi-hoanganh-hoangquan-6.webp",
+        "thoinoi-hoanganh-hoangquan-7.webp",
+        "thoinoi-hoanganh-hoangquan-8.webp",
+        "thoinoi-hoanganh-hoangquan-9.webp",
+        "thoinoi-hoanganh-hoangquan-10.webp",
+      ],
+    },
+    "blast-off-countdown-2025": {
+      id: 21,
+      slug: "blast-off-countdown-2025",
+      title: "Blash Off Countdown 2025",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "le-hoi", // Tầng 2 (Icon con)
+      date: "2025.01.01",
+      contactInfo: {
+        address: "Landmark 81",
+        brandName: "Phúc Party",
+      },
+      files: ["boc25-1.webp", "boc25-2.webp", "boc25-3.webp", "boc25-4.webp", "boc25-5.webp"],
+    },
+    "day-thang-be-tue-nghi": {
+      id: 21,
+      slug: "day-thang-be-tue-nghi",
+      title: "Đầy tháng bé Tuệ Nghi (Xí Muội)",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "fullmonth", // Tầng 2 (Icon con)
+      date: "2025.05.14",
+      contactInfo: {
+        // address: "McDonald's Phú Lâm",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "fullmonth-betuenghi-9.webp",
+        "fullmonth-betuenghi-2.webp",
+        "fullmonth-betuenghi-3.webp",
+        "fullmonth-betuenghi-4.webp",
+        "fullmonth-betuenghi-5.webp",
+        "fullmonth-betuenghi-6.webp",
+        "fullmonth-betuenghi-1.webp",
+        "fullmonth-betuenghi-8.webp",
+        "fullmonth-betuenghi-7.webp",
+      ],
+    },
+  },
+  // ------------------------------------------------------------------------------x-----------------------------------------
+  designs: {
+    "thiet-ke-logo-yen-nguyen-chat": {
+      id: 105,
+      slug: "thiet-ke-logo-yen-nguyen-chat",
+      title: "Yến Nguyên Chất - Logo Branding",
+      category: "thiet-ke",
+      date: "2022-08-03",
+      subCategory: ["logo", "sticker", "package", "web-app"], // Tầng 2 (Icon con)
+      files: ["logo-yennguyenchat.jpg"],
+      contactInfo: {
+        address: "Nha Trang",
+        owner: "Yến Nguyên Chất - Mr. Đức & Vietsoft Software Solutions Company",
+        link: "hhttps://www.facebook.com/minhduc.nguyen.967",
+        brandName: "Phuc Design", // Dùng để hiển thị ở câu cảm ơn
+      },
+    },
+    "thiet-ke-logo-golden-bakery": {
+      id: 104,
+      slug: "thiet-ke-logo-golden-bakery",
+      title: "Golden Bakery - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "sign"], // Tầng 2 (Icon con)
+      files: ["logo-golden-bakery.jpg"],
+      contactInfo: {
+        phone: "090.6655.610",
+        address: "CN1: 195 Lê Hồng Phong, Phường 8, TP. Vũng Tàu - CN2: 126A9 Hoàng Hoa Thám, Phường 2, TP. Vũng Tàu",
+        link: "https://www.facebook.com/goldenbakeryvungtau",
+        owner: "Golden Bakery",
+        date: "15.12.2022",
+      },
+    },
+    "thiet-ke-logo-vifmilk": {
+      id: 112,
+      slug: "thiet-ke-logo-vifmilk",
+      title: "VIFMILK- Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "web-app"], // Tầng 2 (Icon con)
+      files: ["logo-vifmilk.jpg"],
+      contactInfo: {
+        phone: "024.6282 4344 - Fax: 024.6282 4263",
+        address: "Tầng 5 tòa nhà 29 T1,Đường Hoàng Đạo Thúy,Phường Trung Hòa,Quận Cầu Giấy, Hà Nội",
+        owner: "CÔNG TY CỔ PHẦN PHÁT TRIỂN SỮA TƯƠI VIỆT NAM – VIFMILK",
+        link: "vifmilk.vn",
+        date: "28.08.2022",
+      },
+    },
+    "thiet-ke-logo-379shop": {
+      id: 101,
+      slug: "thiet-ke-logo-379shop",
+      title: "379Shop- Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "sticker"], // Tầng 2 (Icon con)
+      // date: "2022.11.21",
+      // date:"21.11.2022",
+      files: ["logo-379shop.jpg"],
+      contactInfo: {
+        address: "57A Tháp Mười, Phường 2, Quận 6, TP.HCM",
+        owner: "SGC_Shop",
+        date: "20.11.2022",
+      },
+    },
+    "thiet-ke-logo-bach-hoa-cho-lon": {
+      id: 102,
+      slug: "thiet-ke-logo-bach-hoa-cho-lon",
+      title: "Bách Hóa Chợ Lớn- Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "web-app"], // Tầng 2 (Icon con)
+      files: ["logo-bhcl.jpg"],
+      contactInfo: {
+        address: "184/36/7 Bãi Sậy, Phường 4, Quận 6, TP. HCM",
+        phone: "0934.006.112 (Mr.Kiệt)",
+        owner: "VĂN PHÒNG PHẨM & BÁCH HOÁ MR.K",
+        link: "bachhoacholon.com",
+        date: "28.08.2022",
+      },
+    },
+    "thiet-ke-logo-bep-kvh": {
+      id: 103,
+      slug: "thiet-ke-logo-bep-kvh",
+      title: "Bếp Kính Vạn Hoa- Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "sticker"], // Tầng 2 (Icon con)
+      files: ["logo-bep-kvh.jpg"],
+      contactInfo: {
+        address: "Bình Dương",
+        phone: " 098.167.2690 (Zalo)",
+        owner: "Bếp Kính Vạn Hoa",
+        date: "13.01.2023",
+      },
+    },
+    "thiet-ke-logo-yen-sao-quyen-yen": {
+      id: 104,
+      slug: "thiet-ke-logo-yen-sao-quyen-yen",
+      title: "Yến sào Quyền Yến- Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "sticker"], // Tầng 2 (Icon con)
+      files: ["logo-yensao-quyenyen.jpg"],
+      contactInfo: {
+        address: "Thôn Bình Tiến 1, xã Phước Minh, Bù Gia Mập, Bình Phước.",
+        phone: " 0915.605.091 - 0375.234.783 (Mrs. Phượng)",
+        owner: "Yến sào Quyền Yến",
+        date: "29.08.2023",
+        link: "https://www.facebook.com/profile.php?id=100032023171821&__tn__=-UK*F",
+      },
+    },
+    "thiet-ke-logo-bao-hiem-loc-hung": {
+      id: 107,
+      slug: "thiet-ke-logo-bao-hiem-loc-hung",
+      title: "Bảo hiểm Lộc Hưng- Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "business-card"], // Tầng 2 (Icon con)
+      files: ["logo-baohiem-lochung.jpg"],
+      contactInfo: {
+        owner: "Công ty Bảo hiểm Lộc Hưng",
+        date: "28.08.2023",
+      },
+    },
+    "thiet-ke-logo-fairy-lashes": {
+      id: 108,
+      slug: "thiet-ke-logo-fairy-lashes",
+      title: "Fairy Lashes- Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: "logo", // Tầng 2 (Icon con)
+      files: ["logo-fairy-lashes.jpg"],
+      contactInfo: {
+        owner: "Công ty Giải pháp Phần mềm Vietsoft",
+        date: "21.11.2021",
+      },
+    },
+    "thiet-ke-logo-katty": {
+      id: 109,
+      slug: "thiet-ke-logo-katty",
+      title: "Katty- Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "business-card", "voucher"], // Tầng 2 (Icon con)
+      files: ["logo-katty.jpg"],
+      contactInfo: {
+        phone: "0909.261.992 (Zalo - Ms. Vi) - 0969.252.422 (Zalo - Ms. My)",
+        address: "10.11 lô A Chung cư 109 Nguyễn Biểu, P.1, Q.5, TP. HCM",
+        owner: "Katty Spa",
+        date: "21.10.2022",
+      },
+    },
+    "thiet-ke-logo-me-hau": {
+      id: 110,
+      slug: "thiet-ke-logo-me-hau",
+      title: "Mẹ Hấu- Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "posm"], // Tầng 2 (Icon con)
+      files: ["logo-mehau.jpg"],
+      contactInfo: {
+        phone: "090.3731.703",
+        address: "243/70 Hoàng Diệu, P.4, Q. 4 (hẻm kế cổng chùa Giác Nguyên 41)",
+        owner: "Mẹ Hấu",
+        date: "13.01.2023",
+      },
+    },
+    "thiet-ke-logo-suc-khoe-xanh": {
+      id: 111,
+      slug: "thiet-ke-logo-suc-khoe-xanh",
+      title: "Sức khỏe Xanh- Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "business-card"], // Tầng 2 (Icon con)
+      files: ["logo-suckhoexanh.jpg"],
+      contactInfo: {
+        phone: "0908.396.007 (Giám đốc - Mr. Lễ Sinh)",
+        address: "161/7/3 Bình Trị Đông, P. BTĐ A, Q. Bình Tân, TP. HCM",
+        owner: "Công ty TNHH TM SỨC KHOẺ XANH",
+        date: "26.08.2022",
+      },
+    },
+    "thiet-ke-logo-tuong-viet": {
+      id: 112,
+      slug: "thiet-ke-logo-tuong-viet",
+      title: "Tường Việt- Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "business-card", "web-app"], // Tầng 2 (Icon con)
+      files: ["logo-tuongviet.jpg"],
+      contactInfo: {
+        phone: "0907.188.575 (Mr. Phương) - huynhphuongxd@gmail.com",
+        address:
+          "➪ HỒ CHÍ MINH: Số B2-OF08, Tòa nhà Q7 Boulevar, Phường Phú Mỹ, Quận 7, TP. Hồ Chí Minh. - ➪ NINH THUẬN: 324 Ngô Gia Tự, Phường Tấn Tài, TP. Phan Rang - Tháp Chàm",
+        owner: "Công ty TNHH Xây dựng - Nội thất Tường Việt",
+        link: "tuongviet.co",
+        date: "03.08.2022",
+      },
+    },
+    "thiet-ke-logo-canatech": {
+      id: 113,
+      slug: "thiet-ke-logo-canatech",
+      title: "CANATECH - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "business-card", "uniform"], // Tầng 2 (Icon con)
+      files: ["logo-canatech.jpg"],
+      contactInfo: {
+        phone: "0907.188.575 (Mr. Phương) - huynhphuongxd@gmail.com",
+        address: " 590/E4 Cách Mạng Tháng Tám, Phường 11, Quận 3, TP. HCM.",
+        owner: "Công ty Cổ phần Đầu Tư CANATECH VIETNAM",
+        date: "29.08.2022",
+      },
+    },
+    "thiet-ke-logo-circle-monogram": {
+      id: 114,
+      slug: "thiet-ke-logo-circle-monogram",
+      title: "CIRCLE - BTML - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "business-card", "uniform"], // Tầng 2 (Icon con)
+      files: ["logo-circle.jpg"],
+      contactInfo: {
+        address: "908/5 Quang Trung, P. 8, Q. Gò Vấp.",
+        owner: "BTL Shop",
+        date: "25.11.2022",
+      },
+    },
+    "thiet-ke-logo-sai-gon-cap": {
+      id: 115,
+      slug: "thiet-ke-logo-sai-gon-cap",
+      title: "Saigon Cap - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "business-card", "sticker"], // Tầng 2 (Icon con)
+      files: ["logo-saigoncap.jpg"],
+      contactInfo: {
+        address: "57A Tháp Mười, Phường 2, Quận 6, TP. Hồ Chí Minh.",
+        owner: "SGC Shop",
+        date: "08.12.2022",
+      },
+    },
+    "thiet-ke-logo-thai-ipitiso-gallery": {
+      id: 116,
+      slug: "thiet-ke-logo-thai-ipitiso-gallery",
+      title: "THAI IPITISO GALLERY - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "business-card", "package"], // Tầng 2 (Icon con)
+      files: ["logo-thai.jpg"],
+      contactInfo: {
+        phone: "Wechat: cowcow999 - Whatsapp: 01133111696 - Hp: 0113311696 - 01133111595",
+        owner: "THAI IPITISO GALLERY",
+        link: "https://www.facebook.com/ThaiItipiso999",
+        date: "08.12.2022",
+      },
+    },
+    "thiet-ke-logo-nem-nuong-co-ba": {
+      id: 117,
+      slug: "thiet-ke-logo-nem-nuong-co-ba",
+      title: "Nem nướng Cô Ba - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "sticker", "sign", "posm"], // Tầng 2 (Icon con)
+      files: ["logo-nemnuong-coba.jpg"],
+      contactInfo: {
+        phone: "0707.93.23.03 (Mrs. Châu)",
+        owner: "Quán Nem Nướng Cô Ba Long An",
+        address: "289 Bùi Minh Trực, Phường 6, Quận 8, TP. HCM",
+        date: "29.08.2022",
+      },
+    },
+    "thiet-ke-logo-nha-tro-richhouse": {
+      id: 118,
+      slug: "thiet-ke-logo-nha-tro-richhouse",
+      title: "Nhà trọ Richhouse - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "web-app"], // Tầng 2 (Icon con)
+      files: ["logo-nhatro-richhouse.jpg"],
+      contactInfo: {
+        phone: "7028.36365050 - info@richfield.com",
+        owner: "Công ty Giải pháp Phần mềm Vietsoft & Nhà trọ RICHHOUSE",
+        address: "103 Lê Văn Lương, Nhà Bè, TP. HCM",
+        link: "nhatrorichhouse.com",
+        date: "03.08.2022",
+      },
+    },
+    "thiet-ke-logo-xtech": {
+      id: 118,
+      slug: "thiet-ke-logo-xtech",
+      title: "XTECH - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "web-app", "business-card"], // Tầng 2 (Icon con)
+      files: ["logo-xtech.jpg"],
+      contactInfo: {
+        phone: "7028.36365050 - info@richfield.com",
+        owner: "Công ty Giải pháp Phần mềm Vietsoft",
+        date: "13.01.2023",
+      },
+    },
+    "thiet-ke-logo-dong-phuc-vk": {
+      id: 119,
+      slug: "thiet-ke-dong-phuc-vk",
+      title: "D Đồng phục VK - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "web-app", "business-card"], // Tầng 2 (Icon con)
+      files: ["logo-dongphucvk.jpg"],
+      contactInfo: {
+        phone: "0905.552.004 - nguyenthivuha@gmail.com",
+        address: "131 Huỳnh Ngọc Huệ, Phường Hòa Khê, TP Đà Nẵng. - Chung cư Quang Thái, 111B Lý Thánh Tông, F.Tân Thới Hòa, Q.Tân Phú, Tp HCM.",
+        owner: "Công ty Giải pháp Phần mềm Vietsoft & Cửa hàng Đồng phục VK",
+        link: "dongphucvk.vn",
+        date: "03.08.2022",
+      },
+    },
+    "thiet-ke-logo-ant": {
+      id: 120,
+      slug: "thiet-ke-logo-ant",
+      title: "POS ANT - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "web-app"], // Tầng 2 (Icon con)
+      files: ["logo-ant.jpg"],
+      contactInfo: {
+        owner: "Công ty Giải pháp Phần mềm Vietsoft",
+        date: "21.11.2022",
+      },
+    },
+    "thiet-ke-logo-artisan": {
+      id: 121,
+      slug: "thiet-ke-logo-artisan",
+      title: "Artisan - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "web-app"], // Tầng 2 (Icon con)
+      files: ["logo-artisan-1.jpg", "logo-artisan-2.jpg"],
+      contactInfo: {
+        owner: "Công ty Giải pháp Phần mềm Vietsoft",
+        date: "20.11.2022",
+      },
+    },
+    "thiet-ke-logo-nail-beauty-supply": {
+      id: 122,
+      slug: "thiet-ke-nail-beauty-supply",
+      title: "Nail Beauty Supply - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "web-app"], // Tầng 2 (Icon con)
+      files: ["logo-nailbeauty-supply.jpg"],
+      contactInfo: {
+        owner: "Công ty Giải pháp Phần mềm Vietsoft & Ngành Nail",
+        date: "03.08.2022",
+      },
+    },
+    "thiet-ke-logo-nail-tech": {
+      id: 123,
+      slug: "thiet-ke-nail-tech",
+      title: "Nailtech - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "web-app"], // Tầng 2 (Icon con)
+      files: ["logo-nailtech-1.jpg", "logo-nailtech-2"],
+      contactInfo: {
+        owner: "Công ty Giải pháp Phần mềm Vietsoft & Ngành Nail",
+        date: "11.10.2022",
+      },
+    },
+    "thiet-ke-logo-nail-checkin": {
+      id: 124,
+      slug: "thiet-ke-nail-checkin",
+      title: "Nail Checkin - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "web-app"], // Tầng 2 (Icon con)
+      files: ["logo-nailcheckin-1.jpg", "logo-nailcheckin-2", "logo-nailcheckin-3"],
+      contactInfo: {
+        owner: "Công ty Giải pháp Phần mềm Vietsoft & Ngành Nail",
+        date: "11.10.2022",
+      },
+    },
+    "thiet-ke-logo-nail-spa-of-american": {
+      id: 126,
+      slug: "thiet-ke-nail-spa-of-american",
+      title: "Nailspa Of American - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "web-app"], // Tầng 2 (Icon con)
+      files: ["logo-naispa-of-american-1.jpg", "logo-naispa-of-american-2"],
+      contactInfo: {
+        owner: "Công ty Giải pháp Phần mềm Vietsoft & Ngành Nail",
+        date: "11.10.2022",
+      },
+    },
+    "thiet-ke-logo-metta-craft": {
+      id: 125,
+      slug: "thiet-ke-metta-craft",
+      title: "Metta Craft - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: "logo", // Tầng 2 (Icon con)
+      files: ["logo-mettacraft.jpg"],
+      contactInfo: {
+        owner: "Công ty Giải pháp Phần mềm Vietsoft & Ngành Nail",
+        address: "Suite 103, 119 Queen street, Charlottetown, PEI",
+        date: "03.08.2022",
+      },
+    },
+    "thiet-ke-logo-cow-awake-cafe": {
+      id: 127,
+      slug: "thiet-ke-cow-awake-cafe",
+      title: "Cow-Awake Cafe - Logo Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: ["logo", "sticker"], // Tầng 2 (Icon con)
+      files: ["logo-cow-awake.jpg"],
+      contactInfo: {
+        owner: "Công ty Giải pháp Phần mềm Vietsoft",
+        date: "21.11.2022",
+      },
+    },
+    "thi-cong-booth-xiaomi-17t": {
+      id: 128,
+      slug: "thi-cong-booth-xiaomi-17t",
+      title: "Xiamoni 17T - Booth Branding",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: "booth", // Tầng 2 (Icon con)
+      files: [
+        "thicong-booth-xiaomi17t-1.webp",
+        "thicong-booth-xiaomi17t-2.webp",
+        "thicong-booth-xiaomi17t-3.webp",
+        "thicong-booth-xiaomi17t-4.webp",
+        "thicong-booth-xiaomi17t-5.webp",
+        "thicong-booth-xiaomi17t-6.webp",
+        "thicong-booth-xiaomi17t-7.webp",
+        "thicong-booth-xiaomi17t-8.webp",
+        "thicong-booth-xiaomi17t-9.webp",
+        "thicong-booth-xiaomi17t-10.webp",
+        "thicong-booth-xiaomi17t-11.webp",
+        "thicong-booth-xiaomi17t-12.webp",
+        "thicong-booth-xiaomi17t-13.webp",
+        "thicong-booth-xiaomi17t-14.webp",
+      ],
+      contactInfo: {
+        // owner: "Công ty Giải pháp Phần mềm Vietsoft",
+        // date: "21.11.2022",
+        //
+      },
+    },
+    "mau-tham-khao-logo-monogram": {
+      id: 128,
+      slug: "mau-tham-khao-logo-monogram",
+      title: "Mẫu tham khảo - Logo Monogram",
+      category: "thiet-ke", // Tầng 1 (Tab lớn)
+      subCategory: "form", // Tầng 2 (Icon con)
+      files: [
+        "thamkhao-logomonogram-1.webp",
+        "thamkhao-logomonogram-2.webp",
+        "thamkhao-logomonogram-3.webp",
+        "thamkhao-logomonogram-4.webp",
+        "thamkhao-logomonogram-5.webp",
+        "thamkhao-logomonogram-6.webp",
+        "thamkhao-logomonogram-7.webp",
+        "thamkhao-logomonogram-8.webp",
+        "thamkhao-logomonogram-9.webp",
+        "thamkhao-logomonogram-10.webp",
+      ],
+      contactInfo: {
+        owner: "Cộng đồng",
+      },
+    },
+  },
+  pricing: {
+    "bang-gia-khai-truong": {
+      id: 21,
+      slug: "bang-gia-khai-truong",
+      title: "Giá niêm yết - Khai trương",
+      type: "price", // Thêm type để phân biệt
+      category: "bang-gia", // Tầng 1 (Tab lớn)
+      subCategory: "khai-truong", // Tầng 2 (Icon con)
+      files: ["khaitruong-banggia-4.webp", "khaitruong-banggia-1.webp", "khaitruong-banggia-2.webp", "khaitruong-banggia-3.webp"],
+    },
+  },
+};
+//gộp tất cả thành mảng
+export const galleryData = [...Object.values(data.events), ...Object.values(data.designs), ...Object.values(data.pricing)];
+// Export thêm các danh mục nếu cần cho bộ lọc (filter) ở allPost
+export const categories = ["su-kien", "thiet-ke", "bang-gia"];
