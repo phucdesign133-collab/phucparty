@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import "../components/allPost.css";
 import BackToTop from "../components/BackToTop";
-import BackgroundText from "../components/BackgroundText";
+import BackgroundText from "../components/backgroundText";
 import Breadcrumb from "../components/Breadcrumb";
 import EventSection from "../components/eventSection";
 import { data as rawData } from "../datas/galleryData"; // Nhập dữ liệu thô
