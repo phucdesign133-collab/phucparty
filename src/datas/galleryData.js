@@ -1,6 +1,6 @@
 //Dữ liệu gốc
 export const data = {
-  // ------------------------------------------------------------------------------x-----------------------------------------
+  // Event bao gồm id từ 1 đến 100
   events: {
     "sinh-nhat-be-hien-long": {
       id: 1,
@@ -226,7 +226,7 @@ export const data = {
       title: "Quốc tế Thiếu Nhi",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "le-hoi", // Tầng 2 (Icon con)
-      date: "2025-06-01",
+      date: "01.06.2025",
       contactInfo: {
         address: "Đầm Sen Park",
         brandName: "Phúc Party",
@@ -393,7 +393,7 @@ export const data = {
       title: "Hảo Hảo Concert",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "le-hoi", // Tầng 2 (Icon con)
-      date: "2025-12-15",
+      date: "12.2025",
       contactInfo: {
         // address: "McDonald's Phú Lâm",
         brandName: "Phúc Party",
@@ -406,7 +406,7 @@ export const data = {
       title: "Quốc tế Thiếu nhi - Nhà xuất bản Trẻ",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "le-hoi", // Tầng 2 (Icon con)
-      date: "2026-06.01",
+      date: "01.06.2026",
       contactInfo: {
         address: "Nhà xuất bản Trẻ - 151 Lý Chính Thắng. Quận 3, TP.HCM",
         brandName: "Phúc Party",
@@ -506,7 +506,7 @@ export const data = {
       title: "Thôi nôi Hoàng Anh & Hoàng Quân",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "thoi-noi", // Tầng 2 (Icon con)
-      date: "2024.12.10",
+      date: "10.12.2024",
       contactInfo: {
         // address: "Nhà hàng 7 Kỳ Quan",
         brandName: "Phúc Party",
@@ -527,10 +527,10 @@ export const data = {
     "blast-off-countdown-2025": {
       id: 21,
       slug: "blast-off-countdown-2025",
-      title: "Blash Off Countdown 2025",
+      title: "Blast Off Countdown 2025",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "le-hoi", // Tầng 2 (Icon con)
-      date: "2025.01.01",
+      date: "31.12.2024",
       contactInfo: {
         address: "Landmark 81",
         brandName: "Phúc Party",
@@ -538,12 +538,12 @@ export const data = {
       files: ["boc25-1.webp", "boc25-2.webp", "boc25-3.webp", "boc25-4.webp", "boc25-5.webp"],
     },
     "day-thang-be-tue-nghi": {
-      id: 21,
+      id: 22,
       slug: "day-thang-be-tue-nghi",
       title: "Đầy tháng bé Tuệ Nghi (Xí Muội)",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "fullmonth", // Tầng 2 (Icon con)
-      date: "2025.05.14",
+      date: "14.05.2025",
       contactInfo: {
         // address: "McDonald's Phú Lâm",
         brandName: "Phúc Party",
@@ -561,7 +561,7 @@ export const data = {
       ],
     },
   },
-  // ------------------------------------------------------------------------------x-----------------------------------------
+  // Design bao gồm id từ 101 đến 200
   designs: {
     "thiet-ke-logo-yen-nguyen-chat": {
       id: 105,
@@ -1008,9 +1008,10 @@ export const data = {
       },
     },
   },
+  // Pricing bao gồm id từ 201
   pricing: {
     "bang-gia-khai-truong": {
-      id: 21,
+      id: 201,
       slug: "bang-gia-khai-truong",
       title: "Giá niêm yết - Khai trương",
       type: "price", // Thêm type để phân biệt

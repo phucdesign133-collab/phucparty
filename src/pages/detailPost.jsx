@@ -11,18 +11,15 @@ const DetailPost = () => {
   const { slug } = useParams();
   const project = galleryData.find((item) => item.slug === slug);
 
-  // Khai báo đầy đủ các state
   const [mainImage, setMainImage] = useState(null);
   const [mainImageIndex, setMainImageIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // 1. Ép cuộn lên đầu trang mỗi khi slug thay đổi
     const scrollTimer = setTimeout(() => {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }, 0);
 
-    // 2. Cập nhật dữ liệu ảnh
     if (project && project.files && project.files.length > 0) {
       setMainImage(project.files[0]);
       setMainImageIndex(0);
@@ -31,7 +28,6 @@ const DetailPost = () => {
     return () => clearTimeout(scrollTimer);
   }, [slug, project]);
 
-  // Hàm chuyển ảnh có logic vòng lặp
   const changeImage = (newIndex) => {
     if (!project || !project.files) return;
     const count = project.files.length;
@@ -42,7 +38,6 @@ const DetailPost = () => {
 
   if (!project) return <div>Không tìm thấy bài viết này!</div>;
 
-  // Logic xác định nhãn động dựa trên category
   const getLabels = (category) => {
     switch (category) {
       case "su-kien":
@@ -68,12 +63,12 @@ const DetailPost = () => {
       />
       <h1 className="post-title">{project.title}</h1>
 
-      {/* Ảnh chính */}
+      {/* 1. Ảnh chính (Đã cập nhật path chuẩn) */}
       <div className="featured-image" onClick={() => setIsOpen(true)}>
-        <img src={`/phucparty/img/${mainImage}`} alt={project.title} />
+        <img src={`${import.meta.env.BASE_URL}img/${mainImage}`} alt={project.title} />
       </div>
 
-      {/* Lightbox */}
+      {/* 2. Lightbox (Đã cập nhật path chuẩn) */}
       {isOpen && (
         <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
           <span className="close-btn">&times;</span>
@@ -86,7 +81,7 @@ const DetailPost = () => {
           >
             &#10094;
           </button>
-          <img src={`/phucparty/img/${mainImage}`} alt="Full size" onClick={(e) => e.stopPropagation()} />
+          <img src={`${import.meta.env.BASE_URL}img/${mainImage}`} alt="Full size" onClick={(e) => e.stopPropagation()} />
           <button
             className="nav-btn next"
             onClick={(e) => {
@@ -99,12 +94,12 @@ const DetailPost = () => {
         </div>
       )}
 
-      {/* Danh sách ảnh Thumbnail */}
+      {/* 3. Danh sách ảnh Thumbnail (Đã cập nhật path chuẩn) */}
       <div className="thumbnail-scroll-container">
         {project.files.map((fileName, index) => (
           <img
             key={index}
-            src={`/phucparty/img/${fileName}`}
+            src={`${import.meta.env.BASE_URL}img/${fileName}`}
             className={`thumbnail ${mainImage === fileName ? "active" : ""}`}
             onClick={() => {
               setMainImage(fileName);
@@ -115,34 +110,35 @@ const DetailPost = () => {
         ))}
       </div>
 
-      {/* Phần thông tin liên hệ cập nhật */}
-      {project.contactInfo && (
-        <div className="contact-section">
-          {project.contactInfo.address && (
-            <p><strong>{labels.address}: </strong> {project.contactInfo.address}</p>
-          )}
-          {project.contactInfo.owner && (
-            <p><strong>Thuộc sở hữu của: </strong> {project.contactInfo.owner}</p>
-          )}
-          {project.contactInfo.link && (
-            <p>
-              <strong>Link: </strong>
-              <a href={project.contactInfo.link} target="_blank" rel="noopener noreferrer">
-                {project.contactInfo.owner || "Xem tại đây"}
-              </a>
-            </p>
-          )}
-          {project.date && (
-            <p><strong>{labels.date}: </strong> {project.date}</p>
-          )}
-
-          {/* Câu cảm ơn linh hoạt */}
-          <p style={{ marginTop: "15px" }}>
-            <strong>Cảm ơn Quý khách đã tin tưởng sử dụng dịch vụ tại {labels.brand}.</strong>
+      <div className="contact-section">
+        {project.contactInfo?.address && (
+          <p>
+            <strong>{labels.address}: </strong> {project.contactInfo.address}
           </p>
-        </div>
-      )}
-      
+        )}
+        {project.contactInfo?.owner && (
+          <p>
+            <strong>Thuộc sở hữu của: </strong> {project.contactInfo.owner}
+          </p>
+        )}
+        {project.contactInfo?.link && (
+          <p>
+            <strong>Link: </strong>
+            <a href={project.contactInfo.link} target="_blank" rel="noopener noreferrer">
+              {project.contactInfo.owner || "Xem tại đây"}
+            </a>
+          </p>
+        )}
+        {project.date && (
+          <p>
+            <strong>{labels.date}: </strong> {project.date}
+          </p>
+        )}
+        <p style={{ marginTop: "15px" }}>
+          <strong>Cảm ơn Quý khách đã tin tưởng sử dụng dịch vụ tại {labels.brand}.</strong>
+        </p>
+      </div>
+
       <ContactSection />
       <AdditionalSections currentSlug={slug} />
     </div>
