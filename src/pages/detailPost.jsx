@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { galleryData } from "../datas/galleryData";
-import BackgroundText from "../components/BackgroundText";
-import ContactSection from "../components/ContactSection";
+import BackgroundText from "../components/backgroundText";
+import ContactSection from "../components/contactSection";
 import Breadcrumb from "../components/Breadcrumb";
 import AdditionalSections from "../components/AdditionalSections";
 import "../components/detailPost.css";
