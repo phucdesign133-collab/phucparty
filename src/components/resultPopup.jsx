@@ -21,7 +21,10 @@ export default function ResultPopup({ isOpen, onClose, result, babyName, code, o
           <p>
             <strong>Điều kiện sử dụng:</strong>
           </p>
-          <p>- Đối với Voucher: sẽ áp dụng vào dịch vụ tiếp theo kể từ khi quay trúng.</p>
+          <p>
+            - Đối với Voucher: Voucher áp dụng đặt show chỉ có hiệu lực khi được xác minh và đặt bởi Zalo chính chủ của Phụ huynh (Cha/Mẹ) vào buổi
+            tiệc tiếp theo. Không áp dụng cho tài khoản ảo hoặc trẻ em tự đặt..
+          </p>
           <p>- Đối với các quà khác: có thể đổi ngay qua qua tin nhắn theo hướng dẫn bên dưới:</p>
         </div>
         <div className="instructions">
