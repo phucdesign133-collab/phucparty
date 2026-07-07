@@ -3,16 +3,20 @@ import { Link } from "react-router-dom";
 import { data } from "../datas/galleryData"; // 1. Import đúng nguồn dữ liệu
 
 const UpComing = () => {
-  // 4 & 5. Hàm format ngày tháng và lấy 6 bài mới nhất
+  // 4 & 5. Hàm format ngày tháng
   const formatDisplayDate = (isoDate) => {
     if (!isoDate) return "";
     const [y, m, d] = isoDate.split("-");
     return d === "15" ? `Tháng ${m}/${y}` : `${d}/${m}/${y}`;
   };
 
-  // Lấy tất cả events, sort theo thời gian mới nhất và lấy 6 bài
-  const allEvents = Object.values(data.events || {});
-  const sortedItems = [...allEvents].sort((a, b) => new Date(b.time) - new Date(a.time)).slice(0, 6);
+  // Lấy TẤT CẢ các bài viết từ mọi hạng mục trong data, gom thành 1 mảng
+  const allItemsArray = Object.values(data).flatMap((category) => Object.values(category || {}));
+  
+  // Sort theo thời gian mới nhất và lấy 6 bài
+  const sortedItems = [...allItemsArray]
+    .sort((a, b) => new Date(b.time) - new Date(a.time))
+    .slice(0, 6);
 
   const [items, setItems] = useState(sortedItems);
   const [displayIndex, setDisplayIndex] = useState(1);
@@ -64,7 +68,7 @@ const UpComing = () => {
                 style={{ textDecoration: "none", color: "inherit", display: "block" }}
               >
                 {/* Lấy ảnh đầu tiên trong mảng files hoặc ảnh mặc định */}
-                <img src={`/phucparty/img/${item.files?.[0] || "default.jpg"}`} alt={item.title} />
+                <img src={`${import.meta.env.BASE_URL}img/${item.files?.[0] || "default.jpg"}`} alt={item.title} />
                 <div className="up-overlay">
                   <span>{formatDisplayDate(item.time)}</span>
                   <h4>{item.title}</h4>

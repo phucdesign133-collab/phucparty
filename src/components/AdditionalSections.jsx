@@ -32,15 +32,15 @@ const AdditionalSections = ({ currentSlug }) => {
   }, [currentSlug, currentPost]);
 
   const dummyPartners = [
-  "https://www.google.com/favicon.ico",
-  "https://www.microsoft.com/favicon.ico",
-  "https://www.apple.com/favicon.ico",
-  "https://www.facebook.com/favicon.ico",
-  "https://www.netflix.com/favicon.ico",
-  "https://www.spotify.com/favicon.ico",
-  "https://www.adobe.com/favicon.ico",
-  "https://www.amazon.com/favicon.ico"
-];
+    "https://www.google.com/favicon.ico",
+    "https://www.microsoft.com/favicon.ico",
+    "https://www.apple.com/favicon.ico",
+    "https://www.facebook.com/favicon.ico",
+    "https://www.netflix.com/favicon.ico",
+    "https://www.spotify.com/favicon.ico",
+    "https://www.adobe.com/favicon.ico",
+    "https://www.amazon.com/favicon.ico",
+  ];
 
   return (
     <div className="additional-sections-container">
@@ -58,7 +58,11 @@ const AdditionalSections = ({ currentSlug }) => {
                 }}
               >
                 {post.files?.[0] ? (
-                  <img src={`/phucparty/img/${post.files[0]}`} alt={post.title} onError={(e) => (e.target.src = "/placeholder.jpg")} />
+                  <img
+                    src={`${import.meta.env.BASE_URL}img/${post.files[0]}`}
+                    alt={post.title}
+                    onError={(e) => (e.target.src = "/placeholder.jpg")}
+                  />
                 ) : (
                   <div className="img-placeholder">No Image</div>
                 )}

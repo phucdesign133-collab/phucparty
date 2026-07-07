@@ -65,7 +65,7 @@ const AllProjects = () => {
           <div className="grid-layout">
             {filteredData.map((item) => (
               <div key={item.id} className="project-card">
-                <img src={`/phucparty/img/${item.files?.[0] || "default.jpg"}`} alt={item.title} />
+                <img src={`${import.meta.env.BASE_URL}img/${item.files?.[0] || "default.jpg"}`} alt={item.title} />
                 <div className="item-info">
                   <p className="project-name">{item?.title}</p>
                   <p className="project-time">Thời gian: {item?.time}</p>

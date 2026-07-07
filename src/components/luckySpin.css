@@ -1,3 +1,6 @@
+input, select, textarea {
+  font-size: 16px !important; /* Quan trọng nhất để chặn zoom */
+}
 .party-container {
   padding: 25px;
   max-width: 1050px;
@@ -50,4 +53,30 @@
   margin-top: 10px;
   display: block;
   width: 100%;
+}
+input[type="date"] {
+  -webkit-appearance: none; /* Xóa giao diện mặc định của Safari/Chrome */
+  appearance: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 100%; /* Đảm bảo nó chiếm đủ chiều rộng */
+  display: block;
+}
+/* Chặn zoom khi focus */
+input:focus, select:focus, textarea:focus {
+  font-size: 16px;
+}
+
+/* Định dạng chuẩn cho mọi input */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box; /* Quan trọng: để padding không làm vỡ khung */
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #222;
+  color: white;
 }

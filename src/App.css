@@ -13,6 +13,22 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+/* Chặn zoom khi focus */
+input:focus, select:focus, textarea:focus {
+  font-size: 16px;
+}
+
+/* Định dạng chuẩn cho mọi input */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box; /* Quan trọng: để padding không làm vỡ khung */
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #222;
+  color: white;
+}
 
 .app-container {
   display: flex;

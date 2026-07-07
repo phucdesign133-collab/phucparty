@@ -42,7 +42,7 @@ const EventSection = ({ data, category, activeFilter, setActiveFilter, currentSl
       <div className="gallery-grid">
         {displayPosts.map((project) => (
           <Link key={project.slug} to={`/post/${project.slug}`} className="gallery-item">
-            <img src={`/phucparty/img/${project?.files?.[0] || "default.jpg"}`} alt={project?.title || "Dự án"} loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}img/${project?.files?.[0] || "default.jpg"}`} alt={project?.title || "Dự án"} loading="lazy" />
             <div className="item-info">
               <p className="project-name">{project?.title}</p>
               {project.category !== "thiet-ke" && <p className="project-time">Thời gian: {project.time}</p>}

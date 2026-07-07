@@ -204,7 +204,9 @@ text-align: center;
 }
 }
 ---------------------------------------------------------------------x---------------------------------------------------------------------
-
+Cách deploy mới nhất để tránh lỗi web: )gõ 2 lệnh thay npm run deploy như cũ)
+git commit -am "Cập nhật..." (đã gộp từ 2 lệnh thành 1 lệnh và nhớ ghi rõ cập nhật cái thứ gì)
+git push origin main (lệnh này bắt buộc để code được đẩy lên)
 
 
 Đổi tên hàng loạt đồng thời đổi định dạng jpg to webp bằng terminal -> bây giờ đang dùng để nén tự động lần 2
