@@ -126,7 +126,7 @@ export default function LuckySpinParty() {
     setIsGiftImageOpen(true);
   };
   const getImageUrl = (imageName) => {
-    return `${import.meta.env.BASE_URL}img/${imageName}`;
+    return `img/${imageName}`;
   };
   return (
     <div
