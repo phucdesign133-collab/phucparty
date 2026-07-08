@@ -245,7 +245,7 @@ export default function LuckySpinParty() {
         <div className="lightbox-overlay" onClick={() => setIsGiftImageOpen(false)}>
           <div className="lightbox-content">
             {/* Gọi hàm getImageUrl trực tiếp ở đây */}
-            <img src={getImageUrl(currentGiftImage)} alt="Gift Preview" />
+            <img src={`${import.meta.env.BASE_URL}img/${currentGiftImage}`} alt="Gift Preview" />
             <p style={{ textAlign: "center" }}>Chạm bất kỳ vị trí nào để đóng...</p>
           </div>
         </div>
