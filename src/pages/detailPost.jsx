@@ -112,9 +112,26 @@ const DetailPost = () => {
 
       <div className="contact-section">
         {project.contactInfo?.address && (
-          <p>
-            <strong>{labels.address}: </strong> {project.contactInfo.address}
-          </p>
+          <div className="address-section">
+            <strong>{labels.address}: </strong>
+            {(() => {
+              // Tách chuỗi địa chỉ dựa trên ký tự phân cách ". - "
+              const addresses = project.contactInfo.address.split(". - ");
+
+              if (addresses.length > 1) {
+                return (
+                  <ul style={{ listStyle: "none", paddingLeft: "15px", marginTop: "5px" }}>
+                    {addresses.map((addr, index) => (
+                      <li key={index} style={{ marginBottom: "5px" }}>
+                        <span style={{ fontWeight: "bold" }}>CN{index + 1}:</span> {addr.trim()}
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
+              return <span> {project.contactInfo.address}</span>;
+            })()}
+          </div>
         )}
         {project.contactInfo?.owner && (
           <p>
@@ -129,9 +146,9 @@ const DetailPost = () => {
             </a>
           </p>
         )}
-        {project.date && (
+        {(project.date || project.contactInfo?.date) && (
           <p>
-            <strong>{labels.date}: </strong> {project.date}
+            <strong>{labels.date}: </strong> {project.date || project.contactInfo.date}
           </p>
         )}
         <p style={{ marginTop: "15px" }}>
@@ -139,7 +156,7 @@ const DetailPost = () => {
         </p>
       </div>
 
-      <ContactSection />
+      <ContactSection category={project.category}/>
       <AdditionalSections currentSlug={slug} />
     </div>
   );

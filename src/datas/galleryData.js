@@ -42,7 +42,7 @@ export const data = {
       title: "Sinh nhật bé Bảo Mi",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "sinh-nhat", // Tầng 2 (Icon con)
-      date: "2023-10-13",
+      date: "13.10.2023",
       files: [
         "sinhnhat-bebaomi-2.jpg",
         "sinhnhat-bebaomi-3.jpg",
@@ -66,7 +66,7 @@ export const data = {
       title: "Sinh nhật bé Bảo Trân",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "sinh-nhat", // Tầng 2 (Icon con)
-      date: "2023-11-02",
+      date: "02.11.2023",
       files: [
         "sinhnhat-beBaoTran-5.jpg",
         "sinhnhat-beBaoTran-2.jpg",
@@ -87,7 +87,7 @@ export const data = {
       title: "Sinh nhật bé Nhật Anh",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "sinh-nhat", // Tầng 2 (Icon con)
-      date: "2023-11-03",
+      date: "03.11.2023",
       files: [
         "sinhnhat-beNhatAnh-1.jpg",
         "sinhnhat-beNhatAnh-2.jpg",
@@ -110,7 +110,7 @@ export const data = {
       title: "Sinh nhật bé Thiên Kim",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "sinh-nhat", // Tầng 2 (Icon con)
-      date: "2023-11-03",
+      date: "04.11.2023",
       files: [
         "sinhnhat-bethienkim-1.jpg",
         "sinhnhat-bethienkim-26.jpg",
@@ -154,7 +154,7 @@ export const data = {
       title: "Sinh nhật Mr. Minh Quyền",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "sinh-nhat", // Tầng 2 (Icon con)
-      date: "2023-08-18",
+      date: "18.08.2023",
       contactInfo: {
         address: "Nhà hàng Lẩu Tôm",
         brandName: "Phúc Party",
@@ -192,7 +192,7 @@ export const data = {
       title: "Trung thu - mầm non Dạ Lý Hương",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "le-hoi", // Tầng 2 (Icon con)
-      date: "2023-10-13",
+      date: "213.10.2023",
       contactInfo: {
         address: "Trường mầm non Dạ Lý Hương",
         brandName: "Phúc Party",
@@ -247,7 +247,7 @@ export const data = {
       title: "Trung thu - Nhà lưu trú 0 đồng",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "thien-nguyen", // Tầng 2 (Icon con)
-      date: "2023-09-15",
+      date: "15.09.2023",
       contactInfo: {
         address: "Nhà Lưu trú 0 Đồng - Thủ Đức",
         brandName: "Phúc Party",
@@ -274,7 +274,7 @@ export const data = {
       title: "Trung thu - Mái ấm Huynh Đệ Như Nghĩa",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "thien-nguyen", // Tầng 2 (Icon con)
-      date: "2023-09-15",
+      date: "10.09.2023",
       contactInfo: {
         address: "Mái ấm Huynh Đệ Như Nghĩa",
         brandName: "Phúc Party",
@@ -292,7 +292,7 @@ export const data = {
       title: "Trung thu - Lớp học tình thương - C4 Phạm Hùng, Quận 8",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "thien-nguyen", // Tầng 2 (Icon con)
-      date: "2023-10-13",
+      date: "213.10.2023",
       contactInfo: {
         address: "Sân bóng C4 Phạm Hùng",
         brandName: "Phúc Party",
@@ -311,7 +311,7 @@ export const data = {
       title: "Mừng thọ - cụ bà Phan Thị Sơ",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "mung-tho", // Tầng 2 (Icon con)
-      date: "2023-08-26",
+      date: "26.08.2023",
       contactInfo: {
         address: "Nhà hàng Ái Huê",
         brandName: "Phúc Party",
@@ -346,7 +346,7 @@ export const data = {
       title: "Sinh nhật bé Nhã Doanh",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "sinh-nhat", // Tầng 2 (Icon con)
-      date: "2023-11.14",
+      date: "14.11.2023",
       contactInfo: {
         address: "McDonald's Phú Lâm",
         brandName: "Phúc Party",
@@ -359,7 +359,7 @@ export const data = {
       title: "Sinh nhật bé Mai Lâm & Vĩ Hùng",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "sinh-nhat", // Tầng 2 (Icon con)
-      date: "2023-11.26",
+      date: "26.11.2023",
       contactInfo: {
         address: "McDonald's Phú Lâm",
         brandName: "Phúc Party",
@@ -438,7 +438,7 @@ export const data = {
       title: "Trung thu - Công an Huyện Bến Lức",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "le-hoi", // Tầng 2 (Icon con)
-      date: "2024.09.16",
+      date: "16.09.2024",
       contactInfo: {
         address: "Công an Huyện Bến Lức",
         brandName: "Phúc Party",
@@ -468,7 +468,7 @@ export const data = {
       title: "Thiện nguyện - chủ đề Biển ơi",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: ["le-hoi", "thien-nguyen"], // Tầng 2 (Icon con)
-      date: "2026.05.31",
+      date: "31.05.2026",
       contactInfo: {
         address: "Bệnh viện Nhi Đồng 2",
         owner: "Thương Nhiều",
@@ -493,7 +493,7 @@ export const data = {
       title: "Year End Party công ty Luật Lưỡng Hà",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "yep", // Tầng 2 (Icon con)
-      date: "2024.12.15",
+      date: "15.12.2024",
       contactInfo: {
         address: "Hoa viên 102",
         brandName: "Phúc Party",
@@ -530,7 +530,7 @@ export const data = {
       title: "Blast Off Countdown 2025",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "le-hoi", // Tầng 2 (Icon con)
-      date: "31.12.2024",
+      date: "30.12.2024",
       contactInfo: {
         address: "Landmark 81",
         brandName: "Phúc Party",
@@ -560,6 +560,24 @@ export const data = {
         "fullmonth-betuenghi-7.webp",
       ],
     },
+    "sinh-nhat-be-yen-chi-6-tuoi": {
+      id: 23,
+      slug: "sinh-nhat-be-yen-chi-6-tuoi",
+      title: "Sinh nhật bé Yến Chi - 6 tuổi",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "sinh-nhat", // Tầng 2 (Icon con)
+      date: "08.07.2026",
+      contactInfo: {
+        address: "Lotteria Lý Chính Thắng - 250B Lý Chính Thắng, Nhiêu Lộc, Hồ Chí Minh",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "sinhnhat-beyechi-2.webp",
+        "sinhnhat-beyechi-3.webp",
+        "sinhnhat-beyechi-1.webp",
+        "sinhnhat-beyechi-4.webp",
+      ],
+    },
   },
   // Design bao gồm id từ 101 đến 200
   designs: {
@@ -587,7 +605,7 @@ export const data = {
       files: ["logo-golden-bakery.jpg"],
       contactInfo: {
         phone: "090.6655.610",
-        address: "CN1: 195 Lê Hồng Phong, Phường 8, TP. Vũng Tàu - CN2: 126A9 Hoàng Hoa Thám, Phường 2, TP. Vũng Tàu",
+        address: "CN1: 195 Lê Hồng Phong, Phường 8, TP. Vũng Tàu. - CN2: 126A9 Hoàng Hoa Thám, Phường 2, TP. Vũng Tàu",
         link: "https://www.facebook.com/goldenbakeryvungtau",
         owner: "Golden Bakery",
         date: "15.12.2022",
@@ -848,7 +866,7 @@ export const data = {
     "thiet-ke-logo-dong-phuc-vk": {
       id: 119,
       slug: "thiet-ke-dong-phuc-vk",
-      title: "D Đồng phục VK - Logo Branding",
+      title: "Đồng phục VK - Logo Branding",
       category: "thiet-ke", // Tầng 1 (Tab lớn)
       subCategory: ["logo", "web-app", "business-card"], // Tầng 2 (Icon con)
       files: ["logo-dongphucvk.jpg"],

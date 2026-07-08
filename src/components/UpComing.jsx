@@ -6,12 +6,20 @@ const UpComing = () => {
   // 1. Dữ liệu đã sắp xếp (giữ nguyên logic của bạn)
   const sortedItems = useMemo(() => {
     const allPosts = [...Object.values(data.events || {}), ...Object.values(data.designs || {})];
+
+    // Hàm parseDate chuẩn
+    const parseDate = (d) => {
+      if (!d) return new Date(2000, 0, 1);
+      if (d.includes(".")) {
+        const [day, month, year] = d.split(".");
+        return new Date(year, month - 1, day);
+      }
+      return new Date(d);
+    };
+
     return allPosts
       .filter((item) => item?.date)
-      .sort((a, b) => {
-        const parseDate = (d) => (d.includes(".") ? new Date(d.split(".").reverse().join("-")) : new Date(d)).getTime();
-        return parseDate(b.date) - parseDate(a.date);
-      })
+      .sort((a, b) => parseDate(b.date) - parseDate(a.date)) // Bài mới nhất (date lớn hơn) lên đầu
       .slice(0, 6);
   }, []);
 
@@ -21,7 +29,7 @@ const UpComing = () => {
 
   const rotate = (dir) => {
     setItems((prev) => (dir === "next" ? [...prev.slice(1), prev[0]] : [prev[prev.length - 1], ...prev.slice(0, -1)]));
-    setDisplayIndex((prev) => (dir === "next" ? (prev === sortedItems.length ? 1 : prev + 1) : (prev === 1 ? sortedItems.length : prev - 1)));
+    setDisplayIndex((prev) => (dir === "next" ? (prev === sortedItems.length ? 1 : prev + 1) : prev === 1 ? sortedItems.length : prev - 1));
   };
 
   return (
@@ -29,11 +37,17 @@ const UpComing = () => {
       <div className="up-inner">
         <div className="up-text">
           <h6 className="up-title">Khoảnh Khắc</h6>
-          <p className="up-desc">Những khoảnh khắc tâm đắc nhất vừa được cập nhật.</p>
+          <p className="up-desc">Những khoảnh khắc gần đây vừa được cập nhật.</p>
           <div className="up-nav">
-            <button onClick={() => rotate("prev")} className="up-btn">‹</button>
-            <span className="up-count">{displayIndex} / {sortedItems.length}</span>
-            <button onClick={() => rotate("next")} className="up-btn">›</button>
+            <button onClick={() => rotate("prev")} className="up-btn">
+              ‹
+            </button>
+            <span className="up-count">
+              {displayIndex} / {sortedItems.length}
+            </span>
+            <button onClick={() => rotate("next")} className="up-btn">
+              ›
+            </button>
           </div>
         </div>
 

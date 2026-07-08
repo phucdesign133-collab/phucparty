@@ -4,17 +4,24 @@ import "./eventSection.css";
 import MenuIconEventSection from "./MenuIconEventSection";
 
 const EventSection = ({ data, category, activeFilter, setActiveFilter, currentSlug }) => {
-  // 1. Khai báo hook ở cấp cao nhất - KHÔNG ĐẶT TRONG IF/ELSE
+  // Hàm chuyển đổi ngày chuẩn xác
+  const parseDate = (d) => {
+    if (!d) return new Date(2000, 0, 1);
+    if (d.includes(".")) {
+      const [day, month, year] = d.split(".");
+      return new Date(year, month - 1, day);
+    }
+    return new Date(d);
+  };
+
   const sorted = useMemo(() => {
     if (!data) return [];
     return [...data].sort((a, b) => {
-      const timeA = a.time || a.date || a.contactInfo?.date || "2000-01-01";
-      const timeB = b.time || b.date || b.contactInfo?.date || "2000-01-01";
-      return new Date(timeB) - new Date(timeA);
+      return parseDate(b.date || b.contactInfo?.date) - parseDate(a.date || a.contactInfo?.date);
     });
   }, [data]);
 
-  // 2. Logic lọc vẫn nằm trong useMemo nhưng không chứa Hook nào khác bên trong
+  // 2. Logic lọc
   const displayPosts = useMemo(() => {
     if (currentSlug) {
       const currentPost = sorted.find((item) => item.slug === currentSlug);
@@ -45,7 +52,10 @@ const EventSection = ({ data, category, activeFilter, setActiveFilter, currentSl
             <img src={`${import.meta.env.BASE_URL}img/${project?.files?.[0] || "default.jpg"}`} alt={project?.title || "Dự án"} loading="lazy" />
             <div className="item-info">
               <p className="project-name">{project?.title}</p>
-              {project.category !== "thiet-ke" && <p className="project-time">Thời gian: {project.time}</p>}
+              {/* Chỉ hiển thị ngày nếu không phải danh mục thiết kế */}
+              {project.category !== "thiet-ke" && (
+                <p className="project-time">Ngày tổ chức: {project.date}</p>
+              )}
             </div>
           </Link>
         ))}

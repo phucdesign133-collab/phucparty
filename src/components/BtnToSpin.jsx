@@ -19,7 +19,8 @@ const BtnToSpin = () => {
           margin: "20px 0",
         }}
       >
-        <h2 style={{ color: "#ff7675", margin: "0 0 10px 0" }}>🎁 Khu Vực Trúng Thưởng 🎁</h2>
+        {/* <h2 style={{ color: "#ff7675", margin: "0 0 10px 0" }}>🎁 Khu Vực Trúng Thưởng 🎁</h2> */}
+        <h2 style={{ color: "#ff7675", margin: "0 0 10px 0" }}>Khu Vực Trúng Thưởng </h2>
         <p style={{ color: "#2d3436", marginBottom: "20px" }}>Bạn có thư mời tham gia vòng quay may mắn nhận quà đặc quyền từ Phúc Design?</p>
         <button
           // onClick={() => navigate("/lucky-spin")} : cái này là điều hướng đổi trang cơ bản

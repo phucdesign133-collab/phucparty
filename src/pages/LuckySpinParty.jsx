@@ -14,19 +14,19 @@ export default function LuckySpinParty() {
   const [prizeResult, setPrizeResult] = useState(null);
   const [generatedCode, setGeneratedCode] = useState("");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [showPopup, setShowPopup] = useState(false);
+  const [isGiftImageOpen, setIsGiftImageOpen] = useState(false);
+  const [currentGiftImage, setCurrentGiftImage] = useState(null);
 
   const canvasRef = useRef(null);
   const angleRef = useRef(0);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
-
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  // Show popup
-  const [showPopup, setShowPopup] = useState(false);
+
   useEffect(() => {
     document.body.style.overflow = showPopup ? "hidden" : "unset";
     return () => {
@@ -36,18 +36,13 @@ export default function LuckySpinParty() {
 
   const isMobile = windowWidth < 850;
   const canvasSize = windowWidth < 500 ? 300 : 440;
-
   const isPremiumMode = babyName.trim().length > 0 && babyBirthday.trim().length > 0;
-
   const currentPrizes = isPremiumMode ? PREMIUM_PRIZES : BASIC_PRIZES;
 
   const drawWheel = (currentAngle) => {
     const canvas = canvasRef.current;
-
     if (!canvas) return;
-
     const ctx = canvas.getContext("2d");
-
     const size = canvasSize;
     const center = size / 2;
     const radius = center - 8;
@@ -57,51 +52,35 @@ export default function LuckySpinParty() {
 
     currentPrizes.forEach((prize, index) => {
       const angle = currentAngle + index * arc;
-
       ctx.beginPath();
       ctx.moveTo(center, center);
       ctx.arc(center, center, radius, angle, angle + arc);
       ctx.closePath();
-
-      ctx.fillStyle = prize.color;
+      ctx.fillStyle = index % 2 === 0 ? "#f21d1d" : "#292828";
       ctx.fill();
-
-      ctx.strokeStyle = "rgba(255,255,255,.4)";
-      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = "#fff";
+      ctx.lineWidth = 2;
       ctx.stroke();
 
       ctx.save();
-
       ctx.translate(center, center);
       ctx.rotate(angle + arc / 2);
-
-      ctx.fillStyle = "#000";
+      ctx.fillStyle = "#fff";
       ctx.textAlign = "right";
       ctx.textBaseline = "middle";
-      ctx.font = windowWidth < 500 ? 'bold 11px "Quicksand", sans-serif' : 'bold 14px "Quicksand", sans-serif';
-
-      ctx.fillText(`${prize.icon} ${prize.text}`, radius - (windowWidth < 500 ? 15 : 25), 0);
-
+      ctx.font = 'bold 12px "Quicksand", sans-serif';
+      ctx.fillText(prize.text, radius - 20, 0);
       ctx.restore();
     });
 
-    const centerRadius = windowWidth < 500 ? 20 : 30;
-
     ctx.beginPath();
-    ctx.arc(center, center, centerRadius, 0, Math.PI * 2);
-
+    ctx.arc(center, center, 25, 0, Math.PI * 2);
     ctx.fillStyle = "#fff";
     ctx.fill();
-
-    ctx.strokeStyle = isPremiumMode ? "#00f5d4" : "#64748b";
-    ctx.lineWidth = 3;
-    ctx.stroke();
-
-    ctx.font = windowWidth < 500 ? "20px Arial" : "30px Arial";
-    ctx.fillStyle = "#000";
+    ctx.font = "25px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("🎁", center, center);
+    ctx.fillText("🎁", center, center + 2);
   };
 
   useEffect(() => {
@@ -111,59 +90,42 @@ export default function LuckySpinParty() {
   const calculateFinalPrize = () => {
     const degrees = angleRef.current * (180 / Math.PI) + 90;
     const arc = 360 / currentPrizes.length;
-
     const index = Math.floor((360 - (degrees % 360)) / arc) % currentPrizes.length;
-
-    const prize = currentPrizes[index];
-
-    setPrizeResult(prize);
-
+    setPrizeResult(currentPrizes[index]);
     const code = `${isPremiumMode ? "VIP" : "NORMAL"}-${Math.floor(1000 + Math.random() * 9000)}`;
-
     setGeneratedCode(code);
   };
 
   const spinTheWheel = () => {
     if (isSpinning) return;
-
     setIsSpinning(true);
     setPrizeResult(null);
     setGeneratedCode("");
-
     const spinAngleStart = Math.random() * 15 + 20;
-    const spinTimeTotal = Math.random() * 2000 + 4000;
-
+    const spinTimeTotal = 7000;
     let spinTime = 0;
-
     const easeOut = (t, b, c, d) => c * ((t = t / d - 1) * t * t + 1) + b;
-
     const animate = () => {
       spinTime += 20;
-
       if (spinTime >= spinTimeTotal) {
         setIsSpinning(false);
         calculateFinalPrize();
         setShowPopup(true);
         return;
       }
-
       const delta = spinAngleStart - easeOut(spinTime, 0, spinAngleStart, spinTimeTotal);
-
       angleRef.current += (delta * Math.PI) / 180;
-
       drawWheel(angleRef.current);
-
       requestAnimationFrame(animate);
     };
-
     animate();
   };
 
-  // const [showPopup, setShowPopup] = useState(false);
-  const handleSpinAgain = () => {
-    setShowPopup(false); // Ẩn popup
-    spinTheWheel(); // Kích hoạt hàm quay lại ngay
+  const handleOpenGiftImage = (imageName) => {
+    setCurrentGiftImage(imageName);
+    setIsGiftImageOpen(true);
   };
+
   return (
     <div
       style={{
@@ -174,13 +136,7 @@ export default function LuckySpinParty() {
       }}
     >
       <div style={styles.headerArea}>
-        <h1
-          style={{
-            ...styles.partyTitle,
-            color: isPremiumMode ? "#00f5d4" : "#e2e8f0",
-            fontSize: isMobile ? "22px" : "30px",
-          }}
-        >
+        <h1 style={{ ...styles.partyTitle, color: isPremiumMode ? "#00f5d4" : "#e2e8f0", fontSize: isMobile ? "22px" : "30px" }}>
           {isPremiumMode ? "💎 PREMIUM SPIN VIP 💎" : "🎉 LUCKY SPIN PARTY 🎉"}
         </h1>
         <p style={styles.partySubtitle}>
@@ -188,14 +144,7 @@ export default function LuckySpinParty() {
         </p>
       </div>
 
-      <div
-        style={{
-          ...styles.mainLayout,
-          flexDirection: isMobile ? "column" : "row", // Chuyển thành hàng dọc khi dùng điện thoại
-          gap: isMobile ? "35px" : "50px",
-        }}
-      >
-        {/* KHỐI VÒNG QUAY RESPONSIVE */}
+      <div style={{ ...styles.mainLayout, flexDirection: isMobile ? "column" : "row", gap: isMobile ? "35px" : "50px" }}>
         <div
           style={{
             ...styles.wheelWrapper,
@@ -212,80 +161,54 @@ export default function LuckySpinParty() {
               borderTopWidth: isMobile ? "24px" : "32px",
             }}
           ></div>
-
-          {/* Canvas tự nhận size theo thiết bị */}
-          <canvas ref={canvasRef} width={canvasSize} height={canvasSize} style={styles.canvasStyle} />
-
+          <div style={{ position: "relative" }}>
+  <div className={`wheel-lights-container ${isSpinning ? "spinning" : ""}`}>
+    {[...Array(20)].map((_, i) => (
+      <div
+        key={i}
+        className="light-dot"
+        style={{
+          // Giữ nguyên công thức bạn đã ưng ý, không thay đổi
+          transform: `rotate(${i * 18}deg) translateY(-${canvasSize / 2 }px)`,
+        }}
+      ></div>
+    ))}
+  </div>
+  <canvas ref={canvasRef} width={canvasSize} height={canvasSize} style={styles.canvasStyle} />
+</div>
           <button
-            //chỗ gọi nút xoay vòng
             onClick={spinTheWheel}
             disabled={isSpinning}
             style={{
               ...styles.spinButton,
-              background: isPremiumMode ? "linear-gradient(45deg, #00f5d4, #7b2cbf)" : "linear-gradient(45deg, #64748b, #475569)",
-              boxShadow: isPremiumMode ? "0 5px 20px rgba(0, 245, 212, 0.4)" : "none",
-              fontSize: isMobile ? "14px" : "16px",
+              background: isSpinning ? "#333" : "#f00",
+              color: "#fff",
+              border: "2px solid #fff",
               padding: isMobile ? "12px 30px" : "14px 40px",
-              background: "#B2FBA5", // Mint Pastel
-              color: "#000", // Chữ đen
-              ...(isSpinning ? styles.disabledBtn : {}),
             }}
           >
-            {isSpinning ? "🌟 ĐANG XOAY..." : isPremiumMode ? "🔥 QUAY VÒNG VIP 🔥" : "🎲 QUAY THỬ QUÀ NHỎ"}
+            {isSpinning ? "🌟 ĐANG XOAY..." : isPremiumMode ? "🔥 QUAY VÒNG VIP 🔥" : " QUAY THỬ QUÀ NHỎ"}
           </button>
         </div>
 
-        {/* KHỐI FORM NHẬP THÔNG TIN RESPONSIVE */}
-        <div
-          style={{
-            ...styles.formWrapper,
-            width: isMobile ? "100%" : "390px",
-          }}
-        >
-          <h3
-            style={{
-              ...styles.formTitle,
-              color: isPremiumMode ? "#ffbf00" : "#94a3b8",
-              fontSize: isMobile ? "15px" : "16px",
-            }}
-          >
+        <div style={{ ...styles.formWrapper, width: isMobile ? "100%" : "390px" }}>
+          <h3 style={{ ...styles.formTitle, color: isPremiumMode ? "#ffbf00" : "#94a3b8", fontSize: isMobile ? "15px" : "16px" }}>
             {isPremiumMode ? "✨ Vòng Quay VIP Sẵn Sàng ✨" : "🔒 Nhập Tên Bé Để Đổi Đĩa Quà VIP"}
           </h3>
-
           <div style={styles.inputGroup}>
-            <label
-              style={{
-                ...styles.label,
-                color: isPremiumMode ? "#00f5d4" : "#94a3b8",
-              }}
-            >
-              Tên của bé yêu:
-            </label>
+            <label style={{ ...styles.label, color: isPremiumMode ? "#00f5d4" : "#94a3b8" }}>Tên của bé yêu:</label>
             <input type="text" placeholder="Nhập tên bé..." value={babyName} onChange={(e) => setBabyName(e.target.value)} style={styles.input} />
           </div>
-
           <div style={styles.inputGroup}>
-            <label
-              style={{
-                ...styles.label,
-                color: isPremiumMode ? "#00f5d4" : "#94a3b8",
-              }}
-            >
-              Ngày sinh của bé:
-            </label>
+            <label style={{ ...styles.label, color: isPremiumMode ? "#00f5d4" : "#94a3b8" }}>Ngày sinh của bé:</label>
             <input
               type="date"
               value={babyBirthday}
               onChange={(e) => setBabyBirthday(e.target.value)}
               required
-              style={{
-                ...styles.input,
-                colorScheme: "dark", // Giữ giao diện lịch tối tương thích với nền tiệc
-              }}
+              style={{ ...styles.input, colorScheme: "dark" }}
             />
           </div>
-
-          {/* KẾT QUẢ TRÚNG THƯỞNG */}
           {prizeResult && (
             <div
               style={{
@@ -294,40 +217,42 @@ export default function LuckySpinParty() {
               }}
             >
               <p style={{ margin: 0, fontSize: "13px", color: "#fff" }}>BÉ ĐÃ QUAY TRÚNG:</p>
-              <h2
-                style={{
-                  ...styles.resultText,
-                  fontSize: isMobile ? "18px" : "20px",
-                }}
-              >
+              <h2 style={{ ...styles.resultText, fontSize: isMobile ? "18px" : "20px" }}>
                 {prizeResult.icon} {prizeResult.text}
               </h2>
-
               <div style={styles.codeBadge}>{generatedCode}</div>
             </div>
           )}
         </div>
       </div>
-      {/* POPUP ĐẶT Ở ĐÂY (NGOÀI CÙNG) */}
       <ResultPopup
         isOpen={showPopup}
         onClose={() => setShowPopup(false)}
         result={prizeResult}
         babyName={babyName}
         code={generatedCode}
-        onSendZalo={() => window.open(`https://zalo.me/0799910603?text=Mã:${generatedCode}`)}
-        onSendWhatsapp={() => window.open(`https://wa.me/0799910603?text=Mã:${generatedCode}`)}
+        onSendZalo={() => window.open(`https://zalo.me/${ZALO_PHONE_ADMIN}?text=Mã:${generatedCode}`)}
+        onSendWhatsapp={() => window.open(`https://wa.me/${ZALO_PHONE_ADMIN}?text=Mã:${generatedCode}`)}
         onSpinAgain={() => {
           setShowPopup(false);
           spinTheWheel();
         }}
+        onOpenImage={handleOpenGiftImage}
       />
+      {isGiftImageOpen && (
+        <div className="lightbox-overlay" onClick={() => setIsGiftImageOpen(false)}>
+          <div className="lightbox-content">
+            <img src={`${import.meta.env.BASE_URL}img/${currentGiftImage}`} alt="Gift Preview" />
+            <p style={{ textAlign: "center" }}>Chạm bất kỳ vị trí nào để đóng...</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
+// Styles định nghĩa bên ngoài component
 const styles = {
-  //chỗ này là nền của hiển thị kết quả vòng quay
   partyContainer: {
     background: "radial-gradient(circle, #1a1625 0%, #0a0712 100%)",
     borderRadius: "24px",
@@ -337,41 +262,14 @@ const styles = {
     border: "3px solid #64748b",
     maxWidth: "1050px",
     margin: "10px auto",
-    // perspective: "1000px",
     boxSizing: "border-box",
-    backgroundColor: "#F8F9FA",
-    margin: "10px",
     padding: "25px",
-  },
-  backButton: {
-    position: "absolute",
-    top: "15px",
-    left: "15px",
-    background: "rgba(255, 255, 255, 0.08)",
-    color: "#fff",
-    border: "1px solid rgba(255,255,255,0.2)",
-    padding: "8px 16px",
-    borderRadius: "20px",
-    cursor: "pointer",
-    fontWeight: "bold",
-    fontSize: "13px",
-    zIndex: 20,
   },
   headerArea: { textAlign: "center", marginBottom: "30px" },
   partyTitle: { margin: 0, fontWeight: "bold", letterSpacing: "0.5px" },
   partySubtitle: { fontSize: "13px", color: "#94a3b8", marginTop: "6px" },
-  mainLayout: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  wheelWrapper: {
-    position: "relative",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    width: "100%",
-  },
+  mainLayout: { display: "flex", justifyContent: "center", alignItems: "center" },
+  wheelWrapper: { position: "relative", display: "flex", flexDirection: "column", alignItems: "center", width: "100%" },
   pointer: {
     position: "absolute",
     top: "-6px",
@@ -387,15 +285,7 @@ const styles = {
     zIndex: 10,
   },
   canvasStyle: { borderRadius: "50%", background: "#13111c", maxWidth: "100%" },
-  spinButton: {
-    marginTop: "20px",
-    color: "#fff",
-    border: "none",
-    fontWeight: "bold",
-    borderRadius: "30px",
-    cursor: "pointer",
-  },
-  disabledBtn: { background: "#334155", cursor: "not-allowed" },
+  spinButton: { marginTop: "30px", color: "#fff", border: "none", fontWeight: "bold", borderRadius: "30px", cursor: "pointer" },
   formWrapper: {
     background: "rgba(255, 255, 255, 0.02)",
     padding: "25px",
@@ -405,12 +295,7 @@ const styles = {
   },
   formTitle: { margin: "0 0 18px 0", textAlign: "center" },
   inputGroup: { marginBottom: "15px" },
-  label: {
-    display: "block",
-    marginBottom: "6px",
-    fontSize: "12px",
-    fontWeight: "bold",
-  },
+  label: { display: "block", marginBottom: "6px", fontSize: "12px", fontWeight: "bold" },
   input: {
     width: "100%",
     padding: "11px",
@@ -421,12 +306,7 @@ const styles = {
     outline: "none",
     boxSizing: "border-box",
   },
-  resultBox: {
-    marginTop: "15px",
-    padding: "15px",
-    borderRadius: "12px",
-    textAlign: "center",
-  },
+  resultBox: { marginTop: "15px", padding: "15px", borderRadius: "12px", textAlign: "center" },
   resultText: { margin: "4px 0 8px 0", color: "#fff", fontWeight: "bold" },
   codeBadge: {
     background: "#ffffff",
@@ -437,17 +317,5 @@ const styles = {
     fontWeight: "bold",
     fontSize: "16px",
     letterSpacing: "0.5px",
-  },
-  zaloSubmitBtn: {
-    marginTop: "12px",
-    width: "100%",
-    background: "#0068ff",
-    color: "#fff",
-    border: "none",
-    padding: "11px",
-    borderRadius: "8px",
-    fontWeight: "bold",
-    fontSize: "13px",
-    cursor: "pointer",
   },
 };

@@ -1,13 +1,15 @@
 import React from "react";
 import "./contactSection.css";
 
-const ContactSection = () => {
+const ContactSection = ({category}) => {
+  // Xác định tên thương hiệu dựa trên category
+  const brandName = category === "thiet-ke" ? "Phúc Design" : "Phúc Party";
   return (
     <div className="contact-section-border">
       <h3>Liên hệ với chúng tôi</h3>
       <div className="contact-info">
         <p>
-          <strong>Đại diện Phúc Party:</strong> Dương Đỗ Hồng Phúc
+          <strong>Đại diện {brandName}:</strong> Dương Đỗ Hồng Phúc
         </p>
         <p>
           <strong>Số điện thoại:</strong> 079.991.0603

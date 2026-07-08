@@ -149,25 +149,25 @@ export const scrollToTopSmooth = () => {
 
 // -----x----
 export const BASIC_PRIZES = [
-  { text: "Bút Chì Màu", color: "#FFD1DC", icon: "✏️" },
-  { text: "Móc Khóa Nhỏ", color: "#AEC6CF", icon: "🔑" },
-  { text: "Kẹo Mút", color: "#B2FBA5", icon: "🍭" },
-  { text: "Bộ Thẻ Bài (tùy chọn)", color: "#FDFD96", icon: "🎈" },
-  { text: "Hình Dán Sticker", color: "#FFB347", icon: "🔖" },
-  { text: "Thun Buộc Tóc", color: "#FF6961", icon: "🎀" },
-  { text: "Bộ 10 vòng đeo tay", color: "#bf81e3", icon: "🎁" },
-  { text: "Bộ 5 lật đật mini", color: "#75e3eb", icon: "🎁" },
+  { text: "Bút Chì Màu May Mắn",image: "gift-chinho.webp" },
+  { text: "Túi Mù Mini Trend", image: "gift-tuimu.webp" },
+  { text: "Bút Sáp Màu",  image: "gift-sapmau.webp" },
+  { text: "Móc Khóa Nhỏ",  image: "gift-mockhoa.webp" },
+  { text: "Thun Cột Tóc Đáng Yêu",image: "gift-thuncottoc.webp" },
+  { text: "Bộ Thẻ Bài Ma Thuật",image: "gift-thebai.webp"},
+  { text: "Hình Dán Sticker",image: "gift-sticker.webp" },
+  { text: "Vòng Đeo Tay Candy", image: "gift-vongtay.webp" },
 ];
 
 export const PREMIUM_PRIZES = [
-  { text: "Voucher 50k", color: "#FFD700", icon: "🎁" }, // Vàng Gold
-  { text: "Voucher 200k", color: "#FFC107", icon: "🎁" }, // Vàng Gold
-  { text: "Voucher 100k", color: "#FFB300", icon: "🎁" }, // Vàng Gold
-  { text: "Voucher 500k", color: "#FF8F00", icon: "🎁" }, // Vàng Gold
-  { text: "Card điện thoại 70k", color: "#FFD54F", icon: "🎁" }, // Vàng Gold
-  { text: "Card điện thoại 50k", color: "#FFCA28", icon: "🎁" }, // Vàng Gold
-  { text: "Card điện thoại 20k", color: "#FFD54F", icon: "🎁" }, // Vàng Gold
-  { text: "Card điện thoại 10k", color: "#FFCA28", icon: "🎁" }, // Vàng Gold
+  { text: "VOUCHER 50k", image: "gift-50.webp" },
+  { text: "VOUCHER 100k", image: "gift-100.webp" },
+  { text: "VOUCHER 200k", image: "gift-200.webp" },
+  { text: "VOUCHER 300k", image: "gift-300.webp" },
+ { text: "VOUCHER 50k", image: "gift-50.webp" },
+  { text: "VOUCHER 100k", image: "gift-100.webp" }, 
+  { text: "VOUCHER 200k", image: "gift-200.webp" },
+  { text: "SIÊU VOUCHER 500K", image: "gift-500.webp" },    
 ];
 
 // Dành cho phần All Projects ở trang Home
