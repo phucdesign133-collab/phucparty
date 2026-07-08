@@ -1,8 +1,12 @@
-// file: vite.config.js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/phucparty/', // Dòng này là "chìa khóa" để app biết nó đang ở đâu
-})
+  base: "/phucparty/",
+  publicDir: "public", // Ép buộc lấy folder này để copy vào root của dist
+  build: {
+    outDir: "dist",
+    emptyOutDir: true, // Xóa sạch dist cũ trước khi build mới
+  },
+});
