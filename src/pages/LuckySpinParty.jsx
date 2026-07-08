@@ -125,7 +125,9 @@ export default function LuckySpinParty() {
     setCurrentGiftImage(imageName);
     setIsGiftImageOpen(true);
   };
-
+  const getImageUrl = (imageName) => {
+    return `/phucparty/img/${imageName}`;
+  };
   return (
     <div
       style={{
@@ -162,20 +164,20 @@ export default function LuckySpinParty() {
             }}
           ></div>
           <div style={{ position: "relative" }}>
-  <div className={`wheel-lights-container ${isSpinning ? "spinning" : ""}`}>
-    {[...Array(20)].map((_, i) => (
-      <div
-        key={i}
-        className="light-dot"
-        style={{
-          // Giữ nguyên công thức bạn đã ưng ý, không thay đổi
-          transform: `rotate(${i * 18}deg) translateY(-${canvasSize / 2 }px)`,
-        }}
-      ></div>
-    ))}
-  </div>
-  <canvas ref={canvasRef} width={canvasSize} height={canvasSize} style={styles.canvasStyle} />
-</div>
+            <div className={`wheel-lights-container ${isSpinning ? "spinning" : ""}`}>
+              {[...Array(20)].map((_, i) => (
+                <div
+                  key={i}
+                  className="light-dot"
+                  style={{
+                    // Giữ nguyên công thức bạn đã ưng ý, không thay đổi
+                    transform: `rotate(${i * 18}deg) translateY(-${canvasSize / 2}px)`,
+                  }}
+                ></div>
+              ))}
+            </div>
+            <canvas ref={canvasRef} width={canvasSize} height={canvasSize} style={styles.canvasStyle} />
+          </div>
           <button
             onClick={spinTheWheel}
             disabled={isSpinning}
@@ -242,7 +244,8 @@ export default function LuckySpinParty() {
       {isGiftImageOpen && (
         <div className="lightbox-overlay" onClick={() => setIsGiftImageOpen(false)}>
           <div className="lightbox-content">
-            <img src={`${import.meta.env.BASE_URL}img/${currentGiftImage}`} alt="Gift Preview" />
+            {/* Gọi hàm getImageUrl trực tiếp ở đây */}
+            <img src={getImageUrl(currentGiftImage)} alt="Gift Preview" />
             <p style={{ textAlign: "center" }}>Chạm bất kỳ vị trí nào để đóng...</p>
           </div>
         </div>

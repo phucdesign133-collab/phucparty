@@ -3,13 +3,17 @@ import "./resultPopup.css"; // Có css rời
 
 export default function ResultPopup({ isOpen, onClose, result, babyName, code, onSendZalo, onSendWhatsapp, onSpinAgain, onOpenImage }) {
   if (!isOpen) return null;
-
+// Hàm này giúp viết hoa chữ cái đầu tiên
+const capitalizeName = (name) => {
+  if (!name) return "";
+  return name.charAt(0).toUpperCase() + name.slice(1);
+};
   return (
     <div className="popup-backdrop">
       <div className="popup-container">
         <button className="close-icon" onClick={onClose}>&times;</button>
 
-        <h3 className="popup-title">Chúc Mừng {babyName} Quay Trúng</h3>
+        <h3 className="popup-title">Chúc Mừng {capitalizeName(babyName)} Quay Trúng</h3>
         <div className="prize-display">{result?.icon} {result?.text}</div>
         <div className="code-badge">Mã: {code}</div>
         
