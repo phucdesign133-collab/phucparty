@@ -6,7 +6,7 @@ const ContactSection = ({category}) => {
   const brandName = category === "thiet-ke" ? "Phúc Design" : "Phúc Party";
   return (
     <div className="contact-section-border">
-      <h3>Liên hệ với chúng tôi</h3>
+      <h3 style={{marginTop:"-10px"}}>Liên hệ với chúng tôi</h3>
       <div className="contact-info">
         <p>
           <strong>Đại diện {brandName}:</strong> Dương Đỗ Hồng Phúc

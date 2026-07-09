@@ -1,10 +1,17 @@
 /* Giao diện tổng thể */
 :root {
-  --primary-color: #6c5ce7;
+  --primary-purple: #6c5ce7;
   --secondary-color: #ff7675;
   --text-color: #2d3436;
   --bg-color: #f9f9fb;
   --card-bg: #ffffff;
+  --primary-blue:   #5DADE2; /* Xanh dương pastel */
+  --primary-green:  #58D68D; /* Xanh lá pastel */
+  --primary-yellow: #F4D03F; /* Vàng pastel */
+  --primary-orange: #EB984E; /* Cam pastel */
+  --primary-red:    #EC7063; /* Đỏ pastel (nhẹ nhàng hơn màu đỏ rực cũ) */
+  --primary-black:  #566573; /* Xám than (thay cho đen kịt để hài hòa với bộ pastel) */
+  --primary-dark-red: #C0392B; /* Đỏ đậm, rất chuyên nghiệp cho các đường link nhấn mạnh */
 }
 
 body {

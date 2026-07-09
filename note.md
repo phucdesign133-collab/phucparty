@@ -212,7 +212,7 @@ Gõ: git push origin main
 
 Đổi tên hàng loạt đồng thời đổi định dạng jpg to webp bằng terminal -> bây giờ đang dùng để nén tự động lần 2
 
-$i = 1; Get-ChildItem -Include *.jpg, *.png, *.jpeg, *.jfif -Recurse | ForEach-Object { $newName = "gift-ten-$i.webp"; Write-Host "Đang chuyển đổi: $($_.Name) -> $newName"; magick $_.FullName -resize 1200x -quality 75 $newName; $i++ }
+$i = 1; Get-ChildItem -Include *.jpg, *.png, *.jpeg, *.jfif -Recurse | ForEach-Object { $newName = "khaitruong-phoccafe-$i.webp"; Write-Host "Đang chuyển đổi: $($_.Name) -> $newName"; magick $_.FullName -resize 1200x -quality 75 $newName; $i++ }
 
 Di chuyển ảnh sua khi đổi tên ra ngoài
 Move-Item \*.jpg ..

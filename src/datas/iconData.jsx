@@ -15,18 +15,20 @@ import {
   FaAddressCard,
   FaBoxOpen,
   FaEye,
-  FaTshirt,FaShare 
+  FaTshirt,FaShare ,FaBuilding 
 } from "react-icons/fa";
 // Bộ Cg
 // import { CgBoy, CgGirl } from "react-icons/cg";
 //Bộ Gi
-import { GiTripleGate, GiFireworkRocket, GiNestedHearts, GiConvergenceTarget } from "react-icons/gi";
+import { GiTripleGate, GiFireworkRocket, GiNestedHearts, GiConvergenceTarget,GiBalloonDog ,GiBalloons  } from "react-icons/gi";
 // Bộ Md
 import { MdElderlyWoman } from "react-icons/md";
 // Bộ Bi
 import { BiSolidSticker, BiSolidDiscount } from "react-icons/bi";
 // Bộ Tb
 import { TbWorldWww, TbBoxModel } from "react-icons/tb";
+//Bộ Gr
+import { GrWorkshop } from "react-icons/gr";
 // xuất icon theo những cái đã nhập phía trên
 export const ICONS = {
   home: { stroke: <IoHomeSharp />, fill: <IoHomeSharp /> },
@@ -40,6 +42,7 @@ export const ICONS = {
   elder: { stroke: <MdElderlyWoman />, fill: <MdElderlyWoman /> },
   donate: { stroke: <FaHandHoldingHeart />, fill: <FaHandHoldingHeart /> },
   yep: { stroke: <GiFireworkRocket />, fill: <GiFireworkRocket /> },
+  decor: { stroke: <GiBalloons />, fill: <GiBalloons /> },
   // ... khai báo các icon khác
   logo: { stroke: <GiConvergenceTarget />, fill: <GiConvergenceTarget /> },
   sticker: { stroke: <BiSolidSticker />, fill: <BiSolidSticker /> },
@@ -53,4 +56,6 @@ export const ICONS = {
   booth: { stroke: <TbBoxModel />, fill: <TbBoxModel /> },
   // ... các icon khác được dùng lại cho 2 tab
   form: { stroke: <FaShare />, fill: <FaShare /> },
+  workshop: { stroke: <GrWorkshop />, fill: <GrWorkshop /> },
+  company: { stroke: <FaBuilding />, fill: <FaBuilding /> },
 };

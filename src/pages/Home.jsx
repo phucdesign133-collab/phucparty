@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { dataLuckySpinParty, scrollToTopSmooth } from "../datas/data";
 import UpComing from "../components/UpComing";
-// import ProjectOfTheMonth from "../components/projectOfTheMonth";
 import BtnToSpin from "../components/BtnToSpin";
 import SearchSection from "../components/searchSection";
 
@@ -13,7 +12,6 @@ const Home = () => {
     <div>
       <UpComing />
       <SearchSection />
-      {/* <ProjectOfTheMonth /> */}
       <BtnToSpin />
     </div>
   );

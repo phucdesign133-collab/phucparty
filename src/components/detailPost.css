@@ -122,3 +122,24 @@ CSS
     height: 60px;
   }
 }
+/* Hashtag của chi tiết bài viết */
+/* detailPost.css */
+.hashtag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.hashtag-item {
+     background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 5px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hashtag-item:hover {
+  text-decoration: underline;
+}

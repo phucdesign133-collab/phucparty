@@ -109,15 +109,13 @@ const DetailPost = () => {
           />
         ))}
       </div>
-
+      {/* Thông tin chi tiết bài viết */}
       <div className="contact-section">
         {project.contactInfo?.address && (
           <div className="address-section">
             <strong>{labels.address}: </strong>
             {(() => {
-              // Tách chuỗi địa chỉ dựa trên ký tự phân cách ". - "
               const addresses = project.contactInfo.address.split(". - ");
-
               if (addresses.length > 1) {
                 return (
                   <ul style={{ listStyle: "none", paddingLeft: "15px", marginTop: "5px" }}>
@@ -133,30 +131,54 @@ const DetailPost = () => {
             })()}
           </div>
         )}
+
         {project.contactInfo?.owner && (
           <p>
             <strong>Thuộc sở hữu của: </strong> {project.contactInfo.owner}
           </p>
         )}
+
+        {/* Hiển thị link cho mọi bài viết có link */}
         {project.contactInfo?.link && (
           <p>
             <strong>Link: </strong>
-            <a href={project.contactInfo.link} target="_blank" rel="noopener noreferrer">
-              {project.contactInfo.owner || "Xem tại đây"}
+            <a
+              style={{ textDecoration: "none", color: "var(--primary-dark-red)", fontWeight: "bold", fontStyle: "italic" }}
+              href={project.contactInfo.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {project.contactInfo.owner ? project.contactInfo.owner : "Xem nhiều hơn >>"}
             </a>
           </p>
         )}
+
         {(project.date || project.contactInfo?.date) && (
           <p>
             <strong>{labels.date}: </strong> {project.date || project.contactInfo.date}
           </p>
         )}
+
         <p style={{ marginTop: "15px" }}>
           <strong>Cảm ơn Quý khách đã tin tưởng sử dụng dịch vụ tại {labels.brand}.</strong>
         </p>
       </div>
-
-      <ContactSection category={project.category}/>
+      {/* Điều hướng về hashtag của facebook */}
+      <div className="hashtag-container">
+        {project.tags?.map((tag, index) => (
+          <a
+            key={index}
+            href={`https://www.facebook.com/hashtag/${tag.toLowerCase()}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hashtag-item"
+          >
+            <span>#{tag}</span>
+          </a>
+        ))}
+      </div>
+      {/* Thông tin liên hệ đặt dịch vụ */}
+      <ContactSection category={project.category} />
       <AdditionalSections currentSlug={slug} />
     </div>
   );
