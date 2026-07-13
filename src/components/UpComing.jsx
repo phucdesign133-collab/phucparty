@@ -37,7 +37,7 @@ const UpComing = () => {
       <div className="up-inner">
         <div className="up-text">
           <h6 className="up-title">Khoảnh Khắc</h6>
-          <p className="up-desc">Những khoảnh khắc gần đây vừa được cập nhật.</p>
+          <p className="up-desc">Những khoảnh khắc gần đây...</p>
           <div className="up-nav">
             <button onClick={() => rotate("prev")} className="up-btn">
               ‹

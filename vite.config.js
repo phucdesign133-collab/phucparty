@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/phucparty/",
+  base: "/",
   publicDir: "public", // Ép buộc lấy folder này để copy vào root của dist
   build: {
     outDir: "dist",
