@@ -1,30 +1,63 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { galleryData } from "../datas/galleryData"; // Nhớ kiểm tra đường dẫn file đúng với project của bạn
 import "./Header.css";
-import Logo from "../assets/images/v1.png";
+
+// Import các logo
+import LogoGroup from "../assets/images/logo-phucgroup.png"; 
+import LogoDesign from "../assets/images/logo-phucdesign.png";
+import LogoParty from "../assets/images/logo-phucparty.png";
+
 import { FaTimes, FaBars } from "react-icons/fa";
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const handleMenuClick = (path) => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    navigate(path);
-    setIsMenuOpen(false);
+  setIsMenuOpen(false); // Đóng menu nếu bạn có trạng thái này
+  navigate(path);       // Điều hướng tới trang mong muốn
+};
+ // Trong Header.jsx, anh chỉ cần khai báo như thế này:
+
+const [currentLogo, setCurrentLogo] = useState(LogoGroup);
+
+const updateLogo = () => {
+    const categoryFromState = location.state?.category;
+    const searchParams = new URLSearchParams(location.search);
+    const categoryFromURL = searchParams.get("filter");
+
+    let currentCat = categoryFromState || categoryFromURL;
+
+    if (!currentCat) {
+      if (location.pathname.includes("/post/")) {
+        const pathParts = location.pathname.split("/");
+        const slug = pathParts[pathParts.length - 1];
+        
+        // Bây giờ galleryData đã được import nên nó sẽ hết lỗi đỏ
+        const project = galleryData.find((item) => item.slug === slug);
+        
+        currentCat = project ? project.category : "thiet-ke"; 
+      } else if (location.pathname.includes("/all-post")) {
+        currentCat = "su-kien";
+      }
+    }
+
+    if (currentCat === "su-kien") return LogoParty;
+    if (currentCat === "thiet-ke") return LogoDesign;
+    return LogoGroup;
   };
 
-  useEffect(() => {
-    if (isMenuOpen) document.body.classList.add("menu-open");
-    else document.body.classList.remove("menu-open");
-    return () => document.body.classList.remove("menu-open");
-  }, [isMenuOpen]);
+// Luôn cập nhật logo khi location thay đổi
+useEffect(() => {
+    setCurrentLogo(updateLogo());
+}, [location]);
 
   return (
     <header className="main-header">
       <div className="header-container">
         <div className="header-logo-wrapper" onClick={() => handleMenuClick("/")}>
-          <img src={Logo} alt="PHUC DESIGN" className="logo-img" />
+          <img src={currentLogo} alt="Logo" className="logo-img" />
         </div>
         <button className="hamburger-btn" onClick={() => setIsMenuOpen(true)}>
           <FaBars size={24} />
@@ -34,10 +67,11 @@ const Header = () => {
       <nav className={`header-nav ${isMenuOpen ? "nav-open" : ""}`}>
         <div className="menu-header-mobile">
           <div className="menu-logo-mobile">
-            <img src={Logo} alt="Logo" />
+            <img src={currentLogo} alt="Logo" />
           </div>
           <button className="close-btn" onClick={() => setIsMenuOpen(false)}>
             <FaTimes size={24} />
+            {/* &times; */}
           </button>
         </div>
         <div className="nav-link" onClick={() => handleMenuClick("/")}>
@@ -53,4 +87,5 @@ const Header = () => {
     </header>
   );
 };
+
 export default Header;

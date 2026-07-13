@@ -24,6 +24,19 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  useEffect(() => {
+    // 1. Kiểm tra xem trên đường link hiện tại có chứa chữ "fbclid" không
+    if (window.location.search.includes('fbclid')) {
+      // 2. Tạo ra một đối tượng URL dựa trên đường dẫn hiện tại
+      const url = new URL(window.location.href);
+      
+      // 3. Xóa bỏ riêng cái tham số fbclid rác rưởi đi
+      url.searchParams.delete('fbclid');
+      
+      // 4. Cập nhật lại thanh địa chỉ của trình duyệt mà không làm tải lại trang
+      window.history.replaceState({}, document.title, url.pathname + url.search + url.hash);
+    }
+  }, []);
   return (
     <>
       <ScrollToTop />

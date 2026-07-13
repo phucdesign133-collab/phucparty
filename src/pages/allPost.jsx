@@ -1,15 +1,16 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import "../components/allPost.css";
 import BackToTop from "../components/BackToTop";
 import BackgroundText from "../components/backgroundText";
 import Breadcrumb from "../components/Breadcrumb";
 import EventSection from "../components/eventSection";
-import { data as rawData } from "../datas/galleryData"; // Nhập dữ liệu thô
+import { data as rawData } from "../datas/galleryData";
 
 const AllPost = () => {
   const [searchParams] = useSearchParams();
   const filterFromUrl = searchParams.get("filter");
+  const navigate = useNavigate();
 
   const tabConfigs = useMemo(
     () => [
@@ -20,19 +21,16 @@ const AllPost = () => {
     [],
   );
 
-  // 1. Gộp và xử lý dữ liệu: chuyển object thành mảng và sắp xếp logic
   const sortedGalleryData = useMemo(() => {
-    // Chuyển object data thành mảng để dễ lọc/sort
     const allItems = [...Object.values(rawData.events || {}), ...Object.values(rawData.designs || {}), ...Object.values(rawData.pricing || {})];
 
     return allItems.sort((a, b) => {
       const timeA = a.time || a.date || a.contactInfo?.date || "2000-01-01";
       const timeB = b.time || b.date || b.contactInfo?.date || "2000-01-01";
-      return new Date(timeB) - new Date(timeA); // Mới nhất lên đầu
+      return new Date(timeB) - new Date(timeA);
     });
   }, []);
 
-  // 2. Hàm helper tìm tab chuẩn xác dựa trên dữ liệu đã sort
   const findTabByFilter = (filter) => {
     if (!filter) return null;
     return tabConfigs.find((tab) =>
@@ -57,7 +55,7 @@ const AllPost = () => {
 
   return (
     <div className="all-post-main-layout">
-      <BackgroundText />
+      <BackgroundText category={tabConfigs.find(t => t.id === activeTabId)?.category}/>
       <Breadcrumb
         items={[
           { label: "Trang chủ", link: "/" },
@@ -73,6 +71,7 @@ const AllPost = () => {
             onClick={() => {
               setActiveTabId(tab.id);
               setActiveFilter("all");
+              navigate("/all-post", { state: { category: tab.category }, replace: true });
             }}
           >
             {tab.label}

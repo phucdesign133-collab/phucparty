@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { galleryData } from "../datas/galleryData";
 import BackgroundText from "../components/backgroundText";
 import ContactSection from "../components/contactSection";
@@ -9,6 +9,7 @@ import "../components/detailPost.css";
 
 const DetailPost = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const project = galleryData.find((item) => item.slug === slug);
 
   const [mainImage, setMainImage] = useState(null);
@@ -16,16 +17,21 @@ const DetailPost = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const scrollTimer = setTimeout(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-    }, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+
+    // Cập nhật history state để Header nhận diện đúng category và đổi logo
+    if (project) {
+      window.history.replaceState({ ...window.history.state, category: project.category }, "");
+      
+      // Dispatch một sự kiện tùy chỉnh để Header có thể lắng nghe nếu cần,
+      // hoặc đơn giản là dựa vào việc Header sử dụng useLocation()
+      window.dispatchEvent(new Event("pushState"));
+    }
 
     if (project && project.files && project.files.length > 0) {
       setMainImage(project.files[0]);
       setMainImageIndex(0);
     }
-
-    return () => clearTimeout(scrollTimer);
   }, [slug, project]);
 
   const changeImage = (newIndex) => {
@@ -53,7 +59,7 @@ const DetailPost = () => {
 
   return (
     <div className="detail-post-container">
-      <BackgroundText />
+      <BackgroundText category={project.category}/>
       <Breadcrumb
         items={[
           { label: "Trang chủ", link: "/" },
@@ -62,13 +68,9 @@ const DetailPost = () => {
         ]}
       />
       <h1 className="post-title">{project.title}</h1>
-
-      {/* 1. Ảnh chính (Đã cập nhật path chuẩn) */}
       <div className="featured-image" onClick={() => setIsOpen(true)}>
         <img src={`${import.meta.env.BASE_URL}img/${mainImage}`} alt={project.title} />
       </div>
-
-      {/* 2. Lightbox (Đã cập nhật path chuẩn) */}
       {isOpen && (
         <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
           <span className="close-btn">&times;</span>
@@ -93,8 +95,6 @@ const DetailPost = () => {
           </button>
         </div>
       )}
-
-      {/* 3. Danh sách ảnh Thumbnail (Đã cập nhật path chuẩn) */}
       <div className="thumbnail-scroll-container">
         {project.files.map((fileName, index) => (
           <img
@@ -109,7 +109,6 @@ const DetailPost = () => {
           />
         ))}
       </div>
-      {/* Thông tin chi tiết bài viết */}
       <div className="contact-section">
         {project.contactInfo?.address && (
           <div className="address-section">
@@ -131,14 +130,11 @@ const DetailPost = () => {
             })()}
           </div>
         )}
-
         {project.contactInfo?.owner && (
           <p>
             <strong>Thuộc sở hữu của: </strong> {project.contactInfo.owner}
           </p>
         )}
-
-        {/* Hiển thị link cho mọi bài viết có link */}
         {project.contactInfo?.link && (
           <p>
             <strong>Link: </strong>
@@ -152,18 +148,15 @@ const DetailPost = () => {
             </a>
           </p>
         )}
-
         {(project.date || project.contactInfo?.date) && (
           <p>
             <strong>{labels.date}: </strong> {project.date || project.contactInfo.date}
           </p>
         )}
-
         <p style={{ marginTop: "15px" }}>
           <strong>Cảm ơn Quý khách đã tin tưởng sử dụng dịch vụ tại {labels.brand}.</strong>
         </p>
       </div>
-      {/* Điều hướng về hashtag của facebook */}
       <div className="hashtag-container">
         {project.tags?.map((tag, index) => (
           <a
@@ -177,7 +170,6 @@ const DetailPost = () => {
           </a>
         ))}
       </div>
-      {/* Thông tin liên hệ đặt dịch vụ */}
       <ContactSection category={project.category} />
       <AdditionalSections currentSlug={slug} />
     </div>

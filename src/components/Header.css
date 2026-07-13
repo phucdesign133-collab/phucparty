@@ -17,29 +17,43 @@ body.menu-open {
   z-index: 999;
   display: flex;
 }
+/* --- Header.css --- */
 
+/* 1. Container cha của header */
 .header-container {
+  display: flex;
+  align-items: center; /* Căn giữa dọc */
+  justify-content: space-between; /* Đẩy logo sang trái, menu sang phải */
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   padding: 10px 20px;
-  display: flex;
-  justify-content: space-between; /* Đã sửa lỗi chính tả */
-  align-items: center;
+  gap: 20px; /* Khoảng cách giữa Logo và Menu */
 }
 
-.header-nav {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  align-items: center;
-}
-
+/* 2. Logo - Ép nó không được chiếm chỗ quá đà */
 .logo-img {
   height: 45px;
   width: auto;
   object-fit: contain;
+  flex: 0 0 auto; /* Không cho logo bị co dãn lung tung */
   cursor: pointer;
+}
+
+/* 3. Menu - Cho nó linh hoạt */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1; /* Cho phép menu chiếm phần không gian còn lại */
+  justify-content: flex-end; /* Đẩy menu về sát phía bên phải */
+  white-space: nowrap; /* Ép chữ nằm 1 hàng */
+}
+
+/* 4. Link menu */
+.nav-link {
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 /* Ẩn các icon Mobile trên Desktop */
@@ -49,88 +63,99 @@ body.menu-open {
   display: none !important;
 }
 
-/* --- Mobile Menu Styles --- */
+/* --- Chỉ chỉnh sửa phần Mobile này thôi --- */
+/* --- HOÀN CHỈNH MOBILE MENU STYLE --- */
 @media (max-width: 768px) {
-  /* Hiển thị hamburger */
+  /* Hiển thị hamburger ở Header chính */
   .hamburger-btn {
     display: flex !important;
     background: none;
     border: none;
     cursor: pointer;
     color: #333 !important;
+    font-size: 24px;
+    padding: 10px;
   }
 
-  /* Định dạng menu trượt */
+  /* Định dạng menu trượt: Đảm bảo phủ toàn màn hình */
+  /* Định dạng menu trượt: Trượt từ phải sang trái */
   .header-nav {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background: #fff;
-    transition: right 0.3s ease;
-    z-index: 9999;
+    right: -100%; /* Ẩn mặc định: nằm ngoài mép phải màn hình */
+    width: 100%; /* Chiếm 100% chiều rộng */
+    height: 100vh; /* Chiếm 100% chiều cao */
+    background-color: #ffffff;
+    z-index: 999999; /* Luôn nằm trên cùng */
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     padding-top: 20px;
+
+    /* Cấu hình trượt bằng right thay vì transform */
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
   }
+
+  /* Khi mở menu: right = 0 để menu trượt khớp vào màn hình */
   .header-nav.nav-open {
     right: 0;
   }
-
-  /* Khu vực chứa nút X và Logo: Nằm ngang */
+  /* Khu vực Logo và Nút X: Phải nằm trên cùng */
   .menu-header-mobile {
-    display: flex;
-    justify-content: space-between; /* Đẩy X sang phải, Logo sang trái */
+    justify-content: space-between;
     align-items: center;
-    padding: 0 20px 20px 20px;
     width: 100%;
+    padding: 0 20px 20px;
+    display: flex;
   }
 
   /* Nút Close */
   .close-btn {
     display: flex !important;
+    font-size: 32px;
+    cursor: pointer;
     background: none;
     border: none;
-    cursor: pointer;
     color: #333 !important;
     padding: 10px;
   }
 
-  /* Logo trong menu: Luôn hiển thị */
+  /* Logo trong menu */
   .menu-logo-mobile {
     display: block !important;
-    margin: 10px 20px 0 20px;
   }
   .menu-logo-mobile img {
-    display: block !important; /* Ghi đè lệnh ẩn */
-    height: 45px;
+    height: 50px;
+    width: auto;
+    display: block;
   }
 
   /* Các link điều hướng */
   .nav-link {
     width: 100%;
-    padding: 20px;
+    padding: 30px 0;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #333;
     font-weight: 600;
-    color: #333;
     cursor: pointer;
-    white-space: nowrap; /* Ngăn rớt chữ trên desktop */
-    position: relative;
     text-decoration: none;
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #f9f9f9; /* Đường kẻ phân cách */
   }
 
-  .nav-link::after {
+  .nav-link:after {
     content: "";
-    position: absolute;
-    left: 50%; /* Bắt đầu từ giữa */
-    bottom: -5px; /* Khoảng cách xuống dưới chữ */
-    width: 60%; /* Độ dài 60% */
-    height: 1px;
     background-color: #eee;
-    transform: translateX(-50%); /* Căn giữa hoàn hảo */
-    transition: width 0.3s ease;
+    width: 60%;
+    height: 1px;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
