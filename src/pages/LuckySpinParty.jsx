@@ -139,10 +139,10 @@ export default function LuckySpinParty() {
     >
       <div style={styles.headerArea}>
         <h1 style={{ ...styles.partyTitle, color: isPremiumMode ? "#00f5d4" : "#e2e8f0", fontSize: isMobile ? "22px" : "30px" }}>
-          {isPremiumMode ? "💎 PREMIUM SPIN VIP 💎" : "🎉 LUCKY SPIN PARTY 🎉"}
+          {isPremiumMode ? "💎 VÒNG QUAY VIP 💎" : "🎉 VÒNG QUAY MAY MẮN 🎉"}
         </h1>
         <p style={styles.partySubtitle}>
-          {isPremiumMode ? "Đã kích hoạt quà tặng đặc quyền dành cho bé!" : "Nhập thông tin bé để mở khóa đĩa quà VIP từ Phúc Design."}
+          {isPremiumMode ? "Chào mừng bạn đến với Vòng quay VIP của Phúc" : "Chào mừng bạn đến với Vòng quay Basic của Phúc."}
         </p>
       </div>
 
@@ -195,10 +195,10 @@ export default function LuckySpinParty() {
 
         <div style={{ ...styles.formWrapper, width: isMobile ? "100%" : "390px" }}>
           <h3 style={{ ...styles.formTitle, color: isPremiumMode ? "#ffbf00" : "#94a3b8", fontSize: isMobile ? "15px" : "16px" }}>
-            {isPremiumMode ? "✨ Vòng Quay VIP Sẵn Sàng ✨" : "🔒 Nhập Tên Bé Để Đổi Đĩa Quà VIP"}
+            {isPremiumMode ? "✨ Vòng Quay VIP Sẵn Sàng ✨" : "🔒 Nhập Thông Tin Để Mở Vòng Quay VIP"}
           </h3>
           <div style={styles.inputGroup}>
-            <label style={{ ...styles.label, color: isPremiumMode ? "#00f5d4" : "#94a3b8" }}>Tên của bé yêu:</label>
+            <label style={{ ...styles.label, color: isPremiumMode ? "#00f5d4" : "#94a3b8" }}>Tên của bé yêu!</label>
             <input type="text" placeholder="Nhập tên bé..." value={babyName} onChange={(e) => setBabyName(e.target.value)} style={styles.input} />
           </div>
           <div style={styles.inputGroup}>

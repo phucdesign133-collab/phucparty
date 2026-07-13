@@ -80,6 +80,9 @@ useEffect(() => {
         <div className="nav-link" onClick={() => handleMenuClick("/all-post")}>
           Thư viện
         </div>
+        <div className="nav-link" onClick={() => handleMenuClick("/resources")}>
+          Công cụ miễn phí
+        </div>
         <div className="nav-link" onClick={() => handleMenuClick("/lucky-spin")}>
           Vòng quay may mắn
         </div>

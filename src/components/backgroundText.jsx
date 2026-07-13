@@ -18,6 +18,10 @@ const BackgroundText = ({ category }) => {
     default: {
       title: "Nơi Lưu Giữ Những Kỷ Niệm",
       subtitle: "Khoảnh khắc tuyệt vời được ghi lại bởi team Phúc Party và chính bạn."
+    },
+    resources: {
+      title: "Tools & AI",
+      subtitle: "Tổng hợp các tài liệu, mẫu thiết kế và công cụ hỗ trợ cho sự kiện của bạn."
     }
   };
 

@@ -10,9 +10,10 @@ import BackToTop from "./components/BackToTop";
 // Pages
 import Home from "./pages/Home";
 import LuckySpinParty from "./pages/LuckySpinParty";
-// import AllGallery from "./pages/AllGallery";
 import AllPost from "./pages/allPost";
 import DetailPost from "./pages/detailPost";
+import Resources from "./pages/Resources";
+import DetailResources from "./pages/detailResources";
 
 // Component con giúp tự động cuộn lên đầu
 const ScrollToTop = () => {
@@ -26,13 +27,13 @@ const ScrollToTop = () => {
 function App() {
   useEffect(() => {
     // 1. Kiểm tra xem trên đường link hiện tại có chứa chữ "fbclid" không
-    if (window.location.search.includes('fbclid')) {
+    if (window.location.search.includes("fbclid")) {
       // 2. Tạo ra một đối tượng URL dựa trên đường dẫn hiện tại
       const url = new URL(window.location.href);
-      
+
       // 3. Xóa bỏ riêng cái tham số fbclid rác rưởi đi
-      url.searchParams.delete('fbclid');
-      
+      url.searchParams.delete("fbclid");
+
       // 4. Cập nhật lại thanh địa chỉ của trình duyệt mà không làm tải lại trang
       window.history.replaceState({}, document.title, url.pathname + url.search + url.hash);
     }
@@ -44,7 +45,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/lucky-spin" element={<LuckySpinParty />} />
-        {/* <Route path="/all-gallery" element={<AllGallery />} /> */}
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/resources/:id" element={<DetailResources />} />
         <Route path="/all-post" element={<AllPost />} />
         <Route path="/detail-post" element={<DetailPost />} />
         <Route path="/post/:slug" element={<DetailPost />} />
