@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Đang chuyển hướng...</title>
-</head>
-<body>
-    <p>Đang chuyển hướng đến Phuc Group...</p>
+    <title>Redirecting...</title>
     <script>
-        // Kiểm tra nếu không phải trang đích thì mới chuyển hướng
         if (window.location.hostname !== "phucgroup.vercel.app") {
+            console.log("Đang chuyển hướng đến Phuc Group...");
             window.location.replace("https://phucgroup.vercel.app/");
         }
     </script>
+</head>
+<body>
+    <!-- Để trống hoàn toàn -->
 </body>
 </html>
