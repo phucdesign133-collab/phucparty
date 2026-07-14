@@ -2,8 +2,15 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://phucgroup.vercel.app/" />
-    <title>Phuc Group</title>
+    <title>Đang chuyển hướng...</title>
+    <script>
+        // Chỉ chuyển hướng nếu trang hiện tại KHÔNG PHẢI là trang đích
+        if (window.location.hostname !== "phucgroup.vercel.app") {
+            window.location.replace("https://phucgroup.vercel.app/");
+        } else {
+            document.body.innerHTML = "Bạn đã ở đúng trang rồi!";
+        }
+    </script>
 </head>
 <body>
     <p>Đang chuyển hướng đến Phuc Group...</p>
