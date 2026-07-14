@@ -78,7 +78,7 @@ useEffect(() => {
           Trang chủ
         </div>
         <div className="nav-link" onClick={() => handleMenuClick("/all-post")}>
-          Thư viện
+          Thư viện hình ảnh
         </div>
         <div className="nav-link" onClick={() => handleMenuClick("/resources")}>
           Công cụ miễn phí

@@ -21,7 +21,7 @@ const BackgroundText = ({ category }) => {
     },
     resources: {
       title: "Tools & AI",
-      subtitle: "Tổng hợp các tài liệu, mẫu thiết kế và công cụ hỗ trợ cho sự kiện của bạn."
+      subtitle: "Tools & AI - Kho công cụ hỗ trợ công việc. Đừng quên bấm vào 'Chi tiết' và xem clip hướng dẫn để ủng hộ Phúc nhé!"
     }
   };
 
