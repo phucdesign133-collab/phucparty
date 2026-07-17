@@ -1,13 +1,13 @@
 import React from "react";
 import "./Footer.css";
-import Logo from "../assets/images/v3.png";
+import LogoGroup from "../assets/images/logo-phucgroup.png";
 
 const Footer = () => {
   return (
     <footer className="footer-main">
       <div className="footer-grid">
         <div className="footer-col">
-          <img src={Logo} alt="Logo" className="footer-logo" />
+          <img src={LogoGroup} alt="Logo" className="footer-logo" style={{background:"#fff",padding:"10px",borderRadius:"10px"}}/>
           <p>Cung cấp nhân sự</p>
           <p>Xây dựng thương hiệu</p>
           <p>An tâm di chuyển</p>
@@ -16,16 +16,16 @@ const Footer = () => {
 
         <div className="footer-col">
           <h3>Khám Phá</h3>
-          <a href="#">Trang chủ</a>
+          <a href="#">Profile</a>
           <a href="#/lucky-spin">Vòng quay may mắn</a>
-          <a href="#">Về chúng tôi</a>
+          <a href="#">Balloon Club</a>
         </div>
 
         <div className="footer-col">
           <h3>Dịch Vụ</h3>
-          <a href="#/all-post">Tổ chức sự kiện</a>
-          <a href="#all-post">Cho thuê vòng quay</a>
-          <a href="#all-post">Biểu diễn nghệ thuật</a>
+          <a href="#/gallery">Tổ chức sự kiện</a>
+          <a href="#all-post">Thiết kế tham khảo</a>
+          <a href="#all-post">Bảng giá sự kiện</a>
         </div>
 
         <div className="footer-col">
@@ -39,7 +39,7 @@ const Footer = () => {
           </a>
           <a href="mailto:phucdesign133@gmail.com">phucdesign133@gmail.com</a>
           <a href="tel:0799910603">Hotline: 079.991.0603</a>
-          <a href="#">ZaloWhatsApp</a>
+          <a href="#">Zalo</a>
         </div>
       </div>
       <div className="footer-copyright">

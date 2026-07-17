@@ -20,7 +20,7 @@ import {
 // Bộ Cg
 // import { CgBoy, CgGirl } from "react-icons/cg";
 //Bộ Gi
-import { GiTripleGate, GiFireworkRocket, GiNestedHearts, GiConvergenceTarget,GiBalloonDog ,GiBalloons  } from "react-icons/gi";
+import { GiTripleGate, GiFireworkRocket, GiNestedHearts, GiConvergenceTarget,GiBalloonDog ,GiBalloons,GiDiamondRing   } from "react-icons/gi";
 // Bộ Md
 import { MdElderlyWoman } from "react-icons/md";
 // Bộ Bi
@@ -43,6 +43,7 @@ export const ICONS = {
   donate: { stroke: <FaHandHoldingHeart />, fill: <FaHandHoldingHeart /> },
   yep: { stroke: <GiFireworkRocket />, fill: <GiFireworkRocket /> },
   decor: { stroke: <GiBalloons />, fill: <GiBalloons /> },
+   wedding: { stroke: <GiDiamondRing />, fill: <GiDiamondRing /> },
   // ... khai báo các icon khác
   logo: { stroke: <GiConvergenceTarget />, fill: <GiConvergenceTarget /> },
   sticker: { stroke: <BiSolidSticker />, fill: <BiSolidSticker /> },

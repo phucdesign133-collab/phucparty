@@ -22,6 +22,10 @@ const BackgroundText = ({ category }) => {
     resources: {
       title: "Tools & AI",
       subtitle: "Tools & AI - Kho công cụ hỗ trợ công việc. Đừng quên bấm vào 'Chi tiết' và xem clip hướng dẫn để ủng hộ Phúc nhé!"
+    },
+    balloonClub: {
+      title: "Balloon Club",
+      subtitle: "Hệ sinh thái dành cho Balloon Artist, bao gồm Academy, AI Tools, Downloads, Resources và Blog, giúp bạn học tập, sáng tạo và phát triển công việc hiệu quả hơn. 🎈"
     }
   };
 

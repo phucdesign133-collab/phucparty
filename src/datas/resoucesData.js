@@ -74,7 +74,6 @@ export const resourcesData = [
       },
     ],
   },
-
   {
     category: "Thư viện mẫu tham khảo",
     tools: [
@@ -459,67 +458,6 @@ export const resourcesData = [
     ],
   },
   {
-    category: "Trình duyệt",
-    tools: [
-      {
-        id: 20,
-        title: "Google",
-        description: "Công cụ tìm kiếm mạnh mẽ nhất thế giới.",
-        note: "Miễn phí",
-        guide: "Nhập từ khóa vào thanh tìm kiếm ,- Nhấn enter để bắt đầu ,- Lọc kết quả theo danh mục ,-",
-        icon: "https://www.google.com/s2/favicons?domain=google.com",
-        link: "https://www.google.com/",
-        tags: ["Search", "Công cụ", "Internet"],
-        images: [
-          "https://images.unsplash.com/photo-1573804633927-bf8190000ade?q=80&w=600&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=600&auto=format&fit=crop",
-        ],
-      },
-      {
-        id: 21,
-        title: "Mozilla Firefox",
-        description: "Trình duyệt web tập trung vào quyền riêng tư.",
-        note: "Miễn phí",
-        guide: "Tải xuống trình duyệt tại trang chủ ,- Cài đặt và đồng bộ hóa tài khoản ,- Tùy chỉnh tiện ích mở rộng ,-",
-        icon: "https://www.google.com/s2/favicons?domain=firefox.com",
-        link: "https://www.mozilla.org/en-US/firefox/",
-        tags: ["Trình duyệt", "Công cụ", "Internet"],
-        images: [
-          "https://images.unsplash.com/photo-1594905139049-74d75f2b8743?q=80&w=600&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1618422201922-df8caf1e62a8?q=80&w=600&auto=format&fit=crop",
-        ],
-      },
-      {
-        id: 22,
-        title: "Microsoft Edge",
-        description: "Trình duyệt hiện đại dựa trên nền tảng Chromium.",
-        note: "Miễn phí",
-        guide: "Cập nhật trình duyệt lên phiên bản mới nhất ,- Đăng nhập tài khoản Microsoft ,- Quản lý tab và ứng dụng ,-",
-        icon: "https://www.google.com/s2/favicons?domain=microsoft.com",
-        link: "https://www.microsoft.com/edge",
-        tags: ["Trình duyệt", "Công cụ", "Internet"],
-        images: [
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1545670723-196ed0954986?q=80&w=600&auto=format&fit=crop",
-        ],
-      },
-      {
-        id: 23,
-        title: "Cốc Cốc",
-        description: "Trình duyệt được tối ưu cho người dùng Việt Nam.",
-        note: "Miễn phí",
-        guide: "Tải về bộ cài đặt ,- Cài đặt trình duyệt vào máy tính ,- Sử dụng các tính năng tích hợp sẵn ,-",
-        icon: "https://www.google.com/s2/favicons?domain=coccoc.com",
-        link: "https://coccoc.com/",
-        tags: ["Trình duyệt", "Công cụ", "Việt Nam"],
-        images: [
-          "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop",
-        ],
-      },
-    ],
-  },
-  {
     category: "Bảng màu",
     tools: [
       {
@@ -593,7 +531,8 @@ export const resourcesData = [
         title: "Quayso.vn",
         description: "Công cụ quay số may mắn trực tuyến cho sự kiện.",
         note: "Miễn phí",
-        guide: "Nhập danh sách người tham gia ,- Hoặc nhập hình phạt trên bàn nhậu ,- Cấu hình số lượng giải thưởng ,- Bấm quay số để xác định kết quả ,-",
+        guide:
+          "Nhập danh sách người tham gia ,- Hoặc nhập hình phạt trên bàn nhậu ,- Cấu hình số lượng giải thưởng ,- Bấm quay số để xác định kết quả ,-",
         icon: "https://www.google.com/s2/favicons?domain=quayso.vn",
         link: "https://quayso.vn",
         tags: ["Sự kiện", "Tiện ích", "Game"],

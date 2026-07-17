@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
-import "../components/allPost.css";
+import "../components/Gallery.css";
 import BackToTop from "../components/BackToTop";
 import BackgroundText from "../components/backgroundText";
 import Breadcrumb from "../components/Breadcrumb";
 import EventSection from "../components/eventSection";
 import { data as rawData } from "../datas/galleryData";
 
-const AllPost = () => {
+const Gallery = () => {
   const [searchParams] = useSearchParams();
   const filterFromUrl = searchParams.get("filter");
   const navigate = useNavigate();
@@ -59,7 +59,7 @@ const AllPost = () => {
       <Breadcrumb
         items={[
           { label: "Trang chủ", link: "/" },
-          { label: "Tất cả bài viết", link: "/all-post" },
+          { label: "Tất cả bài viết", link: "/gallery" },
         ]}
       />
 
@@ -71,7 +71,7 @@ const AllPost = () => {
             onClick={() => {
               setActiveTabId(tab.id);
               setActiveFilter("all");
-              navigate("/all-post", { state: { category: tab.category }, replace: true });
+              navigate("/gallery", { state: { category: tab.category }, replace: true });
             }}
           >
             {tab.label}
@@ -79,7 +79,7 @@ const AllPost = () => {
         ))}
       </div>
 
-      <div className="gallery-allpost-container" ref={tabsContainerRef}>
+      <div className="gallery-Gallery-container" ref={tabsContainerRef}>
         <EventSection
           data={sortedGalleryData}
           category={tabConfigs.find((t) => t.id === activeTabId)?.category || "su-kien"}
@@ -92,4 +92,4 @@ const AllPost = () => {
   );
 };
 
-export default AllPost;
+export default Gallery;

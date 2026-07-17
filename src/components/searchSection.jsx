@@ -31,10 +31,10 @@ export default function SearchSection() {
       });
     });
 
-    // Trả về 8 hashtag có bài viết mới nhất
+    // Trả về 6 hashtag có bài viết mới nhất
     return Object.keys(tagLatestDate)
       .sort((a, b) => tagLatestDate[b] - tagLatestDate[a])
-      .slice(0, 8);
+      .slice(0, 6);
   }, [allGalleryItems]);
 
   const renderHighlighted = (text, highlight) => {

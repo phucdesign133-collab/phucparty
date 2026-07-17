@@ -1,9 +1,10 @@
 import { ICONS } from "./iconData";
-
+ 
 //1. Dùng cho MenuIconSection.jsx
 export const filters_events = [
   //Khúc này là của sự kiện
   { id: "sinh-nhat", label: "Sinh nhật", category: "su-kien", icon: ICONS.birthday.stroke, iconActive: ICONS.birthday.fill },
+  { id: "wedding", label: "Tiệc cưới", category: "su-kien", icon: ICONS.wedding.stroke, iconActive: ICONS.wedding.fill },
   { id: "thoi-noi", label: "Thôi Nôi", category: "su-kien", icon: ICONS.fullmonth.stroke, iconActive: ICONS.fullmonth.fill },
   { id: "thien-nguyen", label: "Thiện nguyện", category: "su-kien", icon: ICONS.donate.stroke, iconActive: ICONS.donate.fill },
   { id: "khai-truong", label: "Khai Trương", category: "su-kien", icon: ICONS.firework.stroke, iconActive: ICONS.firework.fill },

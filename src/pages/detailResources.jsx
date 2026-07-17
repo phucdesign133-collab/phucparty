@@ -32,11 +32,11 @@ const handleScroll = () => {
 };
   return (
     <div className="detail-res-page">
-      <BackgroundText category="resources" />
+      <BackgroundText category="balloonClub" />
       <Breadcrumb
         items={[
           { label: "Trang chủ", link: "/" },
-          { label: "Tất cả bài viết", link: "/resources" },
+          { label: "Tất cả bài viết", link: "/balloon-club" },
           { label: tool.title, link: `/resources/${id}` },
         ]}
       />

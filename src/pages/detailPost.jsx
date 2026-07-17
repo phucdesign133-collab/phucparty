@@ -63,7 +63,7 @@ const DetailPost = () => {
       <Breadcrumb
         items={[
           { label: "Trang chủ", link: "/" },
-          { label: "Tất cả bài viết", link: "/all-post" },
+          { label: "Tất cả bài viết", link: "/gallery" },
           { label: project.title, link: `/post/${slug}` },
         ]}
       />

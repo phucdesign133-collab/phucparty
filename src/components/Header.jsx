@@ -4,7 +4,7 @@ import { galleryData } from "../datas/galleryData"; // Nhớ kiểm tra đườn
 import "./Header.css";
 
 // Import các logo
-import LogoGroup from "../assets/images/logo-phucgroup.png"; 
+import LogoGroup from "../assets/images/logo-phucgroup.png";
 import LogoDesign from "../assets/images/logo-phucdesign.png";
 import LogoParty from "../assets/images/logo-phucparty.png";
 
@@ -15,14 +15,14 @@ const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleMenuClick = (path) => {
-  setIsMenuOpen(false); // Đóng menu nếu bạn có trạng thái này
-  navigate(path);       // Điều hướng tới trang mong muốn
-};
- // Trong Header.jsx, anh chỉ cần khai báo như thế này:
+    setIsMenuOpen(false); // Đóng menu nếu bạn có trạng thái này
+    navigate(path); // Điều hướng tới trang mong muốn
+  };
+  // Trong Header.jsx, anh chỉ cần khai báo như thế này:
 
-const [currentLogo, setCurrentLogo] = useState(LogoGroup);
+  const [currentLogo, setCurrentLogo] = useState(LogoGroup);
 
-const updateLogo = () => {
+  const updateLogo = () => {
     const categoryFromState = location.state?.category;
     const searchParams = new URLSearchParams(location.search);
     const categoryFromURL = searchParams.get("filter");
@@ -33,11 +33,11 @@ const updateLogo = () => {
       if (location.pathname.includes("/post/")) {
         const pathParts = location.pathname.split("/");
         const slug = pathParts[pathParts.length - 1];
-        
+
         // Bây giờ galleryData đã được import nên nó sẽ hết lỗi đỏ
         const project = galleryData.find((item) => item.slug === slug);
-        
-        currentCat = project ? project.category : "thiet-ke"; 
+
+        currentCat = project ? project.category : "thiet-ke";
       } else if (location.pathname.includes("/all-post")) {
         currentCat = "su-kien";
       }
@@ -48,10 +48,10 @@ const updateLogo = () => {
     return LogoGroup;
   };
 
-// Luôn cập nhật logo khi location thay đổi
-useEffect(() => {
+  // Luôn cập nhật logo khi location thay đổi
+  useEffect(() => {
     setCurrentLogo(updateLogo());
-}, [location]);
+  }, [location]);
 
   return (
     <header className="main-header">
@@ -74,17 +74,21 @@ useEffect(() => {
             {/* &times; */}
           </button>
         </div>
+        {/* Cấu trúc mới: Home - Profile - Gallery - Balloon Club - Lucky Spin */}
         <div className="nav-link" onClick={() => handleMenuClick("/")}>
-          Trang chủ
+          Home
         </div>
-        <div className="nav-link" onClick={() => handleMenuClick("/all-post")}>
-          Thư viện hình ảnh
+        {/* <div className="nav-link" onClick={() => handleMenuClick("/")}>
+          Profile
+        </div> */}
+        <div className="nav-link" onClick={() => handleMenuClick("/gallery")}>
+          Gallery
         </div>
-        <div className="nav-link" onClick={() => handleMenuClick("/resources")}>
-          Công cụ miễn phí
+        <div className="nav-link" onClick={() => handleMenuClick("/balloon-club")}>
+          Ballon Club
         </div>
         <div className="nav-link" onClick={() => handleMenuClick("/lucky-spin")}>
-          Vòng quay may mắn
+          Lucky Spin
         </div>
       </nav>
     </header>

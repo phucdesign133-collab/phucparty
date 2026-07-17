@@ -1,6 +1,6 @@
 //Dữ liệu gốc
 export const data = {
-  // Event bao gồm id từ 1 đến 35
+  // Event bao gồm id từ 1 đến 36
   events: {
     //----x----Khai trương -> đang dừng ở các brand lẻ., mai đến chuỗi CAN-
     "khai-truong-phoc-cafe": {
@@ -14,8 +14,9 @@ export const data = {
       contactInfo: {
         address: "199 Lê Trọng Tấn, Phường Sơn Kỳ, Quận Tân Phú, TP. HCM.",
         brandName: "Phúc Party",
-        link: "https://byvn.net/Fsec"  },
-      files: ["khaitruong-phoccafe-3.webp","khaitruong-phoccafe-2.webp","khaitruong-phoccafe-1.webp"],
+        link: "https://byvn.net/Fsec",
+      },
+      files: ["khaitruong-phoccafe-3.webp", "khaitruong-phoccafe-2.webp", "khaitruong-phoccafe-1.webp"],
     },
     "khai-truong-hy-cafe": {
       id: 34,
@@ -114,6 +115,20 @@ export const data = {
         brandName: "Beauty House RYRI",
       },
       files: ["khaitruong-ryri-2.webp", "khai-truong-ryri-1.webp"],
+    },
+    //----x----Tiệc cưới
+    "wedding-tran-huynh-minh-uyen": {
+      id: 36,
+      slug: "wedding-tran-huynh-minh-uyen",
+      title: "Trần Huỳnh ❤️ Minh Uyên",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "wedding", // Tầng 2 (Icon con)
+      date: "04.07.2026",
+      contactInfo: {
+        // address: "Nhà hàng Ái Huê",
+        brandName: "Phúc Party",
+      },
+      files: ["wedding-04072026-2.webp", "wedding-04072026-4.webp", "wedding-04072026-1.webp", "wedding-04072026-3.webp"],
     },
     //----x----Mừng thọ
     "mung-tho-cu-ba-phan-thi-so": {
