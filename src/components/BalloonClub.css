@@ -38,15 +38,34 @@
   padding: 20px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  /* Giúp ẩn thanh cuộn xấu xí trên trình duyệt */
+  scrollbar-width: none; 
 }
 
+.club-slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card item */
 .club-item {
-  flex: 0 0 65vw;
+  /* Mobile: Hiển thị 1.5 card */
+  flex: 0 0 65vw; 
   background: #ffffff;
   padding: 20px;
   border-radius: 20px;
   border: 1px solid #eee;
   text-align: center;
+  /* Giúp card không bị co lại quá nhỏ */
+  box-sizing: border-box; 
+}
+
+/* Tablet và Desktop */
+@media (min-width: 768px) {
+  .club-item {
+    /* Hiển thị ~3 card trên cùng một màn hình */
+    flex: 0 0 300px; 
+    /* Hoặc dùng flex: 0 0 30% để chia tỉ lệ màn hình */
+  }
 }
 
 @media (min-width: 768px) {

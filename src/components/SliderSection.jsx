@@ -2,21 +2,29 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SliderSection.css";
 
-const SliderSection = ({ title, tools }) => {
+const SliderSection = ({ title, tools, basePath }) => {
   return (
     <div className="resource-section">
       <h3 className="section-title">{title}</h3>
-      
-      {/* Grid chỉ còn nhiệm vụ hiển thị, không còn search nội bộ */}
+
+      {/* Grid hiển thị */}
       <div className="res-slider">
         {tools.map((tool) => (
           <div key={tool.id} className="res-card">
-            <div className="res-icon"><img src={tool.icon} alt={tool.title} /></div>
+            <div className="res-icon">
+              <img src={tool.icon} alt={tool.title} />
+            </div>
             <h3>{tool.title}</h3>
             <p className="tool-desc">{tool.description}</p>
             <div className="res-button-row">
-              <a href={tool.link} target="_blank" rel="noreferrer" className="res-btn">Truy cập</a>
-              <Link to={`/resources/${tool.id}`} className="res-btn">Chi tiết</Link>
+              <a href={tool.link} target="_blank" rel="noreferrer" className="res-btn">
+                Truy cập
+              </a>
+
+              {/* Sử dụng basePath và biến tool đã sửa */}
+              <Link to={`${basePath}/${tool.id}`} className="res-btn">
+                Chi tiết
+              </Link>
             </div>
           </div>
         ))}

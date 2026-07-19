@@ -11,31 +11,37 @@ const BalloonClub = () => {
   const [filters, setFilters] = useState({});
 
   const removeDiacritics = (str) => {
-    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D").toLowerCase();
+    return str
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/đ/g, "d")
+      .replace(/Đ/g, "D")
+      .toLowerCase();
   };
 
   // 1. Thay đổi logic lọc để nó chạy "độc lập" cho mỗi group
-const filteredData = useMemo(() => {
-  const cleanKw = removeDiacritics(searchTerm);
-  
-  return balloonClubData.map(group => {
-    // Lọc theo từ khóa tìm kiếm
-    let tools = group.tools.filter(tool => 
-      removeDiacritics(tool.title).includes(cleanKw) ||
-      removeDiacritics(tool.description).includes(cleanKw) ||
-      tool.tags.some(tag => removeDiacritics(tag).includes(cleanKw))
-    );
+  const filteredData = useMemo(() => {
+    const cleanKw = removeDiacritics(searchTerm);
 
-    // Lọc theo subCategory nội bộ
-    const activeSub = filters[group.category];
-    if (activeSub && activeSub !== "Tất cả") {
-      // Chỉ lọc những tool có subCategory khớp với lựa chọn
-      tools = tools.filter(tool => tool.subCategory === activeSub);
-    }
+    return balloonClubData.map((group) => {
+      // Lọc theo từ khóa tìm kiếm
+      let tools = group.tools.filter(
+        (tool) =>
+          removeDiacritics(tool.title).includes(cleanKw) ||
+          removeDiacritics(tool.description).includes(cleanKw) ||
+          tool.tags.some((tag) => removeDiacritics(tag).includes(cleanKw)),
+      );
 
-    return { ...group, tools };
-  });
-}, [searchTerm, filters]);
+      // Lọc theo subCategory nội bộ
+      const activeSub = filters[group.category];
+      if (activeSub && activeSub !== "Tất cả") {
+        // Chỉ lọc những tool có subCategory khớp với lựa chọn
+        tools = tools.filter((tool) => tool.subCategory === activeSub);
+      }
+
+      return { ...group, tools };
+    });
+  }, [searchTerm, filters]);
 
   const handleSearchChange = (e) => {
     const val = e.target.value;
@@ -46,39 +52,39 @@ const filteredData = useMemo(() => {
   return (
     <div className="club-page">
       <BackgroundText category="balloonClub" />
-      
+
       <div className="club-search-wrapper">
-        <input 
-          className="club-search-input"
-          placeholder="Tìm trong Balloon Club..." 
-          value={searchTerm} 
-          onChange={handleSearchChange} 
-        />
+        <input className="club-search-input" placeholder="Tìm trong Balloon Club..." value={searchTerm} onChange={handleSearchChange} />
       </div>
 
       {/* // 2. Cập nhật phần hiển thị (JSX) */}
-<div className="club-content">
-  {filteredData.map((group, index) => (
-    <div key={index} className="club-group-wrapper">
-      <div className="club-group-header">
-        <h3>{group.category}</h3>
-        <select 
-          className="club-select"
-          onChange={(e) => setFilters(prev => ({...prev, [group.category]: e.target.value}))}
-        >
-          <option value="Tất cả">Tất cả</option>
-          {group.subCategories?.map((sub, i) => <option key={i} value={sub}>{sub}</option>)}
-        </select>
+      <div className="club-content">
+        {filteredData.map((group, index) => (
+          <div key={index} className="club-group-wrapper">
+            <div className="club-group-header">
+              <h3>{group.category}</h3>
+              <select className="club-select" onChange={(e) => setFilters((prev) => ({ ...prev, [group.category]: e.target.value }))}>
+                <option value="Tất cả">Tất cả</option>
+                {group.subCategories?.map((sub, i) => (
+                  <option key={i} value={sub}>
+                    {sub}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* // Tìm đoạn gọi SliderSection trong file BalloonClub.jsx */}
+            {group.tools.length > 0 ? (
+              <SliderSection
+                title=""
+                tools={group.tools}
+                basePath="/balloon-club" // Thêm dòng này để Link hoạt động
+              />
+            ) : (
+              <p className="club-empty">Dữ liệu đang được cập nhật... ⏳</p>
+            )}
+          </div>
+        ))}
       </div>
-
-      {group.tools.length > 0 ? (
-        <SliderSection title="" tools={group.tools} />
-      ) : (
-        <p className="club-empty">Dữ liệu đang được cập nhật... ⏳</p>
-      )}
-    </div>
-  ))}
-</div>
     </div>
   );
 };

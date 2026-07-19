@@ -47,9 +47,10 @@ function App() {
         {/* Cấu trúc mới: Home - Profile - Gallery - Balloon Club - Lucky Spin */}
         <Route path="/" element={<Home />} />
           <Route path="/balloon-club" element={<BalloonClub />} />
+          <Route path="/balloon-club/:id" element={<DetailResources />} />
         <Route path="/lucky-spin" element={<LuckySpinParty />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/resources/:id" element={<DetailResources />} />
+        {/* <Route path="/resources" element={<Resources />} />
+        <Route path="/resources/:id" element={<DetailResources />} /> */}
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/detail-post" element={<DetailPost />} />
         <Route path="/post/:slug" element={<DetailPost />} />

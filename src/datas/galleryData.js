@@ -676,6 +676,19 @@ export const data = {
       },
       files: ["boc25-1.webp", "boc25-2.webp", "boc25-3.webp", "boc25-4.webp", "boc25-5.webp"],
     },
+    "khen-thuong-hoc-sinh-gioi-tmi": {
+      id: 21,
+      slug: "khen-thuong-hoc-sinh-gioi-tmi",
+      title: "Khen thưởng Học sinh Giỏi - TMI",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "le-hoi", // Tầng 2 (Icon con)
+      date: "16.07.2026",
+      contactInfo: {
+        address: "Công ty TMI",
+        brandName: "Phúc Party",
+      },
+      files: ["tmi-16072026-3.webp", "tmi-16072026-4.webp", "tmi-16072026-1.webp", "tmi-16072026-2.webp"],
+    },
     "trung-thu-cong-an-huyen-ben-luc": {
       id: 17,
       slug: "trung-thu-cong-an-huyen-ben-luc",
