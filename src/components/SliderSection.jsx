@@ -9,25 +9,35 @@ const SliderSection = ({ title, tools, basePath }) => {
 
       {/* Grid hiển thị */}
       <div className="res-slider">
-        {tools.map((tool) => (
-          <div key={tool.id} className="res-card">
-            <div className="res-icon">
-              <img src={tool.icon} alt={tool.title} />
-            </div>
-            <h3>{tool.title}</h3>
-            <p className="tool-desc">{tool.description}</p>
-            <div className="res-button-row">
-              <a href={tool.link} target="_blank" rel="noreferrer" className="res-btn">
-                Truy cập
-              </a>
+        {tools.map((tool) => {
+          // Ưu tiên dùng reelsLink nếu có (dành cho Balloon Academy), nếu không thì dùng link gốc (dành cho AI/Tool khác)
+          const targetLink = tool.reelsLink || tool.link;
 
-              {/* Sử dụng basePath và biến tool đã sửa */}
-              <Link to={`${basePath}/${tool.id}`} className="res-btn">
-                Chi tiết
-              </Link>
+          return (
+            <div key={tool.id} className="res-card">
+              <div className="res-icon">
+                <img src={tool.icon} alt={tool.title} />
+              </div>
+              <h3>{tool.title}</h3>
+              <p className="tool-desc">{tool.description}</p>
+              <div className="res-button-row">
+                <a
+                  href={targetLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="res-btn"
+                >
+                  {tool.reelsLink ? "Xem Reels" : "Truy cập"}
+                </a>
+
+                {/* Sử dụng basePath và biến tool đã sửa */}
+                <Link to={`${basePath}/${tool.id}`} className="res-btn">
+                  Chi tiết
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <hr className="section-divider" />
     </div>
