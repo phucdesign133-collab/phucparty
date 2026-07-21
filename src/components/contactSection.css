@@ -22,7 +22,7 @@
 .btn-zalo,
 .btn-share {
   flex: 1; /* Hai nút chia đều độ rộng */
-  padding: 12px;
+  padding: 10px;
   text-align: center;
   border-radius: 6px;
   text-decoration: none;

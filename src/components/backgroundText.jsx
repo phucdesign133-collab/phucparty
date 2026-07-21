@@ -25,7 +25,7 @@ const BackgroundText = ({ category }) => {
     },
     balloonClub: {
       title: "Balloon Club",
-      subtitle: "Hệ sinh thái dành cho Balloon Artist, bao gồm Academy, AI Tools, Downloads, Resources và Blog, giúp bạn học tập, sáng tạo và phát triển công việc hiệu quả hơn. 🎈"
+      subtitle: "Hệ sinh thái dành cho Balloon Artist, bao gồm Academy, AI Tools, Đối tác Phúc đã đồng hành, giúp bạn học tập, sáng tạo và phát triển công việc hiệu quả hơn. 🎈"
     }
   };
 

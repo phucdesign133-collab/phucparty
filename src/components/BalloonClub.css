@@ -58,7 +58,69 @@
   /* Giúp card không bị co lại quá nhỏ */
   box-sizing: border-box; 
 }
+.club-select-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.level-select-wrapper {
+  width: 90%;margin:0 auto;
+}
 
+.club-level-select-full {
+  width: 100%;
+  /* Bỏ padding lớn để giữ chiều cao chuẩn mặc định giống các select khác */
+  padding: 8px 12px; 
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  /* Thuộc tính giúp loại bỏ thanh cuộn dọc (áp dụng trên một số trình duyệt hỗ trợ) */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Ẩn thanh cuộn trên Chrome, Safari, Edge */
+.club-level-select-full::-webkit-scrollbar {
+  display: none;
+}
+
+.club-level-select-full:focus {
+  border-color: #bbb;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.level-select-animation {
+  animation: slideDownFade 0.3s ease-in-out;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSelect {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* Tablet và Desktop */
 @media (min-width: 768px) {
   .club-item {

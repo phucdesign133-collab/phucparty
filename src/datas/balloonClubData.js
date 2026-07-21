@@ -6,12 +6,39 @@ export const balloonClubData = [
   // ⭐⭐⭐⭐ Professional
   {
     category: "🎓 Balloon Academy",
-    subCategories: ["Tạo hình bong bóng", "Workshop", "Kỹ thuật & Tricks", "Lộ trình học"],
-    tools: [], // Dữ liệu đang cập nhật
+    subCategories: ["Tạo hình bong bóng", "Tip & Trick"],
+    tools: [
+      // Level 1
+
+      {
+        id: 20,
+        title: "Cây súng - kiểu 1",
+        subCategory: "Tạo hình bong bóng",
+        level: "Level 1", // Mức độ
+        description: "Một cây súng được tạo hình chỉ từ bong bóng...",
+        icon: "/img/logodayne-1.webp",
+        images: ["/img/BA-mau001-1.webp","/img/logodayne-1.webp"],
+        // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
+        materials: ["01 Bóng dài 260 màu xanh dương", "01 Bóng dài 260 màu đen", "Bơm tay chuyên dụng"],
+
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/reel/1799720998064909",
+
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 1"],
+      },
+    ], // Dữ liệu đang cập nhật
   },
   {
     category: "🤖 AI Tools",
-    subCategories: ["AI", "Thư viện mẫu tham khảo", "Icon", "Văn phòng", "Thiết kế", "Giảm dung lượng", "Bảng màu", "Học tập", "Trò chơi"],
+    subCategories: ["AI", "Thư viện tham khảo", "Icon", "Văn phòng", "Thiết kế", "Giảm dung lượng", "Bảng màu", "Học tập", "Trò chơi"],
     tools: [
       // AI
       {
@@ -94,7 +121,7 @@ export const balloonClubData = [
       {
         id: 6,
         title: "MotionBGs",
-        subCategory: "Thư viện mẫu tham khảo",
+        subCategory: "Thư viện tham khảo",
         description: "Thư viện hình nền động cho website.",
         note: "Miễn phí",
         guide: "Chọn mẫu background yêu thích ,- Tùy chỉnh thông số hiển thị ,- Sao chép mã nhúng cho website ,-",
@@ -109,7 +136,7 @@ export const balloonClubData = [
       {
         id: 7,
         title: "Pinterest",
-        subCategory: "Thư viện mẫu tham khảo",
+        subCategory: "Thư viện tham khảo",
         description: "Nền tảng tìm kiếm ý tưởng hình ảnh và thiết kế.",
         note: "Miễn phí",
         guide: "Đăng nhập tài khoản ,- Tìm kiếm từ khóa chủ đề thiết kế ,- Lưu hình ảnh vào bảng cá nhân ,-",
@@ -124,7 +151,7 @@ export const balloonClubData = [
       {
         id: 8,
         title: "Unsplash",
-        subCategory: "Thư viện mẫu tham khảo",
+        subCategory: "Thư viện tham khảo",
         description: "Thư viện hình ảnh chất lượng cao miễn phí.",
         note: "Miễn phí",
         guide: "Nhập từ khóa hình ảnh cần tìm ,- Chọn bức ảnh phù hợp ,- Tải về theo độ phân giải mong muốn ,-",
@@ -139,7 +166,7 @@ export const balloonClubData = [
       {
         id: 9,
         title: "ThietkeDecor",
-        subCategory: "Thư viện mẫu tham khảo",
+        subCategory: "Thư viện tham khảo",
         description: "Dịch vụ thiết kế và trang trí nội thất chuyên nghiệp.",
         note: "Có trả phí",
         guide: "Tham khảo danh mục dự án ,- Liên hệ yêu cầu tư vấn ,- Nhận báo giá thiết kế ,-",

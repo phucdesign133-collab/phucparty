@@ -85,7 +85,7 @@ const Header = () => {
           Gallery
         </div>
         <div className="nav-link" onClick={() => handleMenuClick("/balloon-club")}>
-          Ballon Club
+          Balloon Club
         </div>
         <div className="nav-link" onClick={() => handleMenuClick("/lucky-spin")}>
           Lucky Spin

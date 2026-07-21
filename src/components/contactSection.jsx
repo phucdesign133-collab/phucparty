@@ -1,12 +1,18 @@
 import React from "react";
 import "./contactSection.css";
 
-const ContactSection = ({category}) => {
-  // Xác định tên thương hiệu dựa trên category
-  const brandName = category === "thiet-ke" ? "Phúc Design" : "Phúc Party";
+const ContactSection = ({ category }) => {
+  // Xác định tên thương hiệu dựa trên category hoặc nếu thuộc Balloon Club
+  let brandName = "Phúc Party";
+  if (category === "thiet-ke") {
+    brandName = "Phúc Design";
+  } else if (category === "balloonClub" || category === "balloon-club") {
+    brandName = "Đây Nè!";
+  }
+
   return (
     <div className="contact-section-border">
-      <h3 style={{marginTop:"-10px"}}>Liên hệ với chúng tôi</h3>
+      <h3 style={{ marginTop: "-10px" }}>Liên hệ với chúng tôi</h3>
       <div className="contact-info">
         <p>
           <strong>Đại diện {brandName}:</strong> Dương Đỗ Hồng Phúc
@@ -26,9 +32,6 @@ const ContactSection = ({category}) => {
         <a href="https://zalo.me/0799910603" target="_blank" rel="noopener noreferrer" className="btn-share">
           Liên hệ Whatsapp
         </a>
-        {/* <button onClick={handleShare} className="btn-share hidden-btn">
-          Chia sẻ bài viết
-        </button> */}
       </div>
     </div>
   );
