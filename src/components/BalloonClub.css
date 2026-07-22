@@ -39,7 +39,7 @@
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   /* Giúp ẩn thanh cuộn xấu xí trên trình duyệt */
-  scrollbar-width: none; 
+  scrollbar-width: none;
 }
 
 .club-slider-container::-webkit-scrollbar {
@@ -49,14 +49,14 @@
 /* Card item */
 .club-item {
   /* Mobile: Hiển thị 1.5 card */
-  flex: 0 0 65vw; 
+  flex: 0 0 65vw;
   background: #ffffff;
   padding: 20px;
   border-radius: 20px;
   border: 1px solid #eee;
   text-align: center;
   /* Giúp card không bị co lại quá nhỏ */
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 .club-select-group {
   display: flex;
@@ -64,13 +64,14 @@
   gap: 10px;
 }
 .level-select-wrapper {
-  width: 90%;margin:0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .club-level-select-full {
   width: 100%;
   /* Bỏ padding lớn để giữ chiều cao chuẩn mặc định giống các select khác */
-  padding: 8px 12px; 
+  padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid #ddd;
   background-color: #fff;
@@ -81,7 +82,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
   transition: all 0.3s ease;
   cursor: pointer;
-  
+
   /* Thuộc tính giúp loại bỏ thanh cuộn dọc (áp dụng trên một số trình duyệt hỗ trợ) */
   scrollbar-width: none; /* Firefox */
 }
@@ -125,7 +126,7 @@
 @media (min-width: 768px) {
   .club-item {
     /* Hiển thị ~3 card trên cùng một màn hình */
-    flex: 0 0 300px; 
+    flex: 0 0 300px;
     /* Hoặc dùng flex: 0 0 30% để chia tỉ lệ màn hình */
   }
 }
@@ -190,8 +191,13 @@
   font-size: 14px;
 }
 
-.club-sugg-title { font-weight: bold; }
-.club-sugg-desc { color: #666; font-size: 13px; }
+.club-sugg-title {
+  font-weight: bold;
+}
+.club-sugg-desc {
+  color: #666;
+  font-size: 13px;
+}
 
 /* Thông báo khi không có dữ liệu */
 .club-empty {
@@ -199,4 +205,11 @@
   color: #888;
   padding: 20px;
   font-style: italic;
+}
+
+.search-suggestions-dropdown {
+  border: 1px solid #333;
+  margin-top: -10px;
+  border-radius: 0 0 10px 10px;
+  border-top: none;
 }

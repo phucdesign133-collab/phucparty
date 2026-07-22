@@ -8,21 +8,29 @@ import LogoGroup from "../assets/images/logo-phucgroup.png";
 import LogoDesign from "../assets/images/logo-phucdesign.png";
 import LogoParty from "../assets/images/logo-phucparty.png";
 
+// Import LogoDayNe theo public path (hoặc bạn có thể import từ src nếu để chung thư mục assets)
+const LogoDayNe = "/img/logodayne-1.webp";
+
 import { FaTimes, FaBars } from "react-icons/fa";
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const handleMenuClick = (path) => {
-    setIsMenuOpen(false); // Đóng menu nếu bạn có trạng thái này
+    setIsMenuOpen(false); // Đóng menu mobile
     navigate(path); // Điều hướng tới trang mong muốn
   };
-  // Trong Header.jsx, anh chỉ cần khai báo như thế này:
 
   const [currentLogo, setCurrentLogo] = useState(LogoGroup);
 
   const updateLogo = () => {
+    // 1. Kiểm tra nếu đang ở khu vực Balloon Club thì dùng logo Đây Nè!
+    if (location.pathname.includes("/balloon-club")) {
+      return LogoDayNe;
+    }
+
     const categoryFromState = location.state?.category;
     const searchParams = new URLSearchParams(location.search);
     const categoryFromURL = searchParams.get("filter");
@@ -34,9 +42,7 @@ const Header = () => {
         const pathParts = location.pathname.split("/");
         const slug = pathParts[pathParts.length - 1];
 
-        // Bây giờ galleryData đã được import nên nó sẽ hết lỗi đỏ
         const project = galleryData.find((item) => item.slug === slug);
-
         currentCat = project ? project.category : "thiet-ke";
       } else if (location.pathname.includes("/all-post")) {
         currentCat = "su-kien";
@@ -71,16 +77,12 @@ const Header = () => {
           </div>
           <button className="close-btn" onClick={() => setIsMenuOpen(false)}>
             <FaTimes size={24} />
-            {/* &times; */}
           </button>
         </div>
-        {/* Cấu trúc mới: Home - Profile - Gallery - Balloon Club - Lucky Spin */}
+
         <div className="nav-link" onClick={() => handleMenuClick("/")}>
           Home
         </div>
-        {/* <div className="nav-link" onClick={() => handleMenuClick("/")}>
-          Profile
-        </div> */}
         <div className="nav-link" onClick={() => handleMenuClick("/gallery")}>
           Gallery
         </div>

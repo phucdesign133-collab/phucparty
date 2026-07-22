@@ -18,11 +18,18 @@
   gap: 15px; /* Khoảng cách giữa 2 nút */
   margin-top: 20px;
 }
+.contact-section-custom {
 
+  border-left: 4px solid #4caf50;
+  border-radius: 12px;
+  padding: 20px;
+  background: #ffffff;
+  margin-top: 20px;
+}
 .btn-zalo,
 .btn-share {
   flex: 1; /* Hai nút chia đều độ rộng */
-  padding: 10px;
+  padding: 10px 5px;
   text-align: center;
   border-radius: 6px;
   text-decoration: none;

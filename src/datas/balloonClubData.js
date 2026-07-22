@@ -1,15 +1,11 @@
 export const balloonClubData = [
-  // Đang cập nhật đến id số 37 & thiếu các id 20-21-22-10-29
-  //     ⭐ Beginner
-  // ⭐⭐ Intermediate
-  // ⭐⭐⭐ Advanced
-  // ⭐⭐⭐⭐ Professional
+  // Đang cập nhật đến id số 37 & thiếu các id-10-29
+ 
   {
     category: "🎓 Balloon Academy",
     subCategories: ["Tạo hình bong bóng", "Tip & Trick"],
     tools: [
       // Level 1
-
       {
         id: 20,
         title: "Cây súng - kiểu 1",
@@ -19,18 +15,57 @@ export const balloonClubData = [
         icon: "/img/logodayne-1.webp",
         images: ["/img/BA-mau001-1.webp","/img/logodayne-1.webp"],
         // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
-        materials: ["01 Bóng dài 260 màu xanh dương", "01 Bóng dài 260 màu đen", "Bơm tay chuyên dụng"],
-
+        materials: ["02 Bóng dài 260", "Bơm tay chuyên dụng"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
           { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
           // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
         ],
-
         // Link Reels hướng dẫn thực tế
         reelsLink: "https://www.facebook.com/reel/1799720998064909",
-
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 1"],
+      },
+      {
+        id: 21,
+        title: "Con cá - kiểu 1",
+        subCategory: "Tạo hình bong bóng",
+        level: "Level 1", // Mức độ
+        description: "Một con cá được tạo hình chỉ từ bong bóng...",
+        icon: "/img/logodayne-1.webp",
+        images: ["/img/BA-mau002-1.webp","/img/logodayne-1.webp"],
+        // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
+        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/reel/4283160945269848",
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 1"],
+      },
+      {
+        id: 22,
+        title: "Cây súng ngắn - kiểu 1",
+        subCategory: "Tạo hình bong bóng",
+        level: "Level 1", // Mức độ
+        description: "Một cây súng được tạo hình chỉ từ bong bóng...",
+        icon: "/img/logodayne-1.webp",
+        images: ["/img/BA-mau003-1.webp","/img/logodayne-1.webp"],
+        // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
+        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/reel/1764983721521419",
         // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
         tags: ["Bong bóng", "Level 1"],
       },
@@ -540,7 +575,7 @@ export const balloonClubData = [
   },
   {
     category: "🤝 Success Stories",
-    subCategories: ["Trường mầm non", "Hệ thống thức ăn nhanh", "Hệ thống nhà hàng", "Trung tâm thương mại"],
+    subCategories: ["Trường mầm non", "Chuỗi thức ăn nhanh", "Hệ thống nhà hàng", "Trung tâm thương mại"],
     tools: [], // Dữ liệu đang cập nhật
   },
 ];

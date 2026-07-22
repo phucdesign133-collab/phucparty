@@ -1,6 +1,6 @@
 //Dữ liệu gốc
 export const data = {
-  // Event bao gồm id từ 1 đến 36
+  // Event bao gồm id từ 1 đến 37
   events: {
     //----x----Khai trương -> đang dừng ở các brand lẻ., mai đến chuỗi CAN-
     "khai-truong-phoc-cafe": {
@@ -625,6 +625,35 @@ export const data = {
       ],
     },
     //----x----Lễ hội
+    "le-hoi-kem-2026": {
+      id: 37,
+      slug: "le-hoi-kem-2026",
+      title: "Lễ hội Kem 2026 cùng Jelly Cool",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: "le-hoi", // Tầng 2 (Icon con)
+      date: "17.07.2026",
+      contactInfo: {
+        address: "Lotte Mart Nam Sài Gòn",
+        brandName: "Phúc Party",
+      },
+      files: [
+        "Jelycool-170726-13.webp",
+        "Jelycool-170726-8.webp",
+        "Jelycool-170726-10.webp",
+        "Jelycool-170726-1.webp",
+        "Jelycool-170726-2.webp",
+        "Jelycool-170726-3.webp",
+        "Jelycool-170726-4.webp",
+        "Jelycool-170726-5.webp",
+        "Jelycool-170726-6.webp",
+        "Jelycool-170726-7.webp",
+        "Jelycool-170726-9.webp",
+        "Jelycool-170726-11.webp",
+        "Jelycool-170726-12.webp",
+        "Jelycool-170726-14.webp",
+        "Jelycool-170726-15.webp",
+      ],
+    },
     "hoi-trai-tong-quan-binh-chanh-2025": {
       id: 24,
       slug: "hoi-trai-tong-quan-binh-chanh-2025",

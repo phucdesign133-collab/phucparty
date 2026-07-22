@@ -119,11 +119,19 @@ const DetailResources = () => {
 
               {/* Nút hướng dẫn thực tế */}
               <div className="tool-guide-wrapper">
-                <strong>🎬 Xem clip hướng dẫn:</strong>
-                <div className="tool-guide-inner">
-                  <a href={tool.reelsLink || tool.link} target="_blank" rel="noreferrer" className="reels-action-btn-custom">
-                    Xem ngay
-                  </a>
+                <strong>Xem clip hướng dẫn:</strong>
+                <div style={{ display: "flex", gap: "12px", marginTop: "10px", flexWrap: "wrap" }}>
+                  {tool.reelsLink && (
+                    <a href={tool.reelsLink} target="_blank" rel="noreferrer" className="reels-action-btn-custom">
+                      🎬 Xem thao tác nhanh
+                    </a>
+                  )}
+
+                  {tool.reelsLink1 && (
+                    <a href={tool.reelsLink1} target="_blank" rel="noreferrer" className="reels-action-btn-custom">
+                      🐢 Xem thao tác chậm
+                    </a>
+                  )}
                 </div>
               </div>
 

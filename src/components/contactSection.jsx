@@ -11,7 +11,7 @@ const ContactSection = ({ category }) => {
   }
 
   return (
-    <div className="contact-section-border">
+    <div className="contact-section-custom">
       <h3 style={{ marginTop: "-10px" }}>Liên hệ với chúng tôi</h3>
       <div className="contact-info">
         <p>
