@@ -9,20 +9,21 @@ export const balloonClubData = [
       {
         id: 43,
         title: "Xe motor - không người lái",
+        keyword: "Motorbike",
         subCategory: "Từ một quả Bóng",
         level: "Level 2", // Mức độ
         description: "Một xe motor được tạo hình chỉ từ bong bóng...",
         images: ["/img/tmqb-s1-3.webp", "/img/logodayne-1.webp"],
         // Dữ liệu cho phần "Vật tư chuẩn bị"
-        materials: ["02 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["2 Bóng dài 260 (2 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
-          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          { name: "Đối tác In Sticker ", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
           // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
         ],
         // Link Reels hướng dẫn thực tế
-        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
         // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
         tags: ["Bong bóng", "Level 2"],
       },
@@ -34,7 +35,7 @@ export const balloonClubData = [
         description: "Một hoa hồng được tạo hình chỉ từ bong bóng...",
         images: ["/img/tmqb-s1-7.webp", "/img/logodayne-1.webp"],
         // Dữ liệu cho phần "Vật tư chuẩn bị"
-        materials: ["03 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["3 Bóng dài 260 (3 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
@@ -42,7 +43,7 @@ export const balloonClubData = [
           // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
         ],
         // Link Reels hướng dẫn thực tế
-        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        reelsLink: "https://www.facebook.com/hphuc133/videos/1608083760914598",
         // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
         tags: ["Bong bóng", "Level 2"],
       },
@@ -55,7 +56,7 @@ export const balloonClubData = [
         description: "Một hoa hồng được tạo hình chỉ từ bong bóng...",
         images: ["/img/tmqb-s1-6.webp", "/img/logodayne-1.webp"],
         // Dữ liệu cho phần "Vật tư chuẩn bị"
-        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["1 Bóng dài 260 (1 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
@@ -63,7 +64,7 @@ export const balloonClubData = [
           // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
         ],
         // Link Reels hướng dẫn thực tế
-        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
         // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
         tags: ["Bong bóng", "Level 1"],
       },
@@ -75,7 +76,7 @@ export const balloonClubData = [
         description: "Một con gấu được tạo hình chỉ từ bong bóng...",
         images: ["/img/tmqb-s1-5.webp", "/img/logodayne-1.webp"],
         // Dữ liệu cho phần "Vật tư chuẩn bị"
-        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["1 Bóng dài 260 (1 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
@@ -83,7 +84,7 @@ export const balloonClubData = [
           // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
         ],
         // Link Reels hướng dẫn thực tế
-        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
         // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
         tags: ["Bong bóng", "Level 1"],
       },
@@ -95,7 +96,7 @@ export const balloonClubData = [
         description: "Một chiếc băng đô được tạo hình chỉ từ bong bóng...",
         images: ["/img/tmqb-s1-2.webp", "/img/logodayne-1.webp"],
         // Dữ liệu cho phần "Vật tư chuẩn bị"
-        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["1 Bóng dài 260 (1 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
@@ -103,7 +104,7 @@ export const balloonClubData = [
           // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
         ],
         // Link Reels hướng dẫn thực tế
-        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
         // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
         tags: ["Bong bóng", "Level 1"],
       },
@@ -116,7 +117,7 @@ export const balloonClubData = [
         // icon: "/img/logodayne-1.webp",
         images: ["/img/tmqb-s1-8.webp", "/img/logodayne-1.webp"],
         // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
-        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["1 Bóng dài 260 (1 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
@@ -124,7 +125,7 @@ export const balloonClubData = [
           // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
         ],
         // Link Reels hướng dẫn thực tế
-        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        reelsLink: "https://www.facebook.com/hphuc133/videos/984906091264907",
         // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
         tags: ["Bong bóng", "Level 1"],
       },
@@ -137,7 +138,7 @@ export const balloonClubData = [
         // icon: "/img/logodayne-1.webp",
         images: ["/img/tmqb-s1-11.webp", "/img/logodayne-1.webp"],
         // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
-        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["1 Bóng dài 260 (1 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
@@ -145,7 +146,7 @@ export const balloonClubData = [
           // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
         ],
         // Link Reels hướng dẫn thực tế
-        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
         // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
         tags: ["Bong bóng", "Level 1"],
       },
@@ -158,7 +159,7 @@ export const balloonClubData = [
         // icon: "/img/logodayne-1.webp",
         images: ["/img/tmqb-s1-10.webp", "/img/logodayne-1.webp"],
         // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
-        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["1 Bóng dài 260 (1 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
@@ -179,7 +180,7 @@ export const balloonClubData = [
         // icon: "/img/logodayne-1.webp",
         images: ["/img/tmqb-s1-9.webp", "/img/logodayne-1.webp"],
         // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
-        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["1 Bóng dài 260 (1 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
@@ -200,7 +201,7 @@ export const balloonClubData = [
         // icon: "/img/logodayne-1.webp",
         images: ["/img/tmqb-s1-1.webp", "/img/logodayne-1.webp"],
         // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
-        materials: ["02 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["2 Bóng dài 260 (2 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
@@ -221,7 +222,7 @@ export const balloonClubData = [
         // icon: "/img/logodayne-1.webp",
         images: ["/img/tmqb-s1-4.webp", "/img/logodayne-1.webp"],
         // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
-        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["1 Bóng dài 260 (1 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
@@ -242,7 +243,7 @@ export const balloonClubData = [
         // icon: "/img/logodayne-1.webp",
         images: ["/img/tmqb-s1-12.webp", "/img/logodayne-1.webp"],
         // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
-        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        materials: ["1 Bóng dài 260 (1 Balloon 260)", "Bơm tay chuyên dụng (Hand pump)"],
         // Dữ liệu cho phần "Mua vật tư"
         suppliers: [
           { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },

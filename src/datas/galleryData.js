@@ -1,6 +1,6 @@
 //Dữ liệu gốc
 export const data = {
-  // Event bao gồm id từ 1 đến 38
+  // Event bao gồm id từ 1 đến 75
   events: {
     //----x----Khai trương -> đang dừng ở các brand lẻ., mai đến chuỗi CAN-
     "khai-truong-phoc-cafe": {
@@ -13,10 +13,10 @@ export const data = {
       tags: ["DayNe", "Phộc Cafe", "Võ Sư Lộc", "khai trương", "trang trí", "thiết kế menu", "in ấn menu"],
       contactInfo: {
         address: "199 Lê Trọng Tấn, Phường Sơn Kỳ, Quận Tân Phú, TP. HCM.",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
         link: "https://byvn.net/Fsec",
       },
-      files: ["khaitruong-phoccafe-3.webp", "khaitruong-phoccafe-2.webp", "khaitruong-phoccafe-1.webp"],
+      files: ["thumb-s1-40.webp", "khaitruong-phoccafe-3.webp", "khaitruong-phoccafe-2.webp", "khaitruong-phoccafe-1.webp"],
     },
     "khai-truong-hy-cafe": {
       id: 34,
@@ -28,9 +28,9 @@ export const data = {
       tags: ["DayNe", "Hy Cafe", "khai trương", "trang trí"],
       contactInfo: {
         address: "47-49 Vĩnh Hội, Phường 4, Quận 4, TP. HCM.",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
-      files: ["khaitruong-hycafe-1.webp"],
+      files: ["thumb-s1-18.webp", "khaitruong-hycafe-1.webp"],
     },
     "khai-truong-puna": {
       id: 33,
@@ -42,9 +42,9 @@ export const data = {
       tags: ["DayNe", "PUNA - Nail Studio", "khai trương", "trang trí"],
       contactInfo: {
         address: "76/97 Lê Văn Phan, Phường Phú Thọ Hòa, Quận Tân Phú,  TP. HCM.",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
-      files: ["khaitruong-puna-1.webp"],
+      files: ["thumb-s1-41.webp", "khaitruong-puna-1.webp"],
     },
     "khai-truong-tll-cars": {
       id: 32,
@@ -56,10 +56,10 @@ export const data = {
       tags: ["DayNe", "TLL CARS", "HELIOZ", "khai trương", "trang trí", "MC", "setup"],
       contactInfo: {
         address: "289 Bình Lợi, Phường 13, Quận Bình Thạnh, TP. HCM.",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
         owner: "Công ty TNHH TM DV TLL CARS",
       },
-      files: ["khaitruong-tllcars-2.webp", "khaitruong-tllcars-1.webp"],
+      files: ["thumb-s1-50.webp", "khaitruong-tllcars-2.webp", "khaitruong-tllcars-1.webp"],
     },
     "khai-truong-korea-mart": {
       id: 31,
@@ -71,10 +71,10 @@ export const data = {
       tags: ["DayNe", "XinChaoKoreaMart", "khai trương", "trang trí"],
       contactInfo: {
         address: "Cantavil Quận 2 - số 1 Song Hành, Phường An Phú, TP. Thủ Đức (Quận 2 cũ) ",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
         owner: "Xin chào Korea Mart!",
       },
-      files: ["khaitruong-koreamart-1.webp"],
+      files: ["thumb-s1-27.webp", "khaitruong-koreamart-1.webp"],
     },
     "khai-truong-mcake": {
       id: 31,
@@ -86,10 +86,11 @@ export const data = {
       tags: ["DayNe", "MCAKE", "BalloonParty", "khai trương", "trang trí"],
       contactInfo: {
         address: "SI.08 BLOCK A2, c/c Q7 RIVERSIDE SỐ 4 Đào Trí - P. Phú Thuận - Quận 7 - TP. HCM.",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
         owner: "MCAKE",
       },
       files: [
+        "thumb-s1-37.webp",
         "khaitruong-mcake-1.webp",
         "khaitruong-mcake-2.webp",
         "khaitruong-mcake-3.webp",
@@ -114,7 +115,7 @@ export const data = {
         address: "47 Đường 39 - P. Tân Quy - Quận 7 - TP. HCM.",
         brandName: "Beauty House RYRI",
       },
-      files: ["khaitruong-ryri-2.webp", "khai-truong-ryri-1.webp"],
+      files: ["thumb-s1-42.webp", "khaitruong-ryri-2.webp", "khai-truong-ryri-1.webp"],
     },
     //----x----Tiệc cưới
     "wedding-tran-huynh-minh-uyen": {
@@ -126,9 +127,9 @@ export const data = {
       date: "04.07.2026",
       contactInfo: {
         // address: "Nhà hàng Ái Huê",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
-      files: ["wedding-04072026-2.webp", "wedding-04072026-4.webp", "wedding-04072026-1.webp", "wedding-04072026-3.webp"],
+      files: ["thumb-s1-51.webp", "wedding-04072026-2.webp", "wedding-04072026-4.webp", "wedding-04072026-1.webp", "wedding-04072026-3.webp"],
     },
     //----x----Mừng thọ
     "mung-tho-cu-ba-phan-thi-so": {
@@ -140,9 +141,10 @@ export const data = {
       date: "26.08.2023",
       contactInfo: {
         address: "Nhà hàng Ái Huê",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
+        "thumb-s1-9.webp",
         "mungtho-cubalethiso-0.webp",
         "mungtho-cubalethiso-17.webp",
         "mungtho-cubalethiso-12.webp",
@@ -176,9 +178,10 @@ export const data = {
       contactInfo: {
         address: "Trường THCS Nguyễn Văn Linh - Ấp 2, Bình Chánh",
         owner: "Công ty TNHH Quảng cáo Phúc Design",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
+        "thumb-s1-5.webp",
         "thiennguyen-ngaythaythuoc-1.webp",
         "thiennguyen-ngaythaythuoc-2.webp",
         "thiennguyen-ngaythaythuoc-3.webp",
@@ -203,9 +206,10 @@ export const data = {
       contactInfo: {
         address: "Bệnh viện Nhi Đồng 2",
         owner: "Thương Nhiều",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
+        "thumb-s1-4.webp",
         "thiennguyen-thuongnhieu6-1.webp",
         "thiennguyen-thuongnhieu6-2.webp",
         "thiennguyen-thuongnhieu6-4.webp",
@@ -227,9 +231,10 @@ export const data = {
       date: "15.09.2023",
       contactInfo: {
         address: "Nhà Lưu trú 0 Đồng - Thủ Đức",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
+        "thumb-s1-7.webp",
         "thiennguyen-nhaluutru0dong-1.webp",
         "thiennguyen-nhaluutru0dong-2.webp",
         "thiennguyen-nhaluutru0dong-3.webp",
@@ -254,9 +259,10 @@ export const data = {
       date: "10.09.2023",
       contactInfo: {
         address: "Mái ấm Huynh Đệ Như Nghĩa",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
+        "thumb-s1-8.webp",
         "thiennguyen-maiamhuynhdenhunghia-1.webp",
         "thiennguyen-maiamhuynhdenhunghia-2.webp",
         "thiennguyen-maiamhuynhdenhunghia-3.webp",
@@ -272,9 +278,10 @@ export const data = {
       date: "213.10.2023",
       contactInfo: {
         address: "Sân bóng C4 Phạm Hùng",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
+        "thumb-s1-6.webp",
         "thiennguyen-lophoctinhthuong-0.webp",
         "thiennguyen-lophoctinhthuong-2.webp",
         "thiennguyen-lophoctinhthuong-3.webp",
@@ -293,7 +300,7 @@ export const data = {
       tags: ["DayNe", "LuongHa", "YearOneParty"],
       contactInfo: {
         address: "Hoa viên 102 - 39/79C Đ. Số 102, Tăng Nhơn Phú, Hồ Chí Minh",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
         "yep-congtyluongha-5.webp",
@@ -313,9 +320,10 @@ export const data = {
       date: "10.12.2024",
       contactInfo: {
         // address: "Nhà hàng 7 Kỳ Quan",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
+        "thumb-s1-1.webp",
         "thoinoi-hoanganh-hoangquan-1.webp",
         "thoinoi-hoanganh-hoangquan-2.webp",
         "thoinoi-hoanganh-hoangquan-3.webp",
@@ -338,9 +346,10 @@ export const data = {
       date: "14.05.2025",
       contactInfo: {
         // address: "McDonald's Phú Lâm",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
+        "thumb-s1-52.webp",
         "fullmonth-betuenghi-9.webp",
         "fullmonth-betuenghi-2.webp",
         "fullmonth-betuenghi-3.webp",
@@ -353,21 +362,551 @@ export const data = {
       ],
     },
     //----x----Sinh nhật
-     "sinh-nhat-boi-ben-sony": {
+    "sinh-nhat-be-bao-chau": {
+      id: 75,
+      slug: "sinh-nhat-be-bao-chau",
+      title: "Sinh nhật bé Bảo Châu",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "09.05.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Pizza Domino Tên Lửa",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-56.webp"],
+    },
+    "sinh-nhat-be-bao-ngoc": {
+      id: 74,
+      slug: "sinh-nhat-be-bao-ngoc",
+      title: "Sinh nhật bé Bảo Ngọc",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "25.01.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-55.webp"],
+    },
+    "sinh-nhat-be-kien-quoc": {
+      id: 73,
+      slug: "sinh-nhat-be-kien-quoc",
+      title: "Sinh nhật bé Kiến Quốc",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "24.12.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Nhà hàng Văn Quảng",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-54.webp"],
+    },
+    "sinh-nhat-be-aviv": {
+      id: 72,
+      slug: "sinh-nhat-be-aviv",
+      title: "Sinh nhật bé Aviv",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "21.11.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "CASA GRANDE",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-53.webp"],
+    },
+    "sinh-nhat-be-phan-y": {
+      id: 71,
+      slug: "sinh-nhat-be-phan-y",
+      title: "Sinh nhật bé Phan Ý",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "06.02.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "McDonald's SCVivo City",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-49.webp"],
+    },
+    "sinh-nhat-be-thien-nghi": {
+      id: 70,
+      slug: "sinh-nhat-be-thien-nghi",
+      title: "Sinh nhật bé Thiên Nghi",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "01.06.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "McDonald's Điện Biên Phủ",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-48.webp"],
+    },
+    "sinh-nhat-be-dac-huy": {
+      id: 69,
+      slug: "sinh-nhat-be-dac-huy",
+      title: "Sinh nhật bé Đắc Huy",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "09.05.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Popeyes Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-47.webp"],
+    },
+    "sinh-nhat-be-gia-linh": {
+      id: 68,
+      slug: "sinh-nhat-be-gia-linh",
+      title: "Sinh nhật bé Gia Linh",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "22.02.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Bình Long",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-46.webp"],
+    },
+    "sinh-nhat-be-vu-minh-ngoc": {
+      id: 67,
+      slug: "sinh-nhat-be-minh-ngoc",
+      title: "Sinh nhật bé Minh Ngọc",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "10.05.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "KFC Tỉnh Lộ 10",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-45.webp"],
+    },
+    "sinh-nhat-be-vu-kha-nhu": {
+      id: 66,
+      slug: "sinh-nhat-be-kha-nhu",
+      title: "Sinh nhật bé Khả Như",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "20.12.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Pizza Company Phạm Hùng",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-44.webp"],
+    },
+    "sinh-nhat-be-vu-hoang-anh": {
+      id: 65,
+      slug: "sinh-nhat-be-vu-hoang-anh",
+      title: "Sinh nhật bé Vũ Hoàng Anh",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "21.03.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Pizza Domino Lê Văn Sỹ",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-43.webp"],
+    },
+    "sinh-nhat-be-bao-nam": {
+      id: 64,
+      slug: "sinh-nhat-be-bao-nam",
+      title: "Sinh nhật bé Bảo Nam",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "09.05.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-39.webp"],
+    },
+    "sinh-nhat-be-skylar": {
+      id: 63,
+      slug: "sinh-nhat-be-skylar",
+      title: "Sinh nhật bé Skylar",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "12.04.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Texas Phan Văn Trị",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-36.webp"],
+    },
+    "sinh-nhat-be-bao-tran": {
+      id: 63,
+      slug: "sinh-nhat-be-bao-tran",
+      title: "Sinh nhật bé Bảo Trân",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "16.11.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-35.webp"],
+    },
+    "sinh-nhat-be-nhat-khai": {
+      id: 62,
+      slug: "sinh-nhat-be-nhat-khai",
+      title: "Sinh nhật bé Nhật Khải",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "18.01.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-34.webp"],
+    },
+    "sinh-nhat-be-minh-quan": {
+      id: 61,
+      slug: "sinh-nhat-be-minh-quan",
+      title: "Sinh nhật bé Minh Quân",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "09.02.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-33.webp"],
+    },
+    "sinh-nhat-be-kha-nhi": {
+      id: 60,
+      slug: "sinh-nhat-be-kha-nhi",
+      title: "Sinh nhật bé Khả Nhi",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "05.02.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Pizza Domino Lê Văn Sỹ",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-32.webp"],
+    },
+    "sinh-nhat-be-minh-chau": {
+      id: 59,
+      slug: "sinh-nhat-be-minh-chau",
+      title: "Sinh nhật bé Gia Như",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "25.10.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "McDonald's Phan Xích Long",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-31.webp"],
+    },
+    "sinh-nhat-be-gia-nhu": {
+      id: 58,
+      slug: "sinh-nhat-be-gia-nhu",
+      title: "Sinh nhật bé Gia Như",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "01.11.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-30.webp"],
+    },
+    "sinh-nhat-be-nam-phong": {
+      id: 57,
+      slug: "sinh-nhat-be-nam-phong",
+      title: "Sinh nhật bé Nam Phong",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "13.03.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "McDonald's Điện Biên Phủ",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-29.webp"],
+    },
+    "sinh-nhat-be-phuc-anh": {
+      id: 56,
+      slug: "sinh-nhat-be-phuc-anh",
+      title: "Sinh nhật bé Phúc Ánh",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "21.05.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Phạm Văn Chiêu",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-28.webp"],
+    },
+    "sinh-nhat-be-bao-duyen": {
+      id: 55,
+      slug: "sinh-nhat-be-bao-duyen",
+      title: "Sinh nhật bé Bảo Duyên",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "11.10.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-26.webp"],
+    },
+    "sinh-nhat-be-kha-kha": {
+      id: 54,
+      slug: "sinh-nhat-be-kha-kha",
+      title: "Sinh nhật bé Khả Khả",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "17.01.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-25.webp"],
+    },
+    "sinh-nhat-be-lan-chi": {
+      id: 53,
+      slug: "sinh-nhat-be-lan-chi",
+      title: "Sinh nhật bé Lan Chi",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "23.05.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-24.webp"],
+    },
+    "sinh-nhat-be-minh-duy": {
+      id: 52,
+      slug: "sinh-nhat-be-minh-duy",
+      title: "Sinh nhật bé Minh Duy",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "14.01.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Pizza Domino Phan Văn Trị",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-23.webp"],
+    },
+    "sinh-nhat-be-ngoc-van": {
+      id: 51,
+      slug: "sinh-nhat-be-ngoc-van",
+      title: "Sinh nhật bé Ngọc Vân",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "07.12.2024",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Pizza Domino Lê Văn Sỹ",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-22.webp"],
+    },
+    "sinh-nhat-be-kha-nhi": {
+      id: 50,
+      slug: "sinh-nhat-be-kha-nhi",
+      title: "Sinh nhật bé Khả Nhi",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "05.02.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Pizza Domino Lê Văn Sỹ",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-21.webp"],
+    },
+    "sinh-nhat-be-trong-hao": {
+      id: 49,
+      slug: "sinh-nhat-be-trong-hao",
+      title: "Sinh nhật bé Trọng Hào",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "21.01.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Pizza Company Bàu Cát",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-20.webp"],
+    },
+    "sinh-nhat-be-gia-han": {
+      id: 48,
+      slug: "sinh-nhat-be-gia-han",
+      title: "Sinh nhật bé Gia Hân",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "25.10.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Texas Phan Xích Long",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-19.webp"],
+    },
+    "sinh-nhat-be-huy-hoang": {
+      id: 47,
+      slug: "sinh-nhat-be-huy-hoang",
+      title: "Sinh nhật bé Huy Hoàng",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "28.02.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-16.webp"],
+    },
+    "sinh-nhat-be-minh-triet": {
+      id: 46,
+      slug: "sinh-nhat-be-minh-triet",
+      title: "Sinh nhật bé Minh Triết",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "10.01.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-15.webp"],
+    },
+    "sinh-nhat-be-thanh-duc": {
+      id: 45,
+      slug: "sinh-nhat-be-thanh-duc",
+      title: "Sinh nhật bé Thành Đức",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "23.02.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Bình Long",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-14.webp"],
+    },
+    "sinh-nhat-tu-anh-chi-hao": {
+      id: 44,
+      slug: "sinh-nhat-tu-anh-chi-hao",
+      title: "Sinh nhật bé Tú Anh & Chí Hào",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "20.06.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lê Đại Hành",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-13.webp"],
+    },
+    "sinh-nhat-be-khoi-nguyen": {
+      id: 43,
+      slug: "sinh-nhat-be-khoi-nguyen",
+      title: "Sinh nhật bé Khôi Nguyên",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "12.10.2024",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Popeyes CN1",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-12.webp"],
+    },
+    "sinh-nhat-be-hani": {
+      id: 42,
+      slug: "sinh-nhat-be-hani",
+      title: "Sinh nhật bé Hani",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "26.04.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Pizza Company Bàu Cát",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-11.webp"],
+    },
+    "sinh-nhat-be-thanh-tra": {
+      id: 41,
+      slug: "sinh-nhat-be-thanh-tra",
+      title: "Sinh nhật bé Thanh Trà",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "26.04.2026",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Lý Chính Thắng",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-10.webp"],
+    },
+    "sinh-nhat-be-phuong-anh": {
+      id: 40,
+      slug: "sinh-nhat-be-phuong-anh",
+      title: "Sinh nhật bé Phương Anh",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "08.02.2025",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "Lotteria Bình Long",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-3.webp"],
+    },
+    "sinh-nhat-be-alice": {
+      id: 39,
+      slug: "sinh-nhat-be-alice",
+      title: "Sinh nhật bé Alice",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "28.12.2024",
+      tags: ["ChuHeDayNe"],
+      contactInfo: {
+        address: "McDonald's SCVivo City",
+        brandName: "Chú Hề Đây Nè!",
+      },
+      files: ["thumb-s1-2.webp"],
+    },
+    "sinh-nhat-boi-ben-sony": {
       id: 38,
       slug: "sinh-nhat-boi-ben-sony",
       title: "Sinh nhật Bối - Ben - Sony",
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
       date: "16.07.2026",
-      tags: [
-        "DayNe",
-      ],
+      tags: ["ChuHeDayNe"],
       contactInfo: {
         address: "Làng nướng Nam Bộ",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
-      files: ["sinhnhat-boibensony-3.webp","sinhnhat-boibensony-2.webp","sinhnhat-boibensony-1.webp",],
+      files: ["sinhnhat-boibensony-3.webp", "sinhnhat-boibensony-2.webp", "sinhnhat-boibensony-1.webp"],
     },
     "sinh-nhat-nhan-vien-caladon": {
       id: 26,
@@ -390,7 +929,7 @@ export const data = {
       ],
       contactInfo: {
         address: "Hòn Đất Garden - 140 Tân Sơn Nhì, phường Tân Sơn Nhì, Quận Tân Phú, TP.HCM",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
         owner: "Clip Flycam >>",
         link: "https://www.facebook.com/share/v/1EX3oUmurL/",
       },
@@ -405,7 +944,7 @@ export const data = {
       date: "08.07.2026",
       contactInfo: {
         address: "Lotteria Lý Chính Thắng - 250B Lý Chính Thắng, Nhiêu Lộc, Hồ Chí Minh",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: ["thumb-yenchi-1.webp", "sinhnhat-beyechi-2.webp", "sinhnhat-beyechi-3.webp", "sinhnhat-beyechi-1.webp", "sinhnhat-beyechi-4.webp"],
     },
@@ -418,7 +957,7 @@ export const data = {
       date: "14.11.2023",
       contactInfo: {
         address: "McDonald's Phú Lâm",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: ["thumb-nhadoanh-1.webp", "sinhnhat_benhadoanh.jpg"],
     },
@@ -431,7 +970,7 @@ export const data = {
       date: "26.11.2023",
       contactInfo: {
         address: "McDonald's Phú Lâm",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
         "thumb-mailamvihung-1.webp",
@@ -489,7 +1028,7 @@ export const data = {
       ],
       contactInfo: {
         address: "McDonald's Phú Lâm",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
     },
     "sinh-nhat-be-bao-mi": {
@@ -514,7 +1053,7 @@ export const data = {
       ],
       contactInfo: {
         address: "KFC Tân Hòa Đông",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
     },
     "sinh-nhat-be-bao-tran": {
@@ -536,7 +1075,7 @@ export const data = {
       ],
       contactInfo: {
         address: "McDonald's Phú Lâm",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
     },
     "sinh-nhat-be-nhat-anh": {
@@ -560,7 +1099,7 @@ export const data = {
       ],
       contactInfo: {
         address: "McDonald's Phú Lâm",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
     },
     "sinh-nhat-be-thien-kim": {
@@ -605,7 +1144,7 @@ export const data = {
       ],
       contactInfo: {
         address: "McDonald's Phú Lâm",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
     },
     "sinh-nhat-mr-minh-quyen": {
@@ -617,7 +1156,7 @@ export const data = {
       date: "18.08.2023",
       contactInfo: {
         address: "Nhà hàng Lẩu Tôm",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
         "thumb-minhquyen-1.webp",
@@ -653,11 +1192,11 @@ export const data = {
       slug: "le-hoi-kem-2026",
       title: "Lễ hội Kem 2026 cùng Jelly Cool",
       category: "su-kien", // Tầng 1 (Tab lớn)
-      subCategory: "le-hoi", // Tầng 2 (Icon con)
+      subCategory: ["le-hoi", "brand"], // Tầng 2 (Icon con)
       date: "17.07.2026",
       contactInfo: {
         address: "Lotte Mart Nam Sài Gòn",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
         "Jelycool-170726-13.webp",
@@ -687,7 +1226,7 @@ export const data = {
       tags: ["DayNe", "Hoitraitongquan2025", "BinhChanh"],
       contactInfo: {
         address: "BCHQS Thị trấn Tân Túc - B2/39, KP2, Tân Nhựt, Hồ Chí Minh",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
         "hoitrai-tongquan-2025-10.webp",
@@ -724,7 +1263,7 @@ export const data = {
       date: "30.12.2024",
       contactInfo: {
         address: "Landmark 81",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: ["boc25-1.webp", "boc25-2.webp", "boc25-3.webp", "boc25-4.webp", "boc25-5.webp"],
     },
@@ -737,7 +1276,7 @@ export const data = {
       date: "16.07.2026",
       contactInfo: {
         address: "Công ty TMI",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: ["tmi-16072026-3.webp", "tmi-16072026-4.webp", "tmi-16072026-1.webp", "tmi-16072026-2.webp"],
     },
@@ -750,7 +1289,7 @@ export const data = {
       date: "16.09.2024",
       contactInfo: {
         address: "Công an Huyện Bến Lức",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
         "trungthu-cahbenluc-1.webp",
@@ -780,7 +1319,7 @@ export const data = {
       date: "12.2025",
       contactInfo: {
         // address: "McDonald's Phú Lâm",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: ["haohao-concert-1.webp", "haohao-concert-2.webp", "haohao-concert-3.webp"],
     },
@@ -793,7 +1332,7 @@ export const data = {
       date: "01.06.2026",
       contactInfo: {
         address: "Nhà xuất bản Trẻ - 151 Lý Chính Thắng. Quận 3, TP.HCM",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
         "quoctethieunhi-nhaxuatbantre-2.webp",
@@ -825,7 +1364,7 @@ export const data = {
       date: "213.10.2023",
       contactInfo: {
         address: "Trường mầm non Dạ Lý Hương",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
         "mamnon-dalyhuong-1.webp",
@@ -859,7 +1398,7 @@ export const data = {
       date: "01.06.2025",
       contactInfo: {
         address: "Đầm Sen Park",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
         "khuvuichoi-damsen-1.webp",
@@ -881,7 +1420,7 @@ export const data = {
       tags: ["DayNe", "khaiquangdiemnhan", "VietSoul", "HonViet", "LanSuRong"],
       contactInfo: {
         address: "Nhà Thiếu Nhi Quận 9 - 65D Hồ Bá Phấn, Phường Phước Long A, Quận 9",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
         "khaiquangdiemnhan-vietsoul-3.webp",
@@ -913,7 +1452,7 @@ export const data = {
       contactInfo: {
         address: "Lynk The Vibe - 22B Nguyễn Thị Diệu, phường Xuân Hòa, TP.HCM",
         owner: "Nhân Định - Mê Bảo Hiểm",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: ["workshop-aia-1.webp"],
     },
@@ -928,7 +1467,7 @@ export const data = {
       contactInfo: {
         address: "Good Morning Coffee - 103 Võ Oanh, Bình Thạnh TP.HCM",
         owner: "HECWIN",
-        brandName: "Phúc Party",
+        brandName: "Chú Hề Đây Nè!",
       },
       files: [
         "workshop-hecwin-1.webp",

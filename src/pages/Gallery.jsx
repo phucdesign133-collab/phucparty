@@ -14,9 +14,9 @@ const Gallery = () => {
 
   const tabConfigs = useMemo(
     () => [
-      { id: "events", label: "Sự kiện", category: "su-kien" },
-      { id: "designs", label: "Thiết kế", category: "thiet-ke" },
-      { id: "pricing", label: "Bảng giá", category: "bang-gia" },
+      { id: "events", label: "EVENTS", category: "su-kien" },
+      { id: "designs", label: "DESIGNS", category: "thiet-ke" },
+      { id: "pricing", label: "PRICING", category: "bang-gia" },
     ],
     [],
   );
@@ -58,8 +58,8 @@ const Gallery = () => {
       <BackgroundText category={tabConfigs.find(t => t.id === activeTabId)?.category}/>
       <Breadcrumb
         items={[
-          { label: "Trang chủ", link: "/" },
-          { label: "Tất cả bài viết", link: "/gallery" },
+          { label: "Home", link: "/" },
+          { label: "All Post", link: "/gallery" },
         ]}
       />
 

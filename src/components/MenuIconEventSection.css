@@ -40,7 +40,7 @@
   margin-bottom: 5px;
 }
 .filter-label {
-  font-size: 13px;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -57,7 +57,7 @@
   }
 
   .filter-item-event-section {
-    flex: 0 0 100px; /* Cố định chiều rộng item trên mobile */
+    flex: 0 0 120px; /* Cố định chiều rộng item trên mobile */
   }
 }
 

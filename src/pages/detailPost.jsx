@@ -62,8 +62,8 @@ const DetailPost = () => {
       <BackgroundText category={project.category}/>
       <Breadcrumb
         items={[
-          { label: "Trang chủ", link: "/" },
-          { label: "Tất cả bài viết", link: "/gallery" },
+          { label: "Home", link: "/" },
+          { label: "All Post", link: "/gallery" },
           { label: project.title, link: `/post/${slug}` },
         ]}
       />

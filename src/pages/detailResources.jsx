@@ -35,8 +35,8 @@ const DetailResources = () => {
       <BackgroundText category="balloonClub" />
       <Breadcrumb
         items={[
-          { label: "Trang chủ", link: "/" },
-          { label: "Tất cả bài viết", link: "/balloon-club" },
+          { label: "Home", link: "/" },
+          { label: "All Post", link: "/balloon-club" },
           { label: tool.title, link: `/balloon-club/${id}` },
         ]}
       />
@@ -67,13 +67,13 @@ const DetailResources = () => {
           <>
             {tool.level && (
               <p>
-                <strong>Level: </strong>
+                <strong>Cấp độ (Level): </strong>
                 <span className="highlight-level">{tool.level.replace(/Level/gi, "").trim()}</span>
               </p>
             )}
 
             <div className="tool-features">
-              <strong>Vật tư chuẩn bị:</strong>
+              <strong>Vật tư sử dụng (Materials used):</strong>
               {tool.materials && tool.materials.length > 0 ? (
                 <ul>
                   {tool.materials.map((mat, index) => (
@@ -93,7 +93,7 @@ const DetailResources = () => {
 
               {/* Phần Mua vật tư */}
               <div className="supplier-section">
-                <h3>Chuẩn bị vật tư:</h3>
+                <h3>Chuẩn bị vật tư (Prepare materials):</h3>
                 <div className="supplier-desc">
                   <p>
                     <strong>Tự túc:</strong> Bạn có thể tự mua sắm theo danh sách gợi ý để tối ưu chi phí.
@@ -119,7 +119,7 @@ const DetailResources = () => {
 
               {/* Nút hướng dẫn thực tế */}
               <div className="tool-guide-wrapper">
-                <strong>Xem clip hướng dẫn:</strong>
+                <strong>Xem hướng dẫn (Watch the tutorial video):</strong>
                 <div style={{ display: "flex", gap: "12px", marginTop: "10px", flexWrap: "wrap" }}>
                   {tool.reelsLink && (
                     <a href={tool.reelsLink} target="_blank" rel="noreferrer" className="reels-action-btn-custom">

@@ -30,20 +30,20 @@ const BalloonClub = () => {
     const textWords = cleanText.split(/\s+/);
     const kwWords = cleanKw.split(/\s+/);
 
-    return kwWords.every((kwWord) => 
-      textWords.some((word) => word.includes(kwWord)) || cleanText.includes(cleanKw)
-    );
+    return kwWords.every((kwWord) => textWords.some((word) => word.includes(kwWord)) || cleanText.includes(cleanKw));
   };
 
   const renderHighlightedText = (text, highlight) => {
     if (!highlight.trim()) return text;
     const parts = text.split(new RegExp(`(${highlight})`, "gi"));
-    return parts.map((part, i) => 
+    return parts.map((part, i) =>
       removeDiacritics(part) === removeDiacritics(highlight) ? (
-        <span key={i} style={{ color: "#e91e63", fontWeight: "bold" }}>{part}</span>
+        <span key={i} style={{ color: "#e91e63", fontWeight: "bold" }}>
+          {part}
+        </span>
       ) : (
         part
-      )
+      ),
     );
   };
 
@@ -76,30 +76,30 @@ const BalloonClub = () => {
   }, []);
 
   const filteredData = useMemo(() => {
-  return balloonClubData.map((group) => {
-    let tools = group.tools;
+    return balloonClubData.map((group) => {
+      let tools = group.tools;
 
-    if (searchTerm.trim()) {
-      tools = tools.filter((tool) => matchesKeyword(tool.title, searchTerm));
-    }
-
-    const activeSub = filters[group.category];
-    if (activeSub && activeSub !== "Tất cả") {
-      tools = tools.filter((tool) => tool.subCategory === activeSub);
-    }
-
-    // Sửa lại đoạn kiểm tra level ở đây:
-    // Chỉ lọc theo level khi người dùng chọn đúng subCategory và chọn một level cụ thể (khác "Tất cả")
-    if (activeSub) {
-      const activeLevel = levelFilters[group.category];
-      if (activeLevel && activeLevel !== "Tất cả" && activeLevel !== "Tất cả cấp độ") {
-        tools = tools.filter((tool) => tool.level === activeLevel);
+      if (searchTerm.trim()) {
+        tools = tools.filter((tool) => matchesKeyword(tool.title, searchTerm));
       }
-    }
 
-    return { ...group, tools };
-  });
-}, [searchTerm, filters, levelFilters]);
+      const activeSub = filters[group.category];
+      if (activeSub && activeSub !== "Tất cả") {
+        tools = tools.filter((tool) => tool.subCategory === activeSub);
+      }
+
+      // Sửa lại đoạn kiểm tra level ở đây:
+      // Chỉ lọc theo level khi người dùng chọn đúng subCategory và chọn một level cụ thể (khác "Tất cả")
+      if (activeSub) {
+        const activeLevel = levelFilters[group.category];
+        if (activeLevel && activeLevel !== "Tất cả" && activeLevel !== "Tất cả cấp độ") {
+          tools = tools.filter((tool) => tool.level === activeLevel);
+        }
+      }
+
+      return { ...group, tools };
+    });
+  }, [searchTerm, filters, levelFilters]);
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -118,45 +118,50 @@ const BalloonClub = () => {
     <div className="club-page">
       <BackgroundText category="balloonClub" />
 
-      <div className="club-search-wrapper" ref={searchRef}>
-        <input
-          className="club-search-input"
-          placeholder="Tìm trong Balloon Club..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-          onFocus={() => setIsFocused(true)}
-        />
+     <div className="club-search-wrapper" ref={searchRef}>
+  <input
+    className="club-search-input"
+    placeholder="Search in Balloon Club..."
+    value={searchTerm}
+    onChange={handleSearchChange}
+    onFocus={() => setIsFocused(true)}
+  />
 
-        {/* Thêm điều kiện kiểm tra searchTerm.trim() để khi trống tuyệt đối không hiện khung */}
-        {isFocused && searchTerm.trim() && searchSuggestions.length > 0 && (
-          <div className="search-suggestions-dropdown">
-            {searchSuggestions.map((item) => {
-              const displaySubCategory = item.subCategory 
-                ? `${item.subCategory}${item.level ? ` - ${item.level}` : ""}` 
-                : item.categoryName;
+  {/* Lớp overlay bấm để đóng (nếu trang có dùng) -> tạm ẩn lớp phủ trước để sau dùng thì bật lại*/} 
+  {/* {isFocused && searchTerm.trim() && searchSuggestions.length > 0 && (
+    <div className="search-overlay" onClick={() => setIsFocused(false)} />
+  )} */}
 
-              return (
-                <div
-                  key={item.id}
-                  className="suggestion-item"
-                  onClick={() => {
-                    setSearchTerm(item.title);
-                    setIsFocused(false);
-                    navigate(`/balloon-club/${item.id}`);
-                  }}
-                >
-                  <span className="suggestion-title">
-                    {renderHighlightedText(item.title, searchTerm)}
-                  </span>
-                  <span className="suggestion-category" style={{ fontStyle: "italic", color: "#666" }}>
-                    &nbsp;(trong phần {displaySubCategory})
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-        )}
-      </div>
+  {/* Dùng thẻ ul và class suggestions-list để ăn theo CSS có sẵn thanh cuộn dọc */}
+  {isFocused && searchTerm.trim() && searchSuggestions.length > 0 && (
+    <ul className="suggestions-list">
+      {searchSuggestions.slice(0, 5).map((item) => {
+        const displaySubCategory = item.subCategory 
+          ? `${item.subCategory}${item.level ? ` - ${item.level}` : ""}` 
+          : item.categoryName;
+
+        return (
+          <li
+            key={item.id}
+            className="suggestion-item"
+            onClick={() => {
+              setSearchTerm(item.title);
+              setIsFocused(false);
+              navigate(`/balloon-club/${item.id}`);
+            }}
+          >
+            <span className="suggestion-title">
+              {renderHighlightedText(item.title, searchTerm)}
+            </span>
+            <span className="suggestion-category" style={{ fontStyle: "italic", color: "#666" }}>
+              &nbsp;(in section {displaySubCategory})
+            </span>
+          </li>
+        );
+      })}
+    </ul>
+  )}
+</div>
 
       <div className="club-content">
         {filteredData.map((group, index) => {
@@ -193,10 +198,10 @@ const BalloonClub = () => {
                     onChange={(e) => setLevelFilters((prev) => ({ ...prev, [group.category]: e.target.value }))}
                   >
                     <option value="Tất cả">Tất cả cấp độ</option>
-                    <option value="Level 1">Level 01 — Cơ bản</option>
-                    <option value="Level 2">Level 02 — Nâng cấp</option>
-                    <option value="Level 3">Level 03 — Nâng cao</option>
-                    <option value="Level 4">Level 04 — Chuyên gia</option>
+                    <option value="Level 1">Level 01 — Cơ bản (Beginner)</option>
+                    <option value="Level 2">Level 02 — Nâng cấp (Intermediate)</option>
+                    <option value="Level 3">Level 03 — Nâng cao (Advanced)</option>
+                    <option value="Level 4">Level 04 — Chuyên gia (Expert)</option>
                   </select>
                   <p className="level-sub-desc">💡 {levelDescriptions[levelFilters[group.category] || "Tất cả"]}</p>
                 </div>

@@ -12,7 +12,6 @@ import Home from "./pages/Home";
 import LuckySpinParty from "./pages/LuckySpinParty";
 import Gallery from "./pages/Gallery";
 import DetailPost from "./pages/detailPost";
-import Resources from "./pages/Resources";
 import DetailResources from "./pages/detailResources";
 import BalloonClub from "./pages/BalloonClub";
 
@@ -46,11 +45,9 @@ function App() {
       <Routes>
         {/* Cấu trúc mới: Home - Profile - Gallery - Balloon Club - Lucky Spin */}
         <Route path="/" element={<Home />} />
-          <Route path="/balloon-club" element={<BalloonClub />} />
-          <Route path="/balloon-club/:id" element={<DetailResources />} />
+        <Route path="/balloon-club" element={<BalloonClub />} />
+        <Route path="/balloon-club/:id" element={<DetailResources />} />
         <Route path="/lucky-spin" element={<LuckySpinParty />} />
-        {/* <Route path="/resources" element={<Resources />} />
-        <Route path="/resources/:id" element={<DetailResources />} /> */}
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/detail-post" element={<DetailPost />} />
         <Route path="/post/:slug" element={<DetailPost />} />

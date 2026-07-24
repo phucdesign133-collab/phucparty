@@ -4,28 +4,24 @@ const BackgroundText = ({ category }) => {
   // Cấu hình nội dung cho từng tab
   const content = {
     "su-kien": {
-      title: "Sự Kiện Đáng Nhớ",
-      subtitle: "Những cột mốc quan trọng và các bữa tiệc hoành tráng mà chúng tôi đã thực hiện."
+      title: "Memorable Events",
+      subtitle: "Milestones and grand celebrations we have successfully brought to life."
     },
     "thiet-ke": {
-      title: "Thiết Kế Sáng Tạo",
-      subtitle: "Nơi ý tưởng bay cao với những bản vẽ độc đáo và chuyên nghiệp nhất."
+      title: "Creative Design",
+      subtitle: "Where imagination takes flight through unique and professional visuals."
     },
     "bang-gia": {
-      title: "Bảng Giá Dịch Vụ",
-      subtitle: "Chi tiết các gói dịch vụ chất lượng với mức giá tối ưu dành cho bạn."
+      title: "Service Pricing",
+      subtitle: "Optimized packages tailored to deliver maximum value for your projects."
     },
     default: {
-      title: "Nơi Lưu Giữ Những Kỷ Niệm",
-      subtitle: "Khoảnh khắc tuyệt vời được ghi lại bởi team Phúc Party và chính bạn."
-    },
-    resources: {
-      title: "Tools & AI",
-      subtitle: "Tools & AI - Kho công cụ hỗ trợ công việc. Đừng quên bấm vào 'Chi tiết' và xem clip hướng dẫn để ủng hộ Phúc nhé!"
+      title: "Captured Moments",
+      subtitle: "Incredible snapshots preserved by the Phuc Party team and you."
     },
     balloonClub: {
       title: "Balloon Club",
-      subtitle: "Hệ sinh thái dành cho Balloon Artist, bao gồm Academy, AI Tools, Đối tác Phúc đã đồng hành, giúp bạn học tập, sáng tạo và phát triển công việc hiệu quả hơn. 🎈"
+      subtitle: "An ecosystem for Balloon Artists featuring Academy, AI Tools, and trusted partners."
     }
   };
 
