@@ -76,29 +76,30 @@ const BalloonClub = () => {
   }, []);
 
   const filteredData = useMemo(() => {
-    return balloonClubData.map((group) => {
-      let tools = group.tools;
+  return balloonClubData.map((group) => {
+    let tools = group.tools;
 
-      // Chỉ lọc tool khi có nhập từ khóa
-      if (searchTerm.trim()) {
-        tools = tools.filter((tool) => matchesKeyword(tool.title, searchTerm));
+    if (searchTerm.trim()) {
+      tools = tools.filter((tool) => matchesKeyword(tool.title, searchTerm));
+    }
+
+    const activeSub = filters[group.category];
+    if (activeSub && activeSub !== "Tất cả") {
+      tools = tools.filter((tool) => tool.subCategory === activeSub);
+    }
+
+    // Sửa lại đoạn kiểm tra level ở đây:
+    // Chỉ lọc theo level khi người dùng chọn đúng subCategory và chọn một level cụ thể (khác "Tất cả")
+    if (activeSub) {
+      const activeLevel = levelFilters[group.category];
+      if (activeLevel && activeLevel !== "Tất cả" && activeLevel !== "Tất cả cấp độ") {
+        tools = tools.filter((tool) => tool.level === activeLevel);
       }
+    }
 
-      const activeSub = filters[group.category];
-      if (activeSub && activeSub !== "Tất cả") {
-        tools = tools.filter((tool) => tool.subCategory === activeSub);
-      }
-
-      if (activeSub === "Tạo hình bong bóng") {
-        const activeLevel = levelFilters[group.category];
-        if (activeLevel && activeLevel !== "Tất cả") {
-          tools = tools.filter((tool) => tool.level === activeLevel);
-        }
-      }
-
-      return { ...group, tools };
-    });
-  }, [searchTerm, filters, levelFilters]);
+    return { ...group, tools };
+  });
+}, [searchTerm, filters, levelFilters]);
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -184,18 +185,18 @@ const BalloonClub = () => {
                 </select>
               </div>
 
-              {currentSub === "Tạo hình bong bóng" && (
+              {currentSub === "Từ một quả Bóng" && (
                 <div className="level-select-wrapper level-select-animation">
                   <select
                     className="club-level-select-full"
                     value={levelFilters[group.category] || "Tất cả"}
                     onChange={(e) => setLevelFilters((prev) => ({ ...prev, [group.category]: e.target.value }))}
                   >
-                    <option value="Tất cả">Tất cả độ khó</option>
-                    <option value="Level 1">🌱 Level 01 — Nhập môn</option>
-                    <option value="Level 2">🎈 Level 02 — Cơ bản</option>
-                    <option value="Level 3">🔥 Level 03 — Nâng cao</option>
-                    <option value="Level 4">👑 Level 04 — Chuyên gia</option>
+                    <option value="Tất cả">Tất cả cấp độ</option>
+                    <option value="Level 1">Level 01 — Cơ bản</option>
+                    <option value="Level 2">Level 02 — Nâng cấp</option>
+                    <option value="Level 3">Level 03 — Nâng cao</option>
+                    <option value="Level 4">Level 04 — Chuyên gia</option>
                   </select>
                   <p className="level-sub-desc">💡 {levelDescriptions[levelFilters[group.category] || "Tất cả"]}</p>
                 </div>

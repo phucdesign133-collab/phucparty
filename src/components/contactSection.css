@@ -19,7 +19,6 @@
   margin-top: 20px;
 }
 .contact-section-custom {
-
   border-left: 4px solid #4caf50;
   border-radius: 12px;
   padding: 20px;
@@ -29,7 +28,7 @@
 .btn-zalo,
 .btn-share {
   flex: 1; /* Hai nút chia đều độ rộng */
-  padding: 10px 5px;
+  padding: 10px 0;
   text-align: center;
   border-radius: 6px;
   text-decoration: none;
@@ -48,5 +47,5 @@
   border: 1px solid #ddd;
 }
 .hidden-btn {
-    display: none !important;
+  display: none !important;
 }

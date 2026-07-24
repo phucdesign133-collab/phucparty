@@ -1,19 +1,204 @@
 export const balloonClubData = [
-  // Đang cập nhật đến id số 37 & thiếu các id-10-29
- 
+  // Đang cập nhật đến id số 44
+
   {
     category: "🎓 Balloon Academy",
-    subCategories: ["Tạo hình bong bóng", "Tip & Trick"],
+    subCategories: ["Từ một quả Bóng", "Chuyện của Bóng"],
     tools: [
+      // Level 2
+      {
+        id: 43,
+        title: "Xe motor - không người lái",
+        subCategory: "Từ một quả Bóng",
+        level: "Level 2", // Mức độ
+        description: "Một xe motor được tạo hình chỉ từ bong bóng...",
+        images: ["/img/tmqb-s1-3.webp", "/img/logodayne-1.webp"],
+        // Dữ liệu cho phần "Vật tư chuẩn bị"
+        materials: ["02 Bóng dài 260", "Bơm tay chuyên dụng"],
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 2"],
+      },
+      {
+        id: 44,
+        title: "Hoa hồng - kiểu 2",
+        subCategory: "Từ một quả Bóng",
+        level: "Level 2", // Mức độ
+        description: "Một hoa hồng được tạo hình chỉ từ bong bóng...",
+        images: ["/img/tmqb-s1-7.webp", "/img/logodayne-1.webp"],
+        // Dữ liệu cho phần "Vật tư chuẩn bị"
+        materials: ["03 Bóng dài 260", "Bơm tay chuyên dụng"],
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 2"],
+      },
       // Level 1
+      {
+        id: 42,
+        title: "Hoa hồng - kiểu 1",
+        subCategory: "Từ một quả Bóng",
+        level: "Level 1", // Mức độ
+        description: "Một hoa hồng được tạo hình chỉ từ bong bóng...",
+        images: ["/img/tmqb-s1-6.webp", "/img/logodayne-1.webp"],
+        // Dữ liệu cho phần "Vật tư chuẩn bị"
+        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 1"],
+      },
+      {
+        id: 41,
+        title: "Con gấu",
+        subCategory: "Từ một quả Bóng",
+        level: "Level 1", // Mức độ
+        description: "Một con gấu được tạo hình chỉ từ bong bóng...",
+        images: ["/img/tmqb-s1-5.webp", "/img/logodayne-1.webp"],
+        // Dữ liệu cho phần "Vật tư chuẩn bị"
+        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 1"],
+      },
+      {
+        id: 40,
+        title: "Băng đô tai thỏ",
+        subCategory: "Từ một quả Bóng",
+        level: "Level 1", // Mức độ
+        description: "Một chiếc băng đô được tạo hình chỉ từ bong bóng...",
+        images: ["/img/tmqb-s1-2.webp", "/img/logodayne-1.webp"],
+        // Dữ liệu cho phần "Vật tư chuẩn bị"
+        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 1"],
+      },
+      {
+        id: 39,
+        title: "Chiếc nhẫn",
+        subCategory: "Từ một quả Bóng",
+        level: "Level 1", // Mức độ
+        description: "Một chiếc nhẫn được tạo hình chỉ từ bong bóng...",
+        // icon: "/img/logodayne-1.webp",
+        images: ["/img/tmqb-s1-8.webp", "/img/logodayne-1.webp"],
+        // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
+        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 1"],
+      },
+      {
+        id: 38,
+        title: "Con thỏ - kiểu 3",
+        subCategory: "Từ một quả Bóng",
+        level: "Level 1", // Mức độ
+        description: "Một con thỏ được tạo hình chỉ từ bong bóng...",
+        // icon: "/img/logodayne-1.webp",
+        images: ["/img/tmqb-s1-11.webp", "/img/logodayne-1.webp"],
+        // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
+        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 1"],
+      },
+      {
+        id: 29,
+        title: "Con thỏ - kiểu 2",
+        subCategory: "Từ một quả Bóng",
+        level: "Level 1", // Mức độ
+        description: "Một con thỏ được tạo hình chỉ từ bong bóng...",
+        // icon: "/img/logodayne-1.webp",
+        images: ["/img/tmqb-s1-10.webp", "/img/logodayne-1.webp"],
+        // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
+        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/hphuc133/videos/4256812467964069",
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 1"],
+      },
+      {
+        id: 10,
+        title: "Con thỏ - kiểu 1",
+        subCategory: "Từ một quả Bóng",
+        level: "Level 1", // Mức độ
+        description: "Một con thỏ được tạo hình chỉ từ bong bóng...",
+        // icon: "/img/logodayne-1.webp",
+        images: ["/img/tmqb-s1-9.webp", "/img/logodayne-1.webp"],
+        // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
+        materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
+        // Dữ liệu cho phần "Mua vật tư"
+        suppliers: [
+          { name: "Đối tác Bóng bay", ctaText: "Gọi ngay - Mr. Kiệt", link: "tel:0934006112" },
+          { name: "Đối tác In Sticker", ctaText: "Gọi ngay - Mr. Tuấn", link: "tel:0903039121" },
+          // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
+        ],
+        // Link Reels hướng dẫn thực tế
+        reelsLink: "https://www.facebook.com/hphuc133/videos/1865931627698969",
+        // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
+        tags: ["Bong bóng", "Level 1"],
+      },
       {
         id: 20,
         title: "Cây súng - kiểu 1",
-        subCategory: "Tạo hình bong bóng",
+        subCategory: "Từ một quả Bóng",
         level: "Level 1", // Mức độ
         description: "Một cây súng được tạo hình chỉ từ bong bóng...",
-        icon: "/img/logodayne-1.webp",
-        images: ["/img/BA-mau001-1.webp","/img/logodayne-1.webp"],
+        // icon: "/img/logodayne-1.webp",
+        images: ["/img/tmqb-s1-1.webp", "/img/logodayne-1.webp"],
         // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
         materials: ["02 Bóng dài 260", "Bơm tay chuyên dụng"],
         // Dữ liệu cho phần "Mua vật tư"
@@ -23,18 +208,18 @@ export const balloonClubData = [
           // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
         ],
         // Link Reels hướng dẫn thực tế
-        reelsLink: "https://www.facebook.com/reel/1799720998064909",
+        reelsLink: "https://www.facebook.com/hphuc133/videos/1799720998064909",
         // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
         tags: ["Bong bóng", "Level 1"],
       },
       {
         id: 21,
         title: "Con cá - kiểu 1",
-        subCategory: "Tạo hình bong bóng",
+        subCategory: "Từ một quả Bóng",
         level: "Level 1", // Mức độ
         description: "Một con cá được tạo hình chỉ từ bong bóng...",
-        icon: "/img/logodayne-1.webp",
-        images: ["/img/BA-mau002-1.webp","/img/logodayne-1.webp"],
+        // icon: "/img/logodayne-1.webp",
+        images: ["/img/tmqb-s1-4.webp", "/img/logodayne-1.webp"],
         // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
         materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
         // Dữ liệu cho phần "Mua vật tư"
@@ -44,18 +229,18 @@ export const balloonClubData = [
           // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
         ],
         // Link Reels hướng dẫn thực tế
-        reelsLink: "https://www.facebook.com/reel/4283160945269848",
+        reelsLink: "https://www.facebook.com/hphuc133/videos/4283160945269848",
         // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
         tags: ["Bong bóng", "Level 1"],
       },
       {
         id: 22,
         title: "Cây súng ngắn - kiểu 1",
-        subCategory: "Tạo hình bong bóng",
+        subCategory: "Từ một quả Bóng",
         level: "Level 1", // Mức độ
         description: "Một cây súng được tạo hình chỉ từ bong bóng...",
-        icon: "/img/logodayne-1.webp",
-        images: ["/img/BA-mau003-1.webp","/img/logodayne-1.webp"],
+        // icon: "/img/logodayne-1.webp",
+        images: ["/img/tmqb-s1-12.webp", "/img/logodayne-1.webp"],
         // Dữ liệu thay thế cho phần "Chức năng" -> "Vật tư chuẩn bị"
         materials: ["01 Bóng dài 260", "Bơm tay chuyên dụng"],
         // Dữ liệu cho phần "Mua vật tư"
@@ -65,10 +250,11 @@ export const balloonClubData = [
           // { name: "Phụ kiện nghệ thuật Store", ctaText: "Mua ngay", link: "https://shopee.vn/..." },
         ],
         // Link Reels hướng dẫn thực tế
-        reelsLink: "https://www.facebook.com/reel/1764983721521419",
+        reelsLink: "https://www.facebook.com/hphuc133/videos/1764983721521419",
         // Tài nguyên liên quan (có thể lọc theo subCategory hoặc level)
         tags: ["Bong bóng", "Level 1"],
       },
+      
     ], // Dữ liệu đang cập nhật
   },
   {
@@ -573,9 +759,14 @@ export const balloonClubData = [
       },
     ],
   },
-  {
-    category: "🤝 Success Stories",
-    subCategories: ["Trường mầm non", "Chuỗi thức ăn nhanh", "Hệ thống nhà hàng", "Trung tâm thương mại"],
-    tools: [], // Dữ liệu đang cập nhật
-  },
+  // {
+  //   category: "🤝 Success Stories",
+  //   subCategories: ["Trường mầm non", "Chuỗi thức ăn nhanh", "Hệ thống nhà hàng", "Trung tâm thương mại"],
+  //   tools: [], // Dữ liệu đang cập nhật
+  // },
+  // {
+  //   category: "Hành trình của Phúc",
+  //   subCategories: ["Series 1"],
+  //   tools: [], // Dữ liệu đang cập nhật
+  // },
 ];

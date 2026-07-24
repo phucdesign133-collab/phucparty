@@ -66,7 +66,7 @@ const AdditionalSections = ({ currentSlug }) => {
                 ) : (
                   <div className="img-placeholder">No Image</div>
                 )}
-                <p>{post.title}</p>
+          
               </div>
             ))
           ) : (

@@ -1,88 +1,25 @@
+/* ==========================================
+   1. SECTION & LAYOUT CHUNG
+   ================================---------- */
 .resource-section {
-  padding: 0 20px;
-}
-
-.res-search-input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
-
-.res-slider {
-  display: flex;
-  overflow-x: auto;
-  gap: 16px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.res-slider::-webkit-scrollbar {
-  display: none;
-}
-/* Container của mỗi thẻ card */
-.res-card {
-  flex: 0 0 65%;
-  scroll-snap-align: start;
-  background: #fff;
-  border-radius: 10px; /* Bo góc nhẹ hơn */
-  padding: 20px;
-  text-align: center;
-  border: 1px solid #eee;
-  /* Đã tắt hiệu ứng hover: xóa transform và shadow */
-}
-
-/* Icon nhỏ gọn hơn */
-.res-icon img {
-  width: 40px !important; /* Thu nhỏ icon */
-  height: 40px !important;
-}
-
-/* Cố định chiều cao cho mô tả để card đồng nhất */
-.tool-desc {
-  height: 45px; /* Chiều cao cố định cho 2 dòng text */
-  overflow: hidden;
-  margin: 10px 0;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* Button style */
-.res-btn {
-  flex: 1; /* Chia đều chiều rộng cho 2 nút */
-  padding: 8px 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--primary-dark-red);
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
-  text-align: center;
-  cursor: pointer;
-}
-.res-btn-green {
-  flex: 1; /* Chia đều chiều rộng cho 2 nút */
-  padding: 8px 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--primary-green);
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 13px;
-  text-align: center;
-  cursor: pointer;
-}
-
-/* Đảm bảo không còn hiệu ứng di chuột */
-.res-card:hover {
-  transform: none;
-  box-shadow: none;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
 .section-title {
   font-weight: 600;
-  color: #2d3436;
+  color: var(--primary-dark-red, #b71c1c);
   font-size: 1.5rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.section-icon {
+  color: var(--primary-dark-red, #b71c1c);
+  margin-right: 10px;
 }
 
 .section-divider {
@@ -91,34 +28,77 @@
   border: 0;
   border-top: 2px solid #dfe6e9;
 }
-/* Đảm bảo 2 nút nằm ngang hàng */
-.res-button-row {
-  display: flex !important; /* Dùng !important để ghi đè style cũ nếu cần */
-  flex-direction: row !important;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 15px;
-} /* Cập nhật title và icon sang màu đỏ thương hiệu */
-.section-title {
-  font-weight: 600;
-  color: var(--primary-dark-red); /* Màu đỏ */
-  font-size: 1.5rem;
+
+/* ==========================================
+   2. SLIDER & CARD DẠNG THUMBNAIL (9:16)
+   ================================---------- */
+.res-slider {
   display: flex;
-  align-items: center;
-} /* Icon (nếu bạn render icon bằng thẻ img hoặc font icon trong title) */
-.section-icon {
-  color: var(--primary-dark-red);
-  margin-right: 10px;
+  overflow-x: auto;
+  gap: 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
 }
 
-@media (min-width: 768px) {
-  .res-card {
-    flex: 0 0 28%;
-  }
+.res-slider::-webkit-scrollbar {
+  display: none;
 }
+
+/* Thẻ card dạng thumbnail dọc 9:16 - Hiện ~78% chiều rộng để lòi card sau ra ~20% */
+.res-card-thumb {
+  flex: 0 0 78%;
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.res-card-thumb:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Khung chứa ảnh tỷ lệ 9:16 */
+.res-thumb-container {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: #f9f9f9;
+  overflow: hidden;
+  position: relative;
+}
+
+.res-thumb-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.res-card-thumb:hover .res-thumb-container img {
+  transform: scale(1.03);
+}
+
+
+
+/* ==========================================
+   3. THANH TÌM KIẾM & DROPDOWN GỢI Ý
+   ================================---------- */
 .search-wrapper {
   position: relative;
   width: 100%;
+}
+
+.res-search-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
 .suggestions-list {
@@ -130,9 +110,9 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   z-index: 100;
-  max-height: 200px; /* Độ cao tối đa để kích hoạt cuộn */
-  overflow-y: auto;   /* Cuộn dọc */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .suggestion-item {
@@ -143,4 +123,44 @@
 
 .suggestion-item:hover {
   background-color: #f8f8f8;
+}
+
+/* ==========================================
+   4. PHẦN BỔ SUNG & HEADER FLEX (SELECT)
+   ================================---------- */
+.section-header-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.res-filter-select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  font-size: 0.95rem;
+  color: #2d3436;
+  outline: none;
+}
+
+/* ==========================================
+   5. RESPONSIVE MEDIA QUERIES
+   ================================---------- */
+@media (min-width: 768px) {
+  .res-card-thumb {
+    flex: 0 0 28%; /* Hiển thị đẹp trên màn hình lớn */
+  }
+  
+  .section-header-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .res-filter-select {
+    width: 220px;
+  }
 }

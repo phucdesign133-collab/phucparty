@@ -209,10 +209,11 @@ Gõ: git add .
 Gõ: git commit -m "Nội dung cập nhật"
 Gõ: git push origin main
 
+bear balloon twisting -> cụm từ tìm ảnh dễ dàng
 
 Đổi tên hàng loạt đồng thời đổi định dạng jpg to webp bằng terminal -> bây giờ đang dùng để nén tự động lần 2
 
-$i = 1; Get-ChildItem -Include *.jpg, *.png, *.jpeg, *.jfif -Recurse | ForEach-Object { $newName = "Jelycool-170726-$i.webp"; Write-Host "Đang chuyển đổi: $($_.Name) -> $newName"; magick $_.FullName -resize 1200x -quality 75 $newName; $i++ }
+$i = 1; Get-ChildItem -Include *.jpg, *.png, *.jpeg, *.jfif -Recurse | ForEach-Object { $newName = "thumb-baomi-$i.webp"; Write-Host "Đang chuyển đổi: $($_.Name) -> $newName"; magick $_.FullName -resize 1200x -quality 75 $newName; $i++ }
 
 Di chuyển ảnh sua khi đổi tên ra ngoài
 Move-Item \*.jpg ..

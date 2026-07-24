@@ -60,7 +60,7 @@ const DetailResources = () => {
       </section>
 
       <section className="res-info">
-        <h1>{tool.title}</h1>
+        <h2>{tool.title}</h2>
 
         {/* PHÂN TÁCH GIAO DIỆN DỰA TRÊN LOẠI BÀI VIẾT */}
         {isBalloonArt ? (
@@ -198,24 +198,35 @@ const DetailResources = () => {
         <div className="res-slider">
           {balloonClubData
             .find((group) => group.tools.some((t) => t.id === tool.id))
-            ?.tools.filter((t) => t.id !== tool.id && (isBalloonArt ? t.subCategory === tool.subCategory || t.level === tool.level : true))
-            .map((item) => (
-              <div key={item.id} className="res-card">
-                <div className="res-icon">
-                  <img src={item.icon} alt={item.title} />
-                </div>
-                <h3>{item.title}</h3>
-                <p className="tool-desc">{item.description}</p>
-                <div className="res-button-row">
-                  <a href={item.link} target="_blank" rel="noreferrer" className="res-btn">
-                    Truy cập
-                  </a>
-                  <Link to={`/balloon-club/${item.id}`} className="res-btn">
-                    Chi tiết
-                  </Link>
-                </div>
-              </div>
-            ))}
+            ?.tools.filter((t) => {
+              // Loại bỏ chính item đang xem
+              if (t.id === tool.id) return false;
+
+              // Nếu là mục tạo hình bong bóng có phân cấp level: 
+              // Phải trùng subCategory VÀ trùng level (hoặc nếu item có level thì phải khớp level với tool hiện tại)
+              if (isBalloonArt) {
+                const sameCategory = t.subCategory === tool.subCategory;
+                if (tool.level) {
+                  return sameCategory && t.level === tool.level;
+                }
+                return sameCategory;
+              }
+
+              // Các mục khác lọc theo subCategory bình thường
+              return t.subCategory === tool.subCategory;
+            })
+            .map((item) => {
+              const thumbImage = item.images?.[0] || item.icon;
+
+              return (
+                <Link key={item.id} to={`/balloon-club/${item.id}`} className="res-card-thumb">
+                  <div className="res-thumb-container">
+                    <img src={thumbImage} alt={item.title} />
+                  </div>
+                 
+                </Link>
+              );
+            })}
         </div>
       </section>
     </div>

@@ -1,6 +1,6 @@
 //Dữ liệu gốc
 export const data = {
-  // Event bao gồm id từ 1 đến 37
+  // Event bao gồm id từ 1 đến 38
   events: {
     //----x----Khai trương -> đang dừng ở các brand lẻ., mai đến chuỗi CAN-
     "khai-truong-phoc-cafe": {
@@ -10,7 +10,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: ["khai-truong", "trang-tri", "thiet-ke-menu", "in-an"], // Tầng 2 (Icon con)
       date: "15.05.2024",
-      tags: ["PhucDesign", "PhucDecor", "Phộc Cafe", "Võ Sư Lộc", "khai trương", "trang trí", "thiết kế menu", "in ấn menu"],
+      tags: ["DayNe", "Phộc Cafe", "Võ Sư Lộc", "khai trương", "trang trí", "thiết kế menu", "in ấn menu"],
       contactInfo: {
         address: "199 Lê Trọng Tấn, Phường Sơn Kỳ, Quận Tân Phú, TP. HCM.",
         brandName: "Phúc Party",
@@ -25,7 +25,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: ["khai-truong", "trang-tri"], // Tầng 2 (Icon con)
       date: "20.05.2024",
-      tags: ["PhucDesign", "PhucDecor", "Hy Cafe", "khai trương", "trang trí"],
+      tags: ["DayNe", "Hy Cafe", "khai trương", "trang trí"],
       contactInfo: {
         address: "47-49 Vĩnh Hội, Phường 4, Quận 4, TP. HCM.",
         brandName: "Phúc Party",
@@ -39,7 +39,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: ["khai-truong", "trang-tri"], // Tầng 2 (Icon con)
       date: "07.06.2024",
-      tags: ["PhucDesign", "PhucDecor", "PUNA - Nail Studio", "khai trương", "trang trí"],
+      tags: ["DayNe", "PUNA - Nail Studio", "khai trương", "trang trí"],
       contactInfo: {
         address: "76/97 Lê Văn Phan, Phường Phú Thọ Hòa, Quận Tân Phú,  TP. HCM.",
         brandName: "Phúc Party",
@@ -53,7 +53,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: ["khai-truong", "trang-tri"], // Tầng 2 (Icon con)
       date: "07.06.2024",
-      tags: ["PhucDesign", "PhucDecor", "TLL CARS", "HELIOZ", "khai trương", "trang trí", "MC", "setup"],
+      tags: ["DayNe", "TLL CARS", "HELIOZ", "khai trương", "trang trí", "MC", "setup"],
       contactInfo: {
         address: "289 Bình Lợi, Phường 13, Quận Bình Thạnh, TP. HCM.",
         brandName: "Phúc Party",
@@ -68,7 +68,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: ["khai-truong", "trang-tri"], // Tầng 2 (Icon con)
       date: "10.06.2024",
-      tags: ["PhucDesign", "PhucDecor", "XinChaoKoreaMart", "khai trương", "trang trí"],
+      tags: ["DayNe", "XinChaoKoreaMart", "khai trương", "trang trí"],
       contactInfo: {
         address: "Cantavil Quận 2 - số 1 Song Hành, Phường An Phú, TP. Thủ Đức (Quận 2 cũ) ",
         brandName: "Phúc Party",
@@ -83,7 +83,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: ["khai-truong", "trang-tri"], // Tầng 2 (Icon con)
       date: "24.09.2024",
-      tags: ["PhucDesign", "PhucDecor", "MCAKE", "BalloonParty", "khai trương", "trang trí"],
+      tags: ["DayNe", "MCAKE", "BalloonParty", "khai trương", "trang trí"],
       contactInfo: {
         address: "SI.08 BLOCK A2, c/c Q7 RIVERSIDE SỐ 4 Đào Trí - P. Phú Thuận - Quận 7 - TP. HCM.",
         brandName: "Phúc Party",
@@ -109,7 +109,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: ["khai-truong", "trang-tri"], // Tầng 2 (Icon con)
       date: "25.09.2024",
-      tags: ["PhucDesign", "PhucDecor", "RYRI", "khai trương", "trang trí"],
+      tags: ["DayNe", "RYRI", "khai trương", "trang trí"],
       contactInfo: {
         address: "47 Đường 39 - P. Tân Quy - Quận 7 - TP. HCM.",
         brandName: "Beauty House RYRI",
@@ -172,7 +172,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: ["le-hoi", "thien-nguyen"], // Tầng 2 (Icon con)
       date: "27.02.2025",
-      tags: ["PhucDesign", "PhucDecor", "Đồng Tu", "Ballon Party", "Thiện Nguyện"],
+      tags: ["DayNe", "Đồng Tu", "Ballon Party", "Thiện Nguyện"],
       contactInfo: {
         address: "Trường THCS Nguyễn Văn Linh - Ấp 2, Bình Chánh",
         owner: "Công ty TNHH Quảng cáo Phúc Design",
@@ -290,7 +290,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "yep", // Tầng 2 (Icon con)
       date: "21.01.2024",
-      tags: ["PhucDesign", "PhucDecor", "LuongHa", "YearOneParty"],
+      tags: ["DayNe", "LuongHa", "YearOneParty"],
       contactInfo: {
         address: "Hoa viên 102 - 39/79C Đ. Số 102, Tăng Nhơn Phú, Hồ Chí Minh",
         brandName: "Phúc Party",
@@ -353,6 +353,22 @@ export const data = {
       ],
     },
     //----x----Sinh nhật
+     "sinh-nhat-boi-ben-sony": {
+      id: 38,
+      slug: "sinh-nhat-boi-ben-sony",
+      title: "Sinh nhật Bối - Ben - Sony",
+      category: "su-kien", // Tầng 1 (Tab lớn)
+      subCategory: ["sinh-nhat"], // Tầng 2 (Icon con)
+      date: "16.07.2026",
+      tags: [
+        "DayNe",
+      ],
+      contactInfo: {
+        address: "Làng nướng Nam Bộ",
+        brandName: "Phúc Party",
+      },
+      files: ["sinhnhat-boibensony-3.webp","sinhnhat-boibensony-2.webp","sinhnhat-boibensony-1.webp",],
+    },
     "sinh-nhat-nhan-vien-caladon": {
       id: 26,
       slug: "sinh-nhat-nhan-vien-caladon",
@@ -378,7 +394,7 @@ export const data = {
         owner: "Clip Flycam >>",
         link: "https://www.facebook.com/share/v/1EX3oUmurL/",
       },
-      files: ["sinhnhat-celadon-1.webp"],
+      files: ["thumb-celadon-1.webp", "sinhnhat-celadon-1.webp"],
     },
     "sinh-nhat-be-yen-chi-6-tuoi": {
       id: 23,
@@ -391,7 +407,7 @@ export const data = {
         address: "Lotteria Lý Chính Thắng - 250B Lý Chính Thắng, Nhiêu Lộc, Hồ Chí Minh",
         brandName: "Phúc Party",
       },
-      files: ["sinhnhat-beyechi-2.webp", "sinhnhat-beyechi-3.webp", "sinhnhat-beyechi-1.webp", "sinhnhat-beyechi-4.webp"],
+      files: ["thumb-yenchi-1.webp", "sinhnhat-beyechi-2.webp", "sinhnhat-beyechi-3.webp", "sinhnhat-beyechi-1.webp", "sinhnhat-beyechi-4.webp"],
     },
     "sinh-nhat-be-nha-doanh": {
       id: 13,
@@ -404,7 +420,7 @@ export const data = {
         address: "McDonald's Phú Lâm",
         brandName: "Phúc Party",
       },
-      files: ["sinhnhat_benhadoanh.jpg"],
+      files: ["thumb-nhadoanh-1.webp", "sinhnhat_benhadoanh.jpg"],
     },
     "sinh-nhat-be-mai-lam-vi-hung": {
       id: 14,
@@ -418,6 +434,7 @@ export const data = {
         brandName: "Phúc Party",
       },
       files: [
+        "thumb-mailamvihung-1.webp",
         "sinhnhat-mailam-vihung-1.webp",
         "sinhnhat-mailam-vihung-2.webp",
         "sinhnhat-mailam-vihung-3.webp",
@@ -448,6 +465,7 @@ export const data = {
       subCategory: "sinh-nhat", // Dùng để lọc ở subTab
       date: "28.01.2024", // Định dạng chuẩn YYYY-MM-DD để dễ sắp xếp/lọc
       files: [
+        "thumb-hienlong-1.webp",
         "sinhnhat-beLong-1.jpg",
         "sinhnhat-beLong-2.jpg",
         "sinhnhat-beLong-3.jpg",
@@ -482,6 +500,7 @@ export const data = {
       subCategory: "sinh-nhat", // Tầng 2 (Icon con)
       date: "13.10.2023",
       files: [
+        "thumb-baomi-1.webp",
         "sinhnhat-bebaomi-2.jpg",
         "sinhnhat-bebaomi-3.jpg",
         "sinhnhat-bebaomi-4.jpg",
@@ -506,6 +525,7 @@ export const data = {
       subCategory: "sinh-nhat", // Tầng 2 (Icon con)
       date: "02.11.2023",
       files: [
+        "thumb-baotran-1.webp",
         "sinhnhat-beBaoTran-5.jpg",
         "sinhnhat-beBaoTran-2.jpg",
         "sinhnhat-beBaoTran-3.jpg",
@@ -527,6 +547,7 @@ export const data = {
       subCategory: "sinh-nhat", // Tầng 2 (Icon con)
       date: "03.11.2023",
       files: [
+        "thumb-nhatanh-1.webp",
         "sinhnhat-beNhatAnh-1.jpg",
         "sinhnhat-beNhatAnh-2.jpg",
         "sinhnhat-beNhatAnh-3.jpg",
@@ -550,6 +571,7 @@ export const data = {
       subCategory: "sinh-nhat", // Tầng 2 (Icon con)
       date: "04.11.2023",
       files: [
+        "thumb-thienkim-1.webp",
         "sinhnhat-bethienkim-1.jpg",
         "sinhnhat-bethienkim-26.jpg",
         "sinhnhat-bethienkim-3.jpg",
@@ -598,6 +620,7 @@ export const data = {
         brandName: "Phúc Party",
       },
       files: [
+        "thumb-minhquyen-1.webp",
         "sinhnhat-Mr.Quyen-21.jpg",
         "sinhnhat-Mr.Quyen-2.jpg",
         "sinhnhat-Mr.Quyen-1.jpg",
@@ -661,7 +684,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "le-hoi", // Tầng 2 (Icon con)
       date: "13.02.2025",
-      tags: ["PhucDesign", "PhucDecor", "Hoitraitongquan2025", "BinhChanh"],
+      tags: ["DayNe", "Hoitraitongquan2025", "BinhChanh"],
       contactInfo: {
         address: "BCHQS Thị trấn Tân Túc - B2/39, KP2, Tân Nhựt, Hồ Chí Minh",
         brandName: "Phúc Party",
@@ -855,7 +878,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "le-hoi", // Tầng 2 (Icon con)
       date: "21.01.2024",
-      tags: ["PhucDesign", "PhucDecor", "khaiquangdiemnhan", "VietSoul", "HonViet", "LanSuRong"],
+      tags: ["DayNe", "khaiquangdiemnhan", "VietSoul", "HonViet", "LanSuRong"],
       contactInfo: {
         address: "Nhà Thiếu Nhi Quận 9 - 65D Hồ Bá Phấn, Phường Phước Long A, Quận 9",
         brandName: "Phúc Party",
@@ -886,7 +909,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: ["le-hoi", "workshop"], // Tầng 2 (Icon con)
       date: "24.05.2026",
-      tags: ["PhucDesign", "PhucDecor", "AIA+", "Nhân Định", "Workshop", "QuocTeThieuNhi"],
+      tags: ["DayNe", "AIA+", "Nhân Định", "Workshop", "QuocTeThieuNhi"],
       contactInfo: {
         address: "Lynk The Vibe - 22B Nguyễn Thị Diệu, phường Xuân Hòa, TP.HCM",
         owner: "Nhân Định - Mê Bảo Hiểm",
@@ -901,7 +924,7 @@ export const data = {
       category: "su-kien", // Tầng 1 (Tab lớn)
       subCategory: "workshop", // Tầng 2 (Icon con)
       date: "21.05.2026",
-      tags: ["PhucDesign", "PhucDecor", "HECWIN", "Workshop"],
+      tags: ["DayNe", "HECWIN", "Workshop"],
       contactInfo: {
         address: "Good Morning Coffee - 103 Võ Oanh, Bình Thạnh TP.HCM",
         owner: "HECWIN",
