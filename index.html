@@ -1,20 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phuc Group</title> <!-- Thêm Title ở đây -->
-    <link rel="icon" type="image/png" href="/favicon.png">
-   <script>
-  // Chỉ chuyển hướng khi người dùng truy cập đúng link GitHub Pages lỗi thời
-  if (window.location.hostname.includes("github.io")) {
-    window.location.replace("https://phucgroup.vercel.app/");
-  }
-</script>
-</head>
-<body>
-  <div id="root"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phuc Group</title>
+    <!-- Thêm Title ở đây -->
+    <!-- Cấu hình chuẩn PWA cho iOS để chạy full màn hình như app độc lập -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Phuc Group" />
+
+    <!-- Icon hiển thị khi Add to Home Screen trên iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Favicon hiển thị trên trình duyệt web thông thường -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <script>
+      // Chỉ chuyển hướng khi người dùng truy cập đúng link GitHub Pages lỗi thời
+      if (window.location.hostname.includes("github.io")) {
+        window.location.replace("https://phucgroup.vercel.app/");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
     <!-- Script chạy React của bạn ở đây -->
     <script type="module" src="/src/main.jsx"></script>
-</body>
+  </body>
 </html>
